@@ -1,0 +1,2 @@
+# Needed only to rebuild the PDF index; the web server uses standard Python.
+pypdf==6.10.0

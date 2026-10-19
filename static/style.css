@@ -1,0 +1,63 @@
+:root { color-scheme: light; --ink: #1c344b; --muted: #586979; --blue: #e8f1fa; --blue-border: #b6cce1; --yellow: #fff4cc; --yellow-border: #d6bf77; --paper: #faf9f5; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, sans-serif; font-size: 15px; line-height: 1.6; }
+.topbar { max-width: 1200px; padding: 25px 36px; margin: auto; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #dce1e3; gap: 20px; }
+.brand { display: flex; gap: 12px; align-items: center; color: inherit; text-decoration: none; font-weight: 700; font-size: 17px; }
+.brand-mark { font-size: 28px; border: 1px solid var(--blue-border); background: var(--blue); border-radius: 10px; width: 42px; text-align: center; line-height: 42px; }
+.team, .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.6px; }
+main { max-width: 1128px; margin: 0 auto; padding: 38px 0 20px; }
+.intro { max-width: 650px; }
+.eyebrow { color: #4a6782; margin: 0 0 16px; }
+h1 { font-size: clamp(36px, 4.5vw, 54px); line-height: 1.08; letter-spacing: -2px; margin: 0 0 18px; }
+.intro > p:last-child { color: var(--muted); max-width: 540px; font-size: 16px; margin-bottom: 26px; }
+.notice { display: flex; align-items: flex-start; gap: 12px; padding: 15px 20px; border: 1px solid var(--yellow-border); border-radius: 10px; background: var(--yellow); margin-bottom: 24px; font-size: 13px; }
+.notice p { margin: 2px 0 0; color: #665935; }
+.status-dot { width: 8px; height: 8px; background: #9c7621; border-radius: 50%; flex-shrink: 0; margin-top: 7px; }
+.workspace { display: grid; grid-template-columns: 0.95fr 1.15fr; gap: 24px; }
+.panel { border: 1px solid var(--blue-border); border-radius: 14px; padding: 26px; }
+.question-panel { background: #fff; }
+.answer-panel { background: var(--blue); display: flex; flex-direction: column; }
+.section-heading { display: flex; align-items: center; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
+h2 { font-size: 17px; line-height: 1.3; margin: 0; }
+.step { color: #54718b; font-size: 12px; font-weight: bold; }
+.badge { margin-left: auto; font-size: 10px; border: 1px solid var(--blue-border); background: #f5f9fd; padding: 3px 8px; border-radius: 20px; }
+label { display: block; font-size: 12px; font-weight: bold; margin: 16px 0 6px; }
+select, textarea, button { font-family: inherit; font-size: 14px; }
+select, textarea { width: 100%; border: 1px solid #bdc9d3; border-radius: 7px; padding: 12px; background: #fff; color: var(--ink); }
+textarea { resize: vertical; min-height: 120px; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid #376f9f; outline-offset: 3px; }
+.field-note, .privacy { color: var(--muted); font-size: 11px; line-height: 1.5; }
+.question-label { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-top: 20px; }
+.question-label label { margin-top: 0; }
+.text-button { border: 0; padding: 0; background: transparent; color: #365f85; font-size: 11px; text-decoration: underline; text-underline-offset: 3px; }
+.primary { display: flex; width: 100%; align-items: center; justify-content: space-between; margin-top: 16px; background: #244d74; color: #fff; border: 1px solid #193e61; border-radius: 7px; padding: 13px 16px; font-weight: bold; }
+.primary:hover { background: #1b3d5d; }
+button:disabled, select:disabled { cursor: not-allowed; opacity: .6; }
+.privacy { margin: 12px 0 0; }
+.answer-kicker { font-size: 10px; font-weight: bold; letter-spacing: 1.1px; color: #56718b; margin-top: 14px; }
+h3 { font-size: 26px; letter-spacing: -.6px; margin: 16px 0 12px; line-height: 1.2; }
+#answer-text { color: #465e74; font-size: 14px; }
+.asked { border-left: 2px solid #7b9ebb; padding-left: 12px; font-size: 13px; overflow-wrap: anywhere; }
+.citation-box { background: #f7fafc; border: 1px dashed #a8bfd3; border-radius: 8px; padding: 16px; margin: 24px 0; }
+h4 { font-size: 12px; margin: 0 0 8px; }
+.citation-box p { font-size: 12px; margin: 0; color: #586e80; }
+.citation-box blockquote { margin: 8px 0; padding-left: 12px; border-left: 2px solid var(--blue-border); }
+.source-card { padding: 14px 0; font-size: 13px; overflow-wrap: anywhere; }
+.source-card + .source-card { border-top: 1px solid var(--blue-border); }
+.source-card a { color: #244d74; display: inline-block; margin-top: 10px; font-weight: bold; font-size: 12px; }
+.source-card .source-warning { background: var(--yellow); padding: 10px; color: #665935; border: 1px solid var(--yellow-border); border-radius: 6px; }
+#citations { max-height: 490px; overflow-y: auto; padding-right: 8px; }
+.citation-box .pdf-help { margin-top: 14px; font-size: 11px; }
+.scope { margin-top: auto; padding-top: 24px; border-top: 1px solid #c5d6e5; font-size: 12px; }
+.scope p { margin: 4px 0 0; color: #586e80; }
+.build-strip { margin-top: 26px; padding: 20px 0; display: flex; gap: 30px; align-items: center; }
+.build-strip h2 { font-size: 13px; min-width: 130px; }
+.build-strip ol { list-style: none; padding: 0; margin: 0; display: flex; justify-content: space-between; gap: 24px; width: 100%; }
+.build-strip li { display: flex; align-items: center; gap: 12px; font-size: 12px; }
+.build-strip li > span { background: #f0eee6; border: 1px solid #d9d4c5; border-radius: 50%; height: 30px; width: 30px; text-align: center; line-height: 28px; font-size: 10px; }
+.build-strip li > .built { background: var(--blue); border-color: var(--blue-border); }
+small { display: block; color: var(--muted); font-size: 11px; }
+footer { border-top: 1px solid #dce1e3; margin-top: 14px; padding-top: 20px; display: flex; justify-content: space-between; gap: 15px; color: var(--muted); font-size: 10px; }
+@media (max-width: 1200px) { main { padding: 32px 28px 20px; } }
+@media (max-width: 720px) { .topbar { padding: 18px 20px; flex-wrap: wrap; } main { padding: 28px 20px 20px; } .workspace { grid-template-columns: 1fr; } .panel { padding: 20px; } .build-strip { display: block; } .build-strip ol { flex-direction: column; gap: 16px; margin-top: 20px; } footer { flex-wrap: wrap; } }
