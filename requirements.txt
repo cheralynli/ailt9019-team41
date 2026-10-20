@@ -1,2 +1,5 @@
-# Needed only to rebuild the PDF index; the web server uses standard Python.
+# Local PDF indexing
 pypdf==6.10.0
+
+# Course API HTTP transport
+httpx==0.28.1

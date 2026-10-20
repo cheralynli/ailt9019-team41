@@ -46,10 +46,18 @@ class PipelineTests(unittest.TestCase):
     def test_no_evidence(self):
         self.assertEqual(answer_question({**self.payload, "question": "unrelated"}, self.passages)["status"], "no_evidence")
 
+    @patch.dict("os.environ", {}, clear=True)
     def test_model_stub_never_invents_ruling(self):
         response = answer_question(self.payload, self.passages)
         self.assertEqual(response["status"], "search_only")
         self.assertEqual(response["citations"], self.passages[:1])
+
+    def test_unseparated_chess_is_search_only(self):
+        passages = [{**self.passages[0], "kind": "rules_and_commentary_unseparated"}]
+        with patch("referee.pipeline.generate_answer") as model:
+            response = answer_question(self.payload, passages)
+        self.assertEqual(response["status"], "search_only")
+        model.assert_not_called()
 
     def test_expansion_includes_base_but_not_reverse(self):
         base = {"source_id": "catan-base", "game": "catan", "text": "testtoken"}
@@ -103,6 +111,14 @@ class HTTPTests(unittest.TestCase):
             status, body = self.request("POST", "/api/ask", json.dumps({"game": "catan", "edition": "base-5", "question": "Can I build?"}))
         self.assertEqual(status, 200)
         self.assertEqual(json.loads(body)["status"], "not_ready")
+
+    def test_course_answer_round_trip(self):
+        passage = {"source_id": "catan-base", "game": "catan", "text": "Synthetic testtoken fixture"}
+        expected = {"status": "answer", "message": "Synthetic explanation", "citations": [passage]}
+        with patch("app.load_passages", return_value=[passage]), patch("referee.pipeline.generate_answer", return_value=expected):
+            status, body = self.request("POST", "/api/ask", json.dumps({"game": "catan", "edition": "base-5", "question": "testtoken"}))
+        self.assertEqual(status, 200)
+        self.assertEqual(json.loads(body), expected)
 
     def test_malformed_json(self):
         self.assertEqual(self.request("POST", "/api/ask", "{")[0], 400)

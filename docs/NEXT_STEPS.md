@@ -1,18 +1,31 @@
-# From skeleton to midterm demo
+# From course API integration to midterm demo
+
+## Working now
+
+- Python retrieval feeds server-side course API explanations with validated source IDs.
+- Course API adapter added on 21 October: `qwen3.8-flash`, configured through COURSE_MODEL.
+  Three user-observed browser cases are recorded in `COURSE_API_PROGRESS_2026-10-21.md`; screenshots do not include provider metadata.
+- Hidden key prompt, live connection check, model listing and safe failure diagnostics.
+- Six local PDFs produce 467 indexed passages. Source URLs and hashes are tracked;
+  PDFs and generated excerpts remain ignored.
+- One live Catan distance-rule example was observed in the browser on 19 October
+  2026. See `docs/API_PROGRESS_2026-10-19.md` for evidence and limitations.
 
 ## Next build steps
 
-1. Confirm the course API instructions (provider, endpoint, model, authentication and data-use terms). Never paste or commit the key.
-2. Review the extracted passages and retrieval failures against the original PDFs. Six sources are indexed; confirm the remaining edition labels and separate Chess rules from commentary before AI use.
-3. Implement the backend model adapter using retrieved evidence only. Validate citation IDs against retrieved passages. Add clarification and out-of-scope handling, including strategy and disputed-play requests.
-4. Run a small real rules test with a source-checked answer key. Record actual outputs and failures. Do not count skeleton tests as ruling accuracy.
-5. Run the proposed 32-case evaluation across all four games. The base/expansion source mapping is now implemented, but ranking and answers still need evaluation.
+1. Extend the observed strategy-refusal example with missing evidence, ambiguous questions and API failures
+   with real inputs. Automated mocks do not verify model refusal behaviour.
+2. Retest Pandemic chain reactions: the observed answer used “infection step” where the source says “current Infection card”.
+3. Confirm remaining edition labels and separate Chess laws from commentary.
+   Chess currently remains search-only, including when course API is configured.
+4. Freeze the source-checked answer key and run the proposed 32-case evaluation.
+5. Run the course API live check with the emailed group key; confirm source-use permissions and deployment arrangements.
+   The current server remains a local development server.
 
 ## Midterm handoff (26 October; Moodle cutoff is authoritative)
 
-- A real input → processing → output demonstration in an MP4 of at most 60 seconds.
-- `repository_link.txt`, accessible current code and reproducible README instructions. Upload/push only after the team approves; this starter does not do so.
-- Completed companion one-page status template: real progress, test evidence, limitations, blockers with owners, three dated milestones over the next two weeks, each member’s actual contributions and scope decision.
-- ZIP at most 100 MB; verify playback, staff repository access and Moodle group receipt.
-
-The local search prototype now retrieves real passages and page references, but is not the completed AI core workflow. The team still needs to connect the model, verify its outputs and record the working path. Never present keyword results as generated AI answers.
+- MP4 of at most 60 seconds showing a real input → processing → output.
+- repository_link.txt, staff repository access and reproducible README instructions.
+- One-page Word status sheet: progress, evidence, limitations, blockers and owners,
+  three dated milestones, each member's completed work and scope decision.
+- ZIP at most 100 MB; verify playback and Moodle group receipt.

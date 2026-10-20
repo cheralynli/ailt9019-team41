@@ -1,85 +1,138 @@
 # Board Game Referee · Team 41
 
-A local starter for the AILT9019 project: ask a rules question, retrieve passages from the selected rulebook, and eventually receive an AI explanation with citations.
+A local rules assistant: select a game/ruleset, ask a question, retrieve matching
+rulebook passages and receive an explanation using the course-provided Alibaba
+Cloud Bailian API. Answers cite original local passages and PDF pages.
 
-## Start the app
+## Setup
 
-Requires Python 3.10 or newer. No API key is needed for local search. The web server has no third-party dependencies; rebuilding the index requires `pypdf`.
-
-For a fresh checkout, create a virtual environment and build the index first:
+Requires Python 3.10 or newer. In this repository:
 
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
+```
+
+Place the six PDFs in `rulebooks/` using the filenames in `referee/sources.py`.
+Official download URLs, SHA-256 hashes and indexed ranges are recorded in
+`docs/rulebook-sources.json`. Then build the local index:
+
+```sh
 python -m referee.indexer
 ```
 
-Place the six approved PDFs in `rulebooks/` using the exact filenames listed in `referee/sources.py`. The PDFs and generated index are local-only and Git-ignored. Run the indexer again after replacing a source. It checks page counts and records SHA-256 hashes; a matching page count alone does not verify an edition. Do not replace a PDF without reviewing its source metadata.
+The PDFs and generated index are Git-ignored. Page counts and hashes help verify
+files; they do not establish an edition or permission for every use.
+
+## Course API connection check
 
 ```sh
-python3 app.py
+zsh scripts/start-course.zsh --check
 ```
 
-Open http://127.0.0.1:8000 in your browser. Stop the server with Ctrl+C.
-If the port is busy, run `python3 app.py --port 8001` instead.
+Paste the emailed group API key at the hidden prompt. The key is not saved to
+disk or returned to the parent terminal. This sends one synthetic test request
+without rulebook text. Expected output: `Provider: course`, `Status: answer`,
+three starting tokens in the explanation, and `Validated citations: 1`.
 
-## Try it
+- Base URL: https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+- Protocol: OpenAI-compatible Chat Completions, served by Alibaba Cloud.
+- Default model: `qwen3.8-flash`. Override with `export COURSE_MODEL="MODEL_ID"`.
+- Key variable: `COURSE_API_KEY`; `.env` is ignored and not loaded automatically.
+- Course notice: 25,000 credits shared per group, course-related work only.
+  First-batch key expiry is 19 November 2026; contact teaching staff for top-ups
+  or renewal. Never commit or record the key.
 
-1. Select a game and its ruleset.
-2. Use “Try a sample question” or enter your own question.
-3. Click “Ask BoardMaster”.
-4. Read up to three matching excerpts with document, edition and PDF page references.
-5. Use “Open original PDF” to check each result in context. These links serve only the six approved local files.
+## Run the website
 
-If the embedded browser shows a blank PDF preview, open the same local link in Safari or Chrome. Page-fragment navigation depends on the browser’s PDF viewer.
+Stop any previous server with Ctrl+C, then:
 
-These are **keyword-search results, not AI rulings**. The model API is not connected. Some results may be irrelevant; all results need review. A page link identifies the source but does not prove that the passage answers the question.
+```sh
+zsh scripts/start-course.zsh
+```
 
-Questions are not saved to disk and no external API calls are made. Each question is independent; there is no conversational memory. The local development server binds only to this computer. Do not expose it publicly or use it as a production server.
+Enter the course key again and open http://127.0.0.1:8000. If the port is busy,
+use `zsh scripts/start-course.zsh --port 8001`.
 
-## What exists / what does not
+Select Catan / Base game and ask:
 
-- Working browser form, game/ruleset selection, sample questions, response and citation containers.
-- Working Python JSON endpoint, input validation and a simple retrieval baseline with game/ruleset filtering.
-- A PDF indexing command and a replaceable model adapter placeholder.
-- Basic automated tests, **not** the proposed 32-question rules evaluation.
-- No AI rulings, semantic scope checks, strategy/dispute detection, API integration or deployment yet.
-- Six sources across four games are indexed locally. Expansion searches include their base rules; base-only searches exclude expansions. Dominion Dark Ages and Pandemic editions still need verification.
-- Chess indexing is limited to PDF pages 16–67 of the 2025 Arbiters’ Manual. This section includes rules and commentary that are **not yet separated**; every Chess excerpt carries a warning. The extra equipment/tournament PDF is excluded and untouched.
-- Extracted text can omit diagrams, symbols or columns. Chunk boundaries may cut sentences. Verify original pages before relying on results. A short/empty Seafarers page (31) is skipped and recorded in the index report.
+> Can I build a settlement next to another settlement?
 
-## Project map
+Expected: no, because adjacent intersections must be vacant under the distance
+rule; the cited base-rule passage is on PDF page 5. Use “Open original PDF” to
+check context. If a PDF preview is blank, open its link in Safari or Chrome.
+
+Without a configured key, `python app.py` serves keyword-search results only.
+These are explicitly labelled and do not claim to be AI rulings.
+
+## Data and error handling
+
+Questions are not saved to disk. When the course API is enabled, questions and
+up to three retrieved excerpts, with source labels, are sent to Alibaba Cloud.
+Do not enter personal information. Confirm source-use permissions and provider
+terms before deployment or broader testing. No chat history is maintained.
+
+The backend uses only retrieved evidence, requests JSON and validates returned
+citation IDs against the current passages. URLs, pages and quoted passages come
+from local source metadata, not model-generated references. This prevents
+invented source IDs; it does not prove every explanation is accurate.
+
+Requests time out after 45 seconds; the browser waits 60 seconds. No automatic
+retries are made. Only one course request runs at once per server process;
+teammates using separate servers must still coordinate the shared quota.
+Failures display sanitized diagnostic codes: timeout, network, busy, http_400,
+http_access_denied, http_404, http_429, http_5xx or invalid_model_output. Raw
+provider errors and credentials are not displayed. Refusals and clarification
+requests contain no fabricated ruling or citations.
+
+## Current evidence and limits
+
+See `docs/COURSE_API_PROGRESS_2026-10-21.md` for user-observed Catan answering,
+strategy refusal and Pandemic answering screenshots, with limitations. These
+examples do not establish aggregate accuracy or replace the proposed 32-case
+evaluation. Source provenance is recorded in `docs/rulebook-sources.json`.
+
+- Six documents yield 467 local excerpts, filtered by game/ruleset. Expansion
+  searches include base rules; base-only searches exclude expansions.
+- Retrieval is a BM25-style keyword baseline, not semantic reasoning.
+- Chess uses PDF pages 16–67 of the 355-page 2025 FIDE Arbiters’ Manual. Laws and
+  commentary are not yet separated, so Chess remains search-only.
+- Pandemic and Dark Ages edition labels still need verification.
+- PDF extraction can omit diagrams and symbols; chunks can cut sentences.
+- Pandemic wording about “infection step” versus “current Infection card” needs
+  the testing owner's review. Other refusal/ambiguity cases remain to be tested.
+- The server binds to localhost and is for local development, not production.
+- The midterm recording, deployment and full evaluation remain outstanding.
+
+## Tests and project map
+
+```sh
+python -m unittest discover -s tests -v
+```
+
+Tests mock the course API and do not use keys or spend credits. Local PDF checks
+are skipped if the files/index are missing. They do not measure real model
+accuracy.
 
 ```text
-app.py                   Local HTTP server and /api endpoints
-referee/catalog.py       Games, rulesets and sample questions
-referee/sources.py       Six-source allowlist and base/expansion mapping
-referee/indexer.py       PDF extraction and page-bounded chunking
-referee/corpus.py        Index loading and provenance validation
-referee/pipeline.py      Validation → retrieval → answer/refusal flow
-referee/retrieval.py     Simple keyword-search baseline
-referee/model.py         Future course-model API adapter
-static/                  Browser interface (HTML, CSS, JavaScript)
-data/passages.json       Generated local excerpts (Git-ignored)
-data/index-report.json   Page ranges, source hashes and skipped pages (Git-ignored)
-data/README.md           Passage format and source-verification notes
-tests/test_app.py        Skeleton tests
-docs/NEXT_STEPS.md       Build order and midterm checklist
+app.py                      Local HTTP server and /api endpoints
+referee/model.py            Evidence prompt and citation validation
+referee/course_api.py       Course API transport and local concurrency limit
+referee/pipeline.py          Validation → retrieval → explanation/search/refusal
+referee/sources.py           Source allowlist and base/expansion mapping
+referee/indexer.py           PDF extraction and page-bounded chunks
+referee/retrieval.py         Local keyword retrieval
+scripts/start-course.zsh     Hidden-key startup and connection check
+scripts/check_course.py      Synthetic live API check
+static/                     Browser interface
 ```
 
-## Run the tests
+`GET /api/games` reports catalogue and index counts. `POST /api/ask` accepts
+`game`, `edition` (catalogue ruleset ID) and `question`. Responses contain
+`status`, `message` and `citations`; failures may include `diagnostic`.
+Invalid input returns HTTP 400; corrupt indexes return 503. Local PDF routes
+serve only allowlisted files. The missing-key fallback remains local search.
 
-```sh
-python3 -m unittest discover -s tests -v
-```
-
-## Developer notes
-
-`GET /api/games` returns the catalogue and index counts. `POST /api/ask` accepts a JSON object containing `game`, `edition` (the catalogue ruleset ID), and `question`. Responses include `status`, `message`, and `citations`. `search_only` means retrieved excerpts, not a generated ruling. Invalid input returns HTTP 400; corrupt indexes return 503. A missing index yields an explicit setup message. `GET /api/sources/<source-id>` serves only allowlisted local PDFs, with original PDF page fragments in citation links.
-
-Search uses BM25-style keyword ranking, small vocabulary hints (such as castle/castling), and ruleset filtering. It is not semantic reasoning or a confidence-calibrated refusal system. Ordinary Chess searches exclude chunks mentioning Chess960 unless the question mentions it.
-
-Next, confirm the course API provider and request format before implementing `referee/model.py`. Keep credentials on the backend, outside tracked files. `.env` is ignored, but this starter does not load it or make API calls. Never put a key in browser JavaScript, recordings or Git commits.
-
-The user-supplied PDFs are processed only on this computer. Before deployment, sharing PDFs, or sending text to an external API, verify permissions and provider terms. Nothing commits, pushes, publishes or uploads files automatically.
+Official API configuration reference:
+https://help.aliyun.com/zh/model-studio/more-tools

@@ -23,12 +23,14 @@ def answer_question(payload, passages):
     if selected is None or edition not in {item["id"] for item in selected["editions"]}:
         return result("unsupported", "That game or ruleset is outside the planned collection. Please select one from the menu.")
     if not any(in_scope(p, game, edition) for p in passages):
-        return result("not_ready", "The website and Python backend are connected, but this rulebook has not been indexed yet. The AI model is also not connected. No ruling or citation has been generated.")
+        return result("not_ready", "The website and Python backend are connected, but this rulebook has not been indexed yet. No ruling or citation has been generated.")
     evidence = retrieve(question, game, edition, passages)
     if not evidence:
         return result("no_evidence", "The starter search found no matching passage. I cannot provide a supported ruling. Try a more specific rules question.")
+    if any(p.get("kind") == "rules_and_commentary_unseparated" for p in evidence):
+        return {"status": "search_only", "message": "These Chess excerpts mix official rules and arbiter commentary. AI explanations remain disabled for this source until they are separated and verified. Check the original PDF.", "citations": evidence}
     try:
         return generate_answer(question, evidence)
     except ModelNotConfigured:
-        return {"status": "search_only", "message": "Here are matching excerpts from your local rulebooks. These are keyword-search results, not an AI ruling. Check the original pages for context; diagrams and formatting may not survive extraction. The model API is not connected yet.",
+        return {"status": "search_only", "message": "Here are matching excerpts from your local rulebooks. These are keyword-search results, not an AI ruling. Check the original pages for context; diagrams and formatting may not survive extraction. Configure the selected provider on the server to enable explanations.",
                 "citations": evidence}

@@ -15,7 +15,7 @@ function setEditions() {
 
 function showResult(status, heading, message) {
   document.querySelector("#result-status").textContent = status;
-  document.querySelector("#answer-label").textContent = "RULEBOOK SEARCH · NOT AN AI RULING";
+  document.querySelector("#answer-label").textContent = status === "answer" ? "AI EXPLANATION · CHECK THE SOURCES" : "RULEBOOK ASSISTANT";
   document.querySelector("#result-heading").textContent = heading;
   document.querySelector("#answer-text").textContent = message;
 }
@@ -29,7 +29,7 @@ function showCitations(citations) {
     container.append(note);
     return;
   }
-  // Future model adapter must return only validated citations from retrieved data.
+  // Citation metadata is drawn from validated retrieved passages.
   for (const citation of citations) {
     const card = document.createElement("article");
     card.className = "source-card";
@@ -77,7 +77,7 @@ form.addEventListener("submit", async event => {
   showResult("Processing", "Checking the local pipeline…", "Sending your question to the Python backend.");
   showCitations([]);
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 15000);
+  const timeout = setTimeout(() => controller.abort(), 60000);
   try {
     const response = await fetch("/api/ask", {
       method: "POST", headers: { "Content-Type": "application/json" },
@@ -86,8 +86,8 @@ form.addEventListener("submit", async event => {
     });
     const data = await response.json();
     if (!response.ok) throw new Error(data.error || "The request could not be completed.");
-    const headings = { search_only: "Here’s where to look.", not_ready: "Rulebook index needed.", unsupported: "Outside the planned scope.", no_evidence: "No matching passage found." };
-    showResult(data.status === "search_only" ? "Search only" : data.status === "not_ready" ? "Setup needed" : "No ruling", headings[data.status] || "Pipeline response", data.message);
+    const headings = { answer: "Here’s the supported explanation.", refusal: "Cannot provide a supported ruling.", clarification: "Please clarify your question.", api_error: "Model unavailable.", search_only: "Here’s where to look.", not_ready: "Rulebook index needed.", unsupported: "Outside the planned scope.", no_evidence: "No matching passage found." };
+    showResult(data.status === "api_error" ? "API issue" : data.status === "answer" ? "answer" : data.status === "search_only" ? "Search only" : data.status === "not_ready" ? "Setup needed" : "No ruling", headings[data.status] || "Pipeline response", data.message + (data.diagnostic ? ` [${data.diagnostic}]` : ""));
     showCitations(data.citations || []);
   } catch (error) {
     showResult("Connection issue", "Let’s check the connection.", error.name === "AbortError" ? "The request timed out. Check that the Python server is running and try again." : error.message);
@@ -108,7 +108,7 @@ async function initialise() {
     const data = await response.json();
     games = data.games;
     document.querySelector("#collection-status").textContent = data.passage_count
-      ? `${data.source_count} documents indexed · ${data.passage_count} searchable excerpts. Results are source passages, not verified AI rulings.`
+      ? `${data.source_count} documents indexed · ${data.passage_count} searchable excerpts. Check every explanation against its cited source passages.`
       : "No passages indexed yet. Run python3 -m referee.indexer to connect the rulebooks.";
     gameSelect.replaceChildren(...games.map(game => new Option(game.name, game.id)));
     setEditions();

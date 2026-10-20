@@ -23,7 +23,7 @@
           <div class="question-label"><label for="question">Your rules question</label><button type="button" id="sample" class="text-button" disabled>Try a sample question</button></div>
           <textarea id="question" name="question" maxlength="2000" rows="5" required placeholder="What rule do you want to check?"></textarea>
           <button type="submit" id="submit" class="primary" disabled>Ask BoardMaster <span aria-hidden="true">→</span></button>
-          <p class="privacy">Local only. Questions are not saved or sent to an AI service.</p>
+          <p class="privacy">Questions are not saved to disk. When AI is enabled, questions and retrieved excerpts are sent to the configured provider. Do not enter personal information.</p>
         </form>
       </section>
       <section class="panel answer-panel" aria-labelledby="answer-title">
@@ -31,14 +31,14 @@
         <div id="result" role="status" aria-live="polite" aria-atomic="true">
           <p class="answer-kicker" id="answer-label">RULEBOOK SEARCH RESULTS</p>
           <h3 id="result-heading">Start with a question.</h3>
-          <p id="answer-text">Choose a game and ruleset, then ask about a rule. You’ll see matching excerpts and links to their original PDF pages. AI explanations are not connected yet.</p>
+          <p id="answer-text">Choose a game and ruleset, then ask about a rule. You’ll see matching excerpts and links to their original PDF pages. When AI explanations are enabled, your question and retrieved excerpts are sent to Alibaba Cloud through the course API. Do not enter personal information.</p>
           <p id="asked-question" class="asked" hidden></p>
           <div class="citation-box"><h4>Matching passages & sources</h4><div id="citations" tabindex="0" role="region" aria-label="Scrollable search excerpts"><p>No search yet. Each result will show its document, game, edition and PDF page.</p></div><p class="pdf-help">If a PDF preview is blank, open its link in Safari or Chrome.</p></div>
         </div>
-        <div class="scope"><strong>A rules guide, not a table judge.</strong><p>The planned tool won’t give strategy advice or decide what happened during a disputed play.</p></div>
+        <div class="scope"><strong>A rules guide, not a table judge.</strong><p>This assistant explains published rules. It does not provide strategy advice or decide what happened during a disputed play.</p></div>
       </section>
     </div>
-    <section class="build-strip" aria-label="Build progress"><h2>Under the hood</h2><ol><li><span class="built">01</span><div><strong>Ask a question</strong><small>Interface connected</small></div></li><li><span class="built">02</span><div><strong>Find the evidence</strong><small>Local PDF search</small></div></li><li><span>03</span><div><strong>Explain the rule</strong><small>Model API to connect</small></div></li></ol></section>
+    <section class="build-strip" aria-label="Build progress"><h2>Under the hood</h2><ol><li><span class="built">01</span><div><strong>Ask a question</strong><small>Interface connected</small></div></li><li><span class="built">02</span><div><strong>Find the evidence</strong><small>Local PDF search</small></div></li><li><span>03</span><div><strong>Explain the rule</strong><small>Course API · server configuration required</small></div></li></ol></section>
     <footer><span>Board Game Referee / AILT9019</span><span>Local development · Search prototype v0.2</span></footer>
   </main>
 </body>
