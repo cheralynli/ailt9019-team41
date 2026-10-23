@@ -19,7 +19,8 @@ invented citations.
 
 1. `python scripts/evaluate.py`: offline retrieval preflight. No provider calls.
 2. `zsh scripts/start-course.zsh --evaluate`: hidden group-key prompt, sequential
-   live answers, evidence and CSV review sheet. Up to 32 calls; explicit scope
+   live answers, evidence and CSV review sheet. Up to 64 sequential calls (at most
+   two per case if a recognized scope error requires a content revision); explicit scope
    refusals may be handled locally. Do not run multiple evaluators at once.
 3. Review the original PDFs and recorded outputs, fill the CSV, then run
    `python scripts/evaluate.py --score evaluation/results/RUN/review.csv`.
@@ -84,3 +85,14 @@ independent team confirmation remains pending. PAN05 and DOM04 are retained as
 failures. No raw outputs or frozen cases were edited, and no outputs from
 different runs were combined. These are development results on a known suite,
 not a held-out evaluation or a guarantee of correctness for other questions.
+
+
+## Scope-check revision follow-up
+
+The next live run may include one content revision per case for a recognized
+Pandemic eradication-color or Dominion gain-event scope error. Review the final
+answer and its actual citations, plus `answer_review` metadata where present.
+A refusal after an unsuccessful repair is still a failed answerable case; never
+credit detection alone as a correct answer. No transport failures are retried.
+The offline detection replay is in `scope-replay.json`; it is not a new live
+score. See `../docs/ANSWER_SCOPE_REVIEW_2026-10-23.md` for validation and limits.

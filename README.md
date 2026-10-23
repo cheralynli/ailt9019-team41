@@ -101,7 +101,8 @@ These are explicitly labelled and do not claim to be AI rulings.
 
 Questions are not saved to disk. When the course API is enabled, questions and
 up to six retrieved excerpts, with source labels, are sent to Alibaba Cloud.
-Do not enter personal information. Confirm source-use permissions and provider
+A recognized scope error may resend that question and evidence with the draft
+for one revision. Do not enter personal information. Confirm source-use permissions and provider
 terms before deployment or broader testing. No chat history is maintained.
 
 The backend uses only retrieved evidence, requests JSON and validates returned
@@ -109,8 +110,13 @@ citation IDs against the current passages. URLs, pages and quoted passages come
 from local source metadata, not model-generated references. This prevents
 invented source IDs; it does not prove every explanation is accurate.
 
-Requests time out after 45 seconds; the browser waits 60 seconds. No automatic
-retries are made. Only one course request runs at once per server process;
+Each provider call has a 45-second timeout; the browser waits up to 110 seconds
+to allow one content revision. Recognized Pandemic eradication-color and Dominion
+gain-event scope errors trigger at most one evidence-based revision. If the same
+recognized error remains, the response is withheld with a refusal and the safe
+diagnostic `answer_scope_unresolved`. This narrow check is not a semantic
+correctness guarantee. No transport failures are retried. Only one provider
+request runs at once per server process;
 teammates using separate servers must still coordinate the shared quota.
 Failures display sanitized diagnostic codes: timeout, network, busy, http_400,
 http_access_denied, http_404, http_429, http_5xx or invalid_model_output. Raw
@@ -211,7 +217,10 @@ Enter the group key at the hidden prompt. Results, source citations, metadata
 and a review CSV are saved in an ignored `evaluation/results/<run>/` folder.
 This deliberately records the fixed evaluation questions and outputs, not live
 user chat. The key is never recorded. Permission/quota/model access failures
-stop the run. At most one request is sent at a time, with no automatic retries.
+stop the run. Requests are sequential, with no transport retries. Each of the
+32 cases may use one additional content revision for a recognized scope error,
+so a full run uses at most 64 provider calls. Successful revisions are recorded
+in the output as `answer_review` metadata.
 
 A reviewer compares each output with the frozen key and original cited sources,
 then fills `ruling_correct` and `citation_correct` with yes/no for the 26
@@ -226,3 +235,12 @@ python scripts/evaluate.py --score evaluation/results/RUN/review.csv
 Pass requires 21/26 correct rulings, 24/26 supported citations and all six
 refusals. Unreviewed or incomplete results cannot pass. Automated program tests
 are separate from these rules-accuracy results. See `evaluation/README.md`.
+
+
+## Answer scope review
+
+Recognized eradication-color and gained-card scope errors now trigger at most
+one evidence-based revision, with citation revalidation and refusal if the known
+error persists. This is a narrow safeguard, not an accuracy guarantee. All 58
+program tests pass; a new live run is still required to measure repair quality.
+See `docs/ANSWER_SCOPE_REVIEW_2026-10-23.md` for scope, request budget and limits.

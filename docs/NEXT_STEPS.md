@@ -40,8 +40,13 @@ See `WEEK8_REVIEW_2026-10-23.md` for the submitted-proposal audit, website fixes
 verification boundaries and the Week 8 / Weeks 9–10 requirements.
 
 The Chess source-policy bypass found during review was fixed; see
-`CHESS_GUARD_FIX_2026-10-23.md`. The current automated suite has 48 passing tests.
+`CHESS_GUARD_FIX_2026-10-23.md`. The current automated suite has 58 passing tests.
 These program checks are separate from the documented live evaluation grades.
 
 The current extraction/evaluation implementation is documented in
 `CHESS_AND_EVALUATION.md`; previous search-only descriptions are historical.
+
+
+A bounded model-revision check for the two observed wording errors is now
+implemented; see `ANSWER_SCOPE_REVIEW_2026-10-23.md`. A fresh complete live run
+must determine repair quality before either failure is described as resolved.

@@ -97,7 +97,7 @@ form.addEventListener("submit", async event => {
   showResult("Processing", "Checking the local pipeline…", "Sending your question to the Python backend.");
   showCitations([]);
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 60000);
+  const timeout = setTimeout(() => controller.abort(), 110000);
   try {
     const response = await fetch("/api/ask", {
       method: "POST", headers: { "Content-Type": "application/json" },
