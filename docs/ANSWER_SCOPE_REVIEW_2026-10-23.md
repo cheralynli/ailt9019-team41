@@ -73,3 +73,18 @@ moving the color qualifier to cities. This exact new clause is regression-tested
 as is a safe statement that qualifies the cubes themselves. A successful live
 revision is still unverified. Use the focused `--cases PAN05 DOM04` run before
 another full-suite run; focused results cannot establish an aggregate pass.
+
+
+## Source-extractive alternative after the focused run
+
+The focused run still added unsupported claims without triggering a revision.
+The two explicit rule intents now use complete literal retrieved-source answers
+before model generation, labeled RULEBOOK EXCERPTS. No API request is made when
+this source path succeeds; absent required text falls back to the model path.
+These curated source spans and intent matching are not a general semantic
+validator or an independent benchmark method. Runtime code never reads case IDs
+or expected answers. Other question intents retain the bounded scope checks.
+Both targets pass local production-pipeline tests with real sources and provider
+calls blocked; all 64 tests pass. See
+`evaluation/reports/2026-10-23-focused-source-excerpts/README.md` for the full
+preserved observation, extraction policy and validation limits.

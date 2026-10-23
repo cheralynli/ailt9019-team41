@@ -40,7 +40,7 @@ See `WEEK8_REVIEW_2026-10-23.md` for the submitted-proposal audit, website fixes
 verification boundaries and the Week 8 / Weeks 9–10 requirements.
 
 The Chess source-policy bypass found during review was fixed; see
-`CHESS_GUARD_FIX_2026-10-23.md`. The current automated suite has 58 passing tests.
+`CHESS_GUARD_FIX_2026-10-23.md`. The current automated suite has 64 passing tests.
 These program checks are separate from the documented live evaluation grades.
 
 The current extraction/evaluation implementation is documented in
@@ -58,3 +58,11 @@ PAN05 remains wrong and its new wording escaped the original check. The detector
 extension is implemented and tested, but live repair remains unverified. See
 `evaluation/reports/2026-10-23-fourth-run/README.md`. A focused two-case check is
 available before rerunning the full suite.
+
+
+The focused follow-up found additional unsupported claims despite correct core
+answers. These two explicit question intents now return complete verbatim source
+excerpts with truthful UI labeling and zero provider calls; other intents retain
+the course API. Both targets pass local production-pipeline citation checks.
+See `evaluation/reports/2026-10-23-focused-source-excerpts/README.md`. This is not
+a new complete live score; independent source-selection review remains pending.

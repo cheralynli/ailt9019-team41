@@ -68,6 +68,11 @@ def generate_answer(question, passages):
     if not passages:
         return {"status": "refusal", "message": "No supporting evidence is available.", "citations": []}
 
+    from .source_excerpt import source_excerpt_answer
+    source_result = source_excerpt_answer(question, passages)
+    if source_result is not None:
+        return source_result
+
     evidence = {f"P{i}": passage for i, passage in enumerate(passages, 1)}
     payload = {"question": question, "evidence": [
         {"id": key, "game": p.get("game"), "edition": p.get("edition_label", p.get("edition")),

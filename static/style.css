@@ -37,7 +37,7 @@ button:disabled, select:disabled { cursor: not-allowed; opacity: .6; }
 .privacy { margin: 12px 0 0; }
 .answer-kicker { font-size: 10px; font-weight: bold; letter-spacing: 1.1px; color: #56718b; margin-top: 14px; }
 h3 { font-size: 26px; letter-spacing: -.6px; margin: 16px 0 12px; line-height: 1.2; }
-#answer-text { color: #465e74; font-size: 14px; }
+#answer-text { color: #465e74; font-size: 14px; white-space: pre-line; }
 .asked { border-left: 2px solid #7b9ebb; padding-left: 12px; font-size: 13px; overflow-wrap: anywhere; }
 .citation-box { background: #f7fafc; border: 1px dashed #a8bfd3; border-radius: 8px; padding: 16px; margin: 24px 0; }
 h4 { font-size: 12px; margin: 0 0 8px; }

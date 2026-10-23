@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--live', action='store_true', help='Use the course API; 32 cases; up to 64 sequential requests including bounded content revisions')
+    parser.add_argument('--live', action='store_true', help='Run configured answering; 32 cases; 0–2 provider requests per case')
     parser.add_argument('--score', type=Path, help='Score a completed review CSV without API calls')
     parser.add_argument('--cases', nargs='+', help='Run only these case IDs; focused results are not a complete-suite score')
     args = parser.parse_args()
@@ -52,7 +52,7 @@ def main():
                 'model': os.environ.get('COURSE_MODEL', 'qwen3.8-flash') if args.live else None,
                 'commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
                 'max_provider_requests_per_case': 2,
-                'answer_review_policy': 'At most one evidence-based revision for recognized scope errors; no transport retries.',
+                'answer_review_policy': 'Complete local source-excerpt answers use zero provider requests; otherwise at most one content revision for recognized scope errors; no transport retries.',
                 'working_tree_dirty': bool(subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip()),
                 'note': 'Citation validity and retrieval coverage do not establish semantic correctness; explicit reviewer grading is required.'}
     (folder / 'metadata.json').write_text(json.dumps(metadata, indent=2)+'\n')

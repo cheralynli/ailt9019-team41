@@ -99,8 +99,8 @@ These are explicitly labelled and do not claim to be AI rulings.
 
 ## Data and error handling
 
-Questions are not saved to disk. When the course API is enabled, questions and
-up to six retrieved excerpts, with source labels, are sent to Alibaba Cloud.
+Questions are not saved to disk. For model-generated explanations, questions and up to six retrieved excerpts,
+with source labels, are sent to Alibaba Cloud.
 A recognized scope error may resend that question and evidence with the draft
 for one revision. Do not enter personal information. Confirm source-use permissions and provider
 terms before deployment or broader testing. No chat history is maintained.
@@ -253,3 +253,19 @@ option are documented in `evaluation/reports/2026-10-23-fourth-run/README.md`.
 Independent team confirmation and real verification of the repair path remain
 pending. Run `zsh scripts/start-course.zsh --evaluate --cases PAN05 DOM04` for a
 focused check; this is not a new complete-suite score.
+
+
+## Source-extractive answers for two rule intents
+
+Default Dominion gain/immediate-play questions and Pandemic all-cures-win versus
+eradication questions now use complete literal excerpts when all necessary rule
+sentences are retrieved. The UI labels these **RULEBOOK EXCERPTS**, not AI
+explanations; no provider request is sent for that answer. Missing required text
+falls back to the existing model path. Other question intents retain course API
+answering. Runtime code does not read evaluation IDs or answer-key files.
+
+Both target questions pass local source/citation checks through the production
+pipeline, and all 64 program tests pass. This is not a new complete 32-case score;
+the last full live score is still the recorded fourth-run result. See
+`evaluation/reports/2026-10-23-focused-source-excerpts/README.md` for the preserved
+focused failures, transparent extraction policy, validation and limits.

@@ -116,3 +116,18 @@ zsh scripts/start-course.zsh --evaluate --cases PAN05 DOM04
 The original frozen questions are used. Focused runs cannot establish a complete
 32-case pass and `--score` still requires all 32 distinct IDs. Do not combine a
 focused run with earlier passing outputs and call it a fresh complete run.
+
+
+## Source-extractive follow-up to the focused run
+
+The next implementation uses complete literal source excerpts for two narrow
+rule intents when all required sentences are retrieved. These answers are labeled
+`answer_method=source_excerpt`, with zero provider requests, and must not be
+reported as model-generated explanations. Other intents keep their existing API
+path. The curated extraction policy was added after development-case failures.
+
+Both targets pass local, real-corpus citation checks through the production
+pipeline with provider calls blocked; this is not a new live 32-case result.
+The last full run's grades remain unchanged. See
+[the focused review and validation](reports/2026-10-23-focused-source-excerpts/README.md)
+for provenance, literal outputs, scope and independent-review requirements.

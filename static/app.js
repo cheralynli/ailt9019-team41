@@ -109,6 +109,10 @@ form.addEventListener("submit", async event => {
     const headings = { answer: "Here’s the supported explanation.", refusal: "Cannot provide a supported ruling.", clarification: "Please clarify your question.", api_error: "Model unavailable.", search_only: "Here’s where to look.", not_ready: "Rulebook index needed.", unsupported: "Outside the planned scope.", no_evidence: "No matching passage found." };
     const labels = {answer: "Answer", refusal: "Refused", clarification: "Clarification needed", api_error: "API issue", search_only: "Search only", not_ready: "Setup needed", unsupported: "Unsupported", no_evidence: "No evidence"};
     showResult(labels[data.status] || "Response", headings[data.status] || "Pipeline response", data.message + (data.diagnostic ? ` [${data.diagnostic}]` : ""));
+    if (data.answer_method === "source_excerpt") {
+      document.querySelector("#answer-label").textContent = "RULEBOOK EXCERPTS · CHECK THE SOURCES";
+      document.querySelector("#result-heading").textContent = "Here are the relevant rulebook passages.";
+    }
     showCitations(data.citations || []);
   } catch (error) {
     showResult("Connection issue", "Let’s check the connection.", error.name === "AbortError" ? "The request timed out. Check that the Python server is running and try again." : error.message);
