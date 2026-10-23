@@ -51,7 +51,19 @@ unintended, the team may deliberately attach the report for assessment.
 The first law-separated, original-retrieval preflight covered all specified
 locations/anchors for 13/26 answerable cases. General stemming, phrase matching,
 larger page-bounded excerpts and six-result retrieval improved this to 19/26.
-This is a development diagnostic, not a scored rules-test result. Seven cases
-still miss at least one specified anchor; see preflight.latest.json. Alternate
+This is a development diagnostic, not a scored rules-test result. At that stage seven cases
+still missed at least one specified anchor; see preflight.latest.json. Alternate
 correct passages may exist, so live answers and their actual citations still
 need review. No live accuracy or pass rate is claimed.
+
+
+## First live baseline and follow-up
+
+The first complete live run and assistant-assisted review are recorded in
+[the baseline report](reports/2026-10-23-baseline/README.md). Conservative scores
+are 22/26 full rulings, 21/26 sufficient citations and 6/6 refusals; the citation
+threshold is not met. Independent team confirmation is pending. Subsequent
+retrieval/prompt fixes require a new live run, not rescoring edited answers.
+
+The post-baseline ship retrieval fix covers 21/26 designated reference sets in
+the offline preflight. This remains separate from live semantic grading.

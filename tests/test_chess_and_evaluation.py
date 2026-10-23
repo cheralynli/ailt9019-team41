@@ -10,6 +10,7 @@ from referee.sources import allows_passage_answer
 from referee.corpus import load_passages
 from referee.pipeline import answer_question
 from referee.evaluation import load_cases, check_references, score_rows
+from referee.retrieval import retrieve
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -97,3 +98,34 @@ class ChessTests(unittest.TestCase):
     def test_reference_anchors_match_original_rulebooks(self):
         cases,_=load_cases(ROOT/'evaluation/cases.v1.json')
         check_references(cases,ROOT)
+
+
+@unittest.skipUnless((ROOT/'data/passages.json').exists(), 'Local indexed rulebooks not present')
+class LiveFailureRetrievalTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.passages = load_passages(ROOT/'data/passages.json')
+
+    def test_ship_cost_and_move_conditions_are_both_supplied(self):
+        for question in (
+            'What resources does a ship cost, and may I move that ship on the same turn I built it?',
+            'What does a ship cost, and can it sail immediately after construction?',
+        ):
+            evidence = retrieve(question, 'catan', 'seafarers-5', self.passages)
+            self.assertTrue(any(p['source_id']=='catan-seafarers' and p['page']==3
+                                and '1 wool' in p['text'] and '1 lumber' in p['text'] for p in evidence))
+            self.assertTrue(any(p['source_id']=='catan-seafarers' and p['page']==4
+                                and 'same turn' in p['text'] for p in evidence))
+            self.assertLessEqual(len(evidence),6)
+
+    def test_composite_search_stays_in_selected_ruleset(self):
+        evidence = retrieve('What does a ship cost, and can I move it now?',
+                            'catan', 'base-5', self.passages)
+        self.assertTrue(all(p['source_id']=='catan-base' for p in evidence))
+
+    def test_expansion_distance_reference_includes_base_definition(self):
+        evidence = retrieve('May I build a settlement on a new island reached by my shipping route?',
+                            'catan', 'seafarers-5', self.passages)
+        self.assertTrue(any(p['source_id']=='catan-base' and 'adjacent intersections' in p['text']
+                            for p in evidence))
+        self.assertLessEqual(len(evidence),6)

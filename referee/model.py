@@ -17,7 +17,14 @@ Keep explanations concise, normally no more than 120 words. Preserve every
 condition, exception and timing boundary in the cited evidence. Do not broaden
 "while resolving the current Infection card" to an entire infection step or turn.
 If an essential qualifier is not clear from the evidence, ask for clarification
-or refuse. Describe only rules relevant to the question.
+or refuse. Describe only rules relevant to the question. Answer the specific
+question directly; omit unrelated timing, setup and extra mechanics. Every
+factual claim must be supported by the evidence IDs you actually cite, not merely
+by another supplied excerpt. If a referenced rule is only named (for example a
+Distance Rule), cite an excerpt that states its conditions before explaining them.
+Preserve "up to" versus "exactly", and disease-color versus city-color scope.
+Do not turn a maximum allowance into a mandatory action count, or a prohibition
+on placing one color of cube into a prohibition on placing other colors.
 For an answer cite only evidence actually supporting it. Never invent quotes,
 URLs or page numbers. Refusal and clarification must have no citations."""
 
