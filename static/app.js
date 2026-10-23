@@ -16,12 +16,13 @@ function resetResult() {
   document.querySelector("#asked-question").textContent = "";
   showCitations([]);
   const chess = gameSelect.value === "chess";
-  document.querySelector("#ruleset-status").textContent = chess
+  const searchOnly = games.find(item => item.id === gameSelect.value)?.answer_mode !== "ai_ready";
+  document.querySelector("#ruleset-status").textContent = chess && searchOnly
     ? "Chess is currently search-only: official laws and arbiter commentary have not yet been separated."
-    : "Search stays within the selected ruleset. Expansions include their base rules.";
+    : chess ? "Chess AI uses verified law-only text. Commentary, non-law guidelines and glossary entries are excluded." : "Search stays within the selected ruleset. Expansions include their base rules.";
   const marker = document.querySelector("#model-step");
-  marker.classList.toggle("built", apiConfigured && !chess);
-  document.querySelector("#model-status").textContent = chess ? "Chess: search only" : apiConfigured ? "Course API configured · requests checked on use" : "Local search only · API key not configured";
+  marker.classList.toggle("built", apiConfigured && !searchOnly);
+  document.querySelector("#model-status").textContent = searchOnly ? "Source verification / index needed" : apiConfigured ? "Course API configured · requests checked on use" : "Local search only · API key not configured";
 }
 
 function setEditions() {

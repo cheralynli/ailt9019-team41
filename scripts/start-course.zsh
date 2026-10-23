@@ -19,4 +19,7 @@ export COURSE_API_KEY COURSE_MODEL
 if [[ "${1:-}" == "--check" ]]; then
   exec .venv/bin/python scripts/check_course.py
 fi
+if [[ "${1:-}" == "--evaluate" ]]; then
+  exec .venv/bin/python scripts/evaluate.py --live
+fi
 exec .venv/bin/python app.py "$@"

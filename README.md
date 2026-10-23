@@ -17,7 +17,7 @@ assistant's scope or the supplied evidence is insufficient; it is not an API err
 | Catan / base | Can I build a settlement next to another settlement? | Distance-rule explanation plus base rulebook citation |
 | Dominion / base | How many cards do I draw at the end of my turn? | Clean-up rule explanation plus base rulebook citation |
 | Pandemic / base | What happens when an outbreak occurs? | Outbreak explanation with precise Infection-card timing plus citation |
-| Chess | Can I castle while my king is in check? | Currently source excerpts only, with an explicit laws/commentary warning |
+| Chess | Can I castle while my king is in check? | Verified official-law explanation and original manual page citation; rebuild the index first |
 
 Try “Should I build a city or a settlement to win?” under Catan to check a
 strategy refusal. Switching game or edition clears the previous result so its
@@ -100,7 +100,7 @@ These are explicitly labelled and do not claim to be AI rulings.
 ## Data and error handling
 
 Questions are not saved to disk. When the course API is enabled, questions and
-up to three retrieved excerpts, with source labels, are sent to Alibaba Cloud.
+up to six retrieved excerpts, with source labels, are sent to Alibaba Cloud.
 Do not enter personal information. Confirm source-use permissions and provider
 terms before deployment or broader testing. No chat history is maintained.
 
@@ -124,13 +124,14 @@ strategy refusal and Pandemic answering screenshots, with limitations. These
 examples do not establish aggregate accuracy or replace the proposed 32-case
 evaluation. Source provenance is recorded in `docs/rulebook-sources.json`.
 
-- Six documents yield 467 local excerpts, filtered by game/ruleset. Expansion
+- The rebuilt six-document corpus yields 227 local excerpts, filtered by game/ruleset. Expansion
   searches include base rules; base-only searches exclude expansions.
 - Retrieval is a BM25-style keyword baseline, not semantic reasoning.
-- Chess uses PDF pages 16–67 of the 355-page 2025 FIDE Arbiters’ Manual. Laws and
-  commentary are not yet separated, so Chess remains search-only. This restriction
-  is enforced by the checked-in source policy even if index classification
-  metadata is missing or incorrect.
+- Chess classifies PDF pages 16–67 of the pinned 355-page 2025 FIDE Arbiters’
+  Manual. Only verified upright law text on pages 16–56 is eligible for AI;
+  commentary, non-law guidelines and glossary entries are excluded. Exact PDF
+  hash, passage ID, page and text must match a fresh extraction. Legacy indexes
+  remain search-only until rebuilt. See `docs/CHESS_AND_EVALUATION.md`.
 - Pandemic and Dark Ages edition labels still need verification.
 - PDF extraction can omit diagrams and symbols; chunks can cut sentences.
 - Pandemic wording about “infection step” versus “current Infection card” needs
@@ -183,3 +184,40 @@ questions before retrieval, reject explicit mismatched game names, and strengthe
 the evidence prompt to preserve conditions and timing. Keyword scope checks are
 conservative, not a complete semantic classifier. No live accuracy improvement
 is claimed until the group reruns its real API test cases.
+
+## Fixed 32-case rules evaluation
+
+The fixed source-checked key is `evaluation/cases.v1.json` with a SHA-256 freeze
+file. Do not change expected answers after a scored run; create a new version
+and preserve earlier results. First review the key as a team.
+
+```sh
+python scripts/evaluate.py
+```
+
+This offline preflight checks source anchors and retrieval only. It does not
+call the model or report accuracy. To obtain the actual 32 outputs sequentially:
+
+```sh
+zsh scripts/start-course.zsh --evaluate
+```
+
+Enter the group key at the hidden prompt. Results, source citations, metadata
+and a review CSV are saved in an ignored `evaluation/results/<run>/` folder.
+This deliberately records the fixed evaluation questions and outputs, not live
+user chat. The key is never recorded. Permission/quota/model access failures
+stop the run. At most one request is sent at a time, with no automatic retries.
+
+A reviewer compares each output with the frozen key and original cited sources,
+then fills `ruling_correct` and `citation_correct` with yes/no for the 26
+answerable cases and `refusal_correct` for the six refusals. Add reviewer name
+and notes. Alternate source locations may be valid if they support every
+required claim; a valid source ID alone is insufficient. Finally:
+
+```sh
+python scripts/evaluate.py --score evaluation/results/RUN/review.csv
+```
+
+Pass requires 21/26 correct rulings, 24/26 supported citations and all six
+refusals. Unreviewed or incomplete results cannot pass. Automated program tests
+are separate from these rules-accuracy results. See `evaluation/README.md`.

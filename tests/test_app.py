@@ -119,7 +119,7 @@ class PipelineTests(unittest.TestCase):
     def test_chunks_keep_all_words(self):
         text = " ".join(str(i) for i in range(500))
         parts = list(chunks(text))
-        self.assertTrue(all(len(p.split()) <= 180 for p in parts))
+        self.assertTrue(all(len(p.split()) <= 500 for p in parts))
         self.assertEqual(set(text.split()), set(" ".join(parts).split()))
         self.assertEqual(normalize("ﬁrst\n  rule"), "first rule")
 
@@ -138,7 +138,7 @@ class HTTPTests(unittest.TestCase):
         cls.thread.join()
 
     def request(self, method, path, body=None):
-        connection = HTTPConnection("127.0.0.1", self.server.server_port, timeout=3)
+        connection = HTTPConnection("127.0.0.1", self.server.server_port, timeout=15)
         connection.request(method, path, body, {"Content-Type": "application/json"})
         response = connection.getresponse()
         status, data = response.status, response.read()

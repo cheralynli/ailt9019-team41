@@ -18,7 +18,7 @@ def normalize(text):
     return re.sub(r"\s+", " ", unicodedata.normalize("NFKC", text)).strip()
 
 
-def chunks(text, size=180, overlap=35):
+def chunks(text, size=500, overlap=80):
     words = text.split()
     for start in range(0, len(words), size - overlap):
         yield " ".join(words[start:start + size])
@@ -36,6 +36,16 @@ def build_index(root=ROOT):
         reader = PdfReader(path)
         if len(reader.pages) != source["page_count"]:
             raise ValueError(f"Unexpected page count for {source['filename']}; verify this edition before indexing.")
+        if source["id"] == "chess-laws":
+            from .chess import extract_chess, PROFILE
+            separated, audit = extract_chess(path)
+            passages.extend(separated)
+            reports.append({"source_id": source["id"], "filename": source["filename"],
+                            "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                            "pdf_pages": len(reader.pages), "indexed_range": source["pages"],
+                            "passages": len(separated), "skipped_short_pages": [],
+                            "extraction_profile": PROFILE, "page_classification": audit})
+            continue
         start, end = source["pages"]
         empty_pages = []
         before = len(passages)

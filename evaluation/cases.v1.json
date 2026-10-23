@@ -1,0 +1,513 @@
+{
+  "version": "1.0",
+  "created_on": "2026-10-23",
+  "status": "source-checked baseline prepared before scored live evaluation; independent team review recommended",
+  "cases": [
+    {
+      "id": "CAT01",
+      "game": "catan",
+      "edition": "base-5",
+      "category": "ordinary",
+      "question": "Can I build a settlement next to another settlement?",
+      "expected": "No. All three adjacent intersections must be vacant, including your own settlements or cities.",
+      "references": [
+        {
+          "source_id": "catan-base",
+          "page": 5,
+          "anchor": "adjacent intersections"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "CAT02",
+      "game": "catan",
+      "edition": "base-5",
+      "category": "ordinary",
+      "question": "Which resources are required to build one settlement?",
+      "expected": "One brick, one lumber, one wool and one grain.",
+      "references": [
+        {
+          "source_id": "catan-base",
+          "page": 5,
+          "anchor": "Brick, Lumber, Wool"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "CAT03",
+      "game": "catan",
+      "edition": "base-5",
+      "category": "ordinary",
+      "question": "A 7 is rolled and I hold exactly seven resource cards. Must I discard any?",
+      "expected": "No. Only players holding more than seven resource cards discard half, rounded down.",
+      "references": [
+        {
+          "source_id": "catan-base",
+          "page": 5,
+          "anchor": "more than 7"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "CAT04",
+      "game": "catan",
+      "edition": "base-5",
+      "category": "ordinary",
+      "question": "How many resource cards does a city receive when its adjacent terrain hex produces?",
+      "expected": "Two of the resource produced by that hex, subject to normal supply rules.",
+      "references": [
+        {
+          "source_id": "catan-base",
+          "page": 5,
+          "anchor": "2 resource cards"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "CAT05",
+      "game": "catan",
+      "edition": "seafarers-5",
+      "category": "two_passage",
+      "question": "When my shipping route reaches a new island, may I build a settlement there, and what exact distance restriction applies?",
+      "expected": "A connected shipping route can permit a new coastal settlement; all three neighbouring intersections must still be vacant.",
+      "references": [
+        {
+          "source_id": "catan-seafarers",
+          "page": 4,
+          "anchor": "new settlement"
+        },
+        {
+          "source_id": "catan-base",
+          "page": 5,
+          "anchor": "adjacent intersections"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "CAT06",
+      "game": "catan",
+      "edition": "seafarers-5",
+      "category": "two_passage",
+      "question": "What resources does a ship cost, and may I move that ship on the same turn I built it?",
+      "expected": "A ship costs one wool and one lumber. A newly built ship cannot move in the same turn.",
+      "references": [
+        {
+          "source_id": "catan-seafarers",
+          "page": 3,
+          "anchor": "wool"
+        },
+        {
+          "source_id": "catan-seafarers",
+          "page": 4,
+          "anchor": "same turn"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "CAT07",
+      "game": "catan",
+      "edition": "base-5",
+      "category": "routing",
+      "question": "In the selected base game, is upgrading a settlement to a city worth one or two victory points?",
+      "expected": "A city is worth two victory points in total, replacing a one-point settlement.",
+      "references": [
+        {
+          "source_id": "catan-base",
+          "page": 5,
+          "anchor": "2 victory points"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "CAT08",
+      "game": "catan",
+      "edition": "base-5",
+      "category": "refusal",
+      "question": "Should I build a city or a settlement to win?",
+      "expected": "Decline strategy advice; offer to explain the written building rules instead.",
+      "references": [],
+      "review_note": "Strategy request; refusal is required by the proposal boundary, not by a rulebook."
+    },
+    {
+      "id": "CHE01",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "ordinary",
+      "question": "Can I castle while my king is in check?",
+      "expected": "No. Castling is temporarily prevented when the king’s starting square is attacked.",
+      "references": [
+        {
+          "source_id": "chess-laws",
+          "page": 24,
+          "anchor": "Castling is prevented temporarily"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "CHE02",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "ordinary",
+      "question": "Which side makes the first move under the selected Laws?",
+      "expected": "White, the player with light-coloured pieces, makes the first move.",
+      "references": [
+        {
+          "source_id": "chess-laws",
+          "page": 17,
+          "anchor": "makes the first move"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "CHE03",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "ordinary",
+      "question": "On its first move, can a pawn advance two squares if both squares are unoccupied?",
+      "expected": "Yes, along the same file on its first move if both squares are unoccupied.",
+      "references": [
+        {
+          "source_id": "chess-laws",
+          "page": 21,
+          "anchor": "both squares are unoccupied"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "CHE04",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "ordinary",
+      "question": "Can I promote a pawn to a queen even if I have not lost my original queen?",
+      "expected": "Yes. Promotion choice is not restricted to previously captured pieces; a pawn can become a queen, rook, bishop or knight of the same colour.",
+      "references": [
+        {
+          "source_id": "chess-laws",
+          "page": 22,
+          "anchor": "captured previously"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "CHE05",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "two_passage",
+      "question": "Why is capturing the opponent’s king illegal, and what result follows when the opponent is checkmated?",
+      "expected": "Capturing the king is prohibited; a legal checkmate wins and immediately ends the game.",
+      "references": [
+        {
+          "source_id": "chess-laws",
+          "page": 17,
+          "anchor": "capturing"
+        },
+        {
+          "source_id": "chess-laws",
+          "page": 28,
+          "anchor": "checkmate"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "CHE06",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "routing",
+      "question": "Under the selected Laws, if I intentionally touch my own piece and it has a legal move, must I move that piece?",
+      "expected": "Yes, subject to the adjustment exception: move the first own piece intentionally touched that can legally move.",
+      "references": [
+        {
+          "source_id": "chess-laws",
+          "page": 25,
+          "anchor": "first piece"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "CHE07",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "refusal",
+      "question": "Compare Monopoly rent rules with Chess castling and give one combined ruling.",
+      "expected": "Decline the cross-game/unsupported request; no combined ruling.",
+      "references": [],
+      "review_note": "Cross-game and unsupported-game case."
+    },
+    {
+      "id": "CHE08",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "refusal",
+      "question": "According only to the selected Laws of Chess section, what is the official maximum weight in grams of a wooden king?",
+      "expected": "State that the selected evidence does not establish that equipment weight; do not invent a number.",
+      "references": [],
+      "review_note": "Missing-data case: the fixed Laws section does not specify a maximum king weight in grams. Do not retrieve other manual sections or equipment regulations."
+    },
+    {
+      "id": "DOM01",
+      "game": "dominion",
+      "edition": "base-2",
+      "category": "ordinary",
+      "question": "What cards are in each player’s starting deck in the base game?",
+      "expected": "Seven Coppers and three Estates, shuffled face down.",
+      "references": [
+        {
+          "source_id": "dominion-base",
+          "page": 3,
+          "anchor": "3 Estates and 7 Coppers"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "DOM02",
+      "game": "dominion",
+      "edition": "base-2",
+      "category": "ordinary",
+      "question": "How many cards do I draw at the end of my turn during Clean-up?",
+      "expected": "Draw a new hand of five cards after discarding hand and cards in play.",
+      "references": [
+        {
+          "source_id": "dominion-base",
+          "page": 5,
+          "anchor": "new hand of 5 cards"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "DOM03",
+      "game": "dominion",
+      "edition": "base-2",
+      "category": "ordinary",
+      "question": "At the start of the Action phase, how many Action cards may I normally play before any card grants extra Actions?",
+      "expected": "Normally one Action card; additional Actions require a card effect.",
+      "references": [
+        {
+          "source_id": "dominion-base",
+          "page": 4,
+          "anchor": "one Action card"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "DOM04",
+      "game": "dominion",
+      "edition": "base-2",
+      "category": "ordinary",
+      "question": "When I gain a card and no effect says otherwise, where does it go and do I play it immediately?",
+      "expected": "It normally goes from the Supply to the discard pile; gaining is not playing.",
+      "references": [
+        {
+          "source_id": "dominion-base",
+          "page": 7,
+          "anchor": "do not play a card"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "DOM05",
+      "game": "dominion",
+      "edition": "dark-ages",
+      "category": "two_passage",
+      "question": "When only Dark Ages Kingdom cards are used, how does my starting deck differ from the base deck, and which three cards replace the Estates?",
+      "expected": "Keep seven Coppers; replace the three Estates with Hovel, Necropolis and Overgrown Estate.",
+      "references": [
+        {
+          "source_id": "dominion-base",
+          "page": 3,
+          "anchor": "3 Estates and 7 Coppers"
+        },
+        {
+          "source_id": "dominion-dark-ages",
+          "page": 2,
+          "anchor": "Hovel, a Necropolis"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "DOM06",
+      "game": "dominion",
+      "edition": "base-2",
+      "category": "two_passage",
+      "question": "I start my Action phase with the usual one Action and play Village. How many further Action cards may I now play, and do I draw a card?",
+      "expected": "Village uses the original Action, gives two Actions and draws one card. Two further Actions are available, not three.",
+      "references": [
+        {
+          "source_id": "dominion-base",
+          "page": 4,
+          "anchor": "one Action card"
+        },
+        {
+          "source_id": "dominion-base",
+          "page": 6,
+          "anchor": "+2 Actions"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "DOM07",
+      "game": "dominion",
+      "edition": "base-2",
+      "category": "routing",
+      "question": "In this selected game, does a Curse add one victory point or subtract one at scoring?",
+      "expected": "A Curse is worth minus one victory point.",
+      "references": [
+        {
+          "source_id": "dominion-base",
+          "page": 6,
+          "anchor": "worth -1"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "DOM08",
+      "game": "dominion",
+      "edition": "base-2",
+      "category": "refusal",
+      "question": "My friend says I secretly looked at the top card yesterday, but I deny it. Decide who is telling the truth and who should be punished.",
+      "expected": "Decline to determine disputed events or credibility; refer to the organiser.",
+      "references": [],
+      "review_note": "Disputed-event request; no factual ruling can establish what happened."
+    },
+    {
+      "id": "PAN01",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "ordinary",
+      "question": "How many actions can I take during the actions part of my turn?",
+      "expected": "Up to four actions.",
+      "references": [
+        {
+          "source_id": "pandemic-base",
+          "page": 3,
+          "anchor": "Do 4 actions"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "PAN02",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "ordinary",
+      "question": "What is the normal hand limit, and what must I do if I exceed it?",
+      "expected": "Seven cards. After resolving Epidemics, discard cards or play Events until at seven.",
+      "references": [
+        {
+          "source_id": "pandemic-base",
+          "page": 6,
+          "anchor": "more than 7 cards"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "PAN03",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "ordinary",
+      "question": "What happens when an outbreak occurs?",
+      "expected": "Advance the outbreak marker and add a matching cube to connected cities; resolve chain reactions. Do not outbreak a city again while resolving the current Infection card; do not broaden this to the entire infection step.",
+      "references": [
+        {
+          "source_id": "pandemic-base",
+          "page": 7,
+          "anchor": "current Infection card"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "PAN04",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "ordinary",
+      "question": "As an ordinary role without a special ability, how do I discover a cure?",
+      "expected": "At any research station, discard five City cards of the same disease colour to discover that cure.",
+      "references": [
+        {
+          "source_id": "pandemic-base",
+          "page": 4,
+          "anchor": "discard 5 City cards"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "PAN05",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "two_passage",
+      "question": "If all four diseases are cured but cubes remain, have we won, and how is curing different from eradication?",
+      "expected": "Discovering all four cures wins; eradicating additionally requires removing all cubes of a cured disease. Remaining cubes do not prevent the all-cures win.",
+      "references": [
+        {
+          "source_id": "pandemic-base",
+          "page": 1,
+          "anchor": "all 4 diseases"
+        },
+        {
+          "source_id": "pandemic-base",
+          "page": 4,
+          "anchor": "this disease is eradicated"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "PAN06",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "routing",
+      "question": "In the selected game, how many Player cards do I draw after my actions, before infecting cities?",
+      "expected": "Two Player cards, resolving any Epidemics as required.",
+      "references": [
+        {
+          "source_id": "pandemic-base",
+          "page": 6,
+          "anchor": "draw the top 2 cards together"
+        }
+      ],
+      "review_note": ""
+    },
+    {
+      "id": "PAN07",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "refusal",
+      "question": "According only to the Pandemic rulebook, what is the official lateness fine in Hong Kong dollars for arriving late to a casual game night?",
+      "expected": "The rulebook does not establish such a monetary fine. Do not invent an amount.",
+      "references": [],
+      "review_note": "Missing-data case: no lateness-fine schedule appears in the fixed rulebook."
+    },
+    {
+      "id": "PAN08",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "refusal",
+      "question": "For Pandemic Legacy Season 1, tell me the contents of sealed box 8.",
+      "expected": "Decline: Pandemic Legacy and sealed-box content are outside the selected base-rulebook corpus.",
+      "references": [],
+      "review_note": "Unsupported game/edition content; do not answer from memory."
+    }
+  ]
+}

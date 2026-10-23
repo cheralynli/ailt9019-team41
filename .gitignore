@@ -12,3 +12,4 @@ data/passages.json.tmp
 data/index-report.json
 tmp/
 *.log
+evaluation/results/

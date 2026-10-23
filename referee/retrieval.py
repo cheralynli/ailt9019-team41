@@ -5,12 +5,17 @@ from math import log
 import re
 import unicodedata
 
-from .sources import in_scope
+from .sources import in_scope, allows_passage_answer
 
 STOP_WORDS = set("a an the is are can i my of to in it do and when what how many at on for with you your does did be as from this that have has happens happen me please about rule rules game next another while".split())
 ALIASES = {"castling": "castle", "castled": "castle", "drawing": "draw", "draws": "draw",
            "building": "build", "built": "build", "settlements": "settlement", "cards": "card",
-           "outbreaks": "outbreak", "ships": "ship", "shelters": "shelter"}
+           "outbreaks": "outbreak", "ships": "ship", "shelters": "shelter",
+           "actions": "action", "resources": "resource", "cities": "city", "cubes": "cube",
+           "diseases": "disease", "cured": "cure", "curing": "cure", "eradicated": "eradicate",
+           "eradication": "eradicate", "played": "play", "playing": "play", "gaining": "gain",
+           "requires": "require", "required": "require", "rolling": "roll", "rolled": "roll",
+           "intentionally": "intent", "intention": "intent", "touches": "touch", "touched": "touch"}
 
 
 def tokens(text):
@@ -18,7 +23,9 @@ def tokens(text):
     return [ALIASES.get(word, word) for word in words if word not in STOP_WORDS and len(word) > 1]
 
 
-def retrieve(question, game, edition, passages, limit=3):
+def retrieve(question, game, edition, passages, limit=6):
+    query_words = tokens(question)
+    query_pairs = set(zip(query_words, query_words[1:]))
     query = set(tokens(question))
     # Small, explicit vocabulary hints; this is still lexical search, not AI.
     lowered = question.lower()
@@ -27,6 +34,10 @@ def retrieve(question, game, edition, passages, limit=3):
     if game == "dominion" and "end" in lowered and "turn" in lowered:
         query.update({"clean", "up"})
     scoped = [p for p in passages if in_scope(p, game, edition)]
+    if game == "chess":
+        verified = [p for p in scoped if allows_passage_answer(p)]
+        if verified:
+            scoped = verified
     if not query or not scoped:
         return []
     counts = [Counter(tokens(p["text"])) for p in scoped]
@@ -43,6 +54,18 @@ def retrieve(question, game, edition, passages, limit=3):
                 rarity = log(1 + (len(scoped) - frequencies[word] + .5) / (frequencies[word] + .5))
                 score += rarity * frequency * 2.5 / (frequency + 1.5 * (.25 + .75 * sum(count.values()) / average_length))
         if score:
+            words = tokens(passage["text"])
+            pairs = set(zip(words, words[1:]))
+            score += 2 * len(query_pairs & pairs)
             ranked.append((score, passage))
     ranked.sort(key=lambda item: item[0], reverse=True)
-    return [passage for _, passage in ranked[:limit]]
+    selected = []
+    while ranked and len(selected) < limit:
+        def diversified(item):
+            score, passage = item
+            repeated_page = any(p["source_id"] == passage["source_id"] and p.get("page") == passage.get("page") for p in selected)
+            return score * (.65 if repeated_page else 1)
+        best = max(ranked, key=diversified)
+        selected.append(best[1])
+        ranked.remove(best)
+    return selected

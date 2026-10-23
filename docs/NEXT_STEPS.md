@@ -6,7 +6,7 @@
 - Course API adapter added on 21 October: `qwen3.8-flash`, configured through COURSE_MODEL.
   Three user-observed browser cases are recorded in `COURSE_API_PROGRESS_2026-10-21.md`; screenshots do not include provider metadata.
 - Hidden key prompt, live connection check, model listing and safe failure diagnostics.
-- Six local PDFs produce 467 indexed passages. Source URLs and hashes are tracked;
+- The rebuilt six-document corpus produces 227 indexed passages. Source URLs and hashes are tracked;
   PDFs and generated excerpts remain ignored.
 - One live Catan distance-rule example was observed in the browser on 19 October
   2026. See `docs/API_PROGRESS_2026-10-19.md` for evidence and limitations.
@@ -16,9 +16,10 @@
 1. Extend the observed strategy-refusal example with missing evidence, ambiguous questions and API failures
    with real inputs. Automated mocks do not verify model refusal behaviour.
 2. Retest Pandemic chain reactions: the observed answer used “infection step” where the source says “current Infection card”.
-3. Confirm remaining edition labels and separate Chess laws from commentary.
-   Chess currently remains search-only, including when course API is configured.
-4. Freeze the source-checked answer key and run the proposed 32-case evaluation.
+3. Review the pinned Chess law extraction and run a live Chess answer test.
+   Verified law-only excerpts are now eligible; commentary stays excluded.
+4. Review the prepared frozen 32-case key, run `start-course.zsh --evaluate`,
+   and grade the saved outputs as described in `evaluation/README.md`.
 5. Run the course API live check with the emailed group key; confirm source-use permissions and deployment arrangements.
    The current server remains a local development server.
 
@@ -36,3 +37,6 @@ verification boundaries and the Week 8 / Weeks 9–10 requirements.
 The Chess source-policy bypass found during review was fixed; see
 `CHESS_GUARD_FIX_2026-10-23.md`. The current automated suite has 33 passing tests.
 This does not replace Chess source separation or the live 32-case evaluation.
+
+The current extraction/evaluation implementation is documented in
+`CHESS_AND_EVALUATION.md`; previous search-only descriptions are historical.

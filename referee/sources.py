@@ -41,3 +41,12 @@ def allows_ai_answer(source_id):
     """Trust the checked-in source policy, never optional index classification."""
     source = SOURCE_BY_ID.get(source_id)
     return source is not None and source.get("ai_answers_allowed", True)
+
+
+def allows_passage_answer(passage):
+    """Chess requires exact re-extraction from the pinned local PDF."""
+    if passage.get("source_id") == "chess-laws":
+        from .chess import verified_passage
+        verified = verified_passage(passage)
+        return verified is not None and verified["kind"] == "official_law"
+    return allows_ai_answer(passage.get("source_id"))
