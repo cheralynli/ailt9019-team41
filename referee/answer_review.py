@@ -11,7 +11,8 @@ FINDINGS = {
         'The draft describes eradication as preventing new cubes in cities of a color. '
         'This confuses disease-cube color with printed city color. Explain only the '
         'requested cure/eradication distinction using cited evidence. Omit the extra '
-        'placement claim unless the cited evidence explicitly supports its exact scope.'),
+        'placement claim when it is not requested. Adding the word disease after cities '
+        'does not fix the scope: the restriction must qualify the cubes themselves.'),
     'gain_future_scope': (
         'The draft makes a card-effect requirement apply to all future entry into '
         'hand or play. The question concerns the destination and immediate result '
@@ -32,7 +33,7 @@ def scope_findings(message, passages):
         for sentence in re.split(r'(?<=[.!?])\s+', text):
             match = re.search(r'(?:no\s+(?:new\s+)?|prevent\w*\s+(?:any\s+)?(?:new\s+)?)'
                               r'(?:disease\s+)?cubes\b(?P<tail>[^.!?]*?)'
-                              r'\bcities of (?:that|this|the same|its) colo[u]?r', sentence)
+                              r'\bcities of (?:that|this|the same|its) (?:disease )?colo[u]?r', sentence)
             if match and not re.search(r'\bcubes? of (?:that|this|the|an?) (?:eradicated )?'
                                        r'disease(?: colo[u]?r)?', match.group(0)):
                 found.append('eradication_city_scope')

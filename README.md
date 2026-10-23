@@ -244,3 +244,12 @@ one evidence-based revision, with citation revalidation and refusal if the known
 error persists. This is a narrow safeguard, not an accuracy guarantee. All 58
 program tests pass; a new live run is still required to measure repair quality.
 See `docs/ANSWER_SCOPE_REVIEW_2026-10-23.md` for scope, request budget and limits.
+
+
+A fourth complete live run records 25/26 rulings, 25/26 sufficient citations and
+6/6 refusals under assisted review. PAN05 remains a failure; DOM04 passes without
+triggering revision. A later detector extension and focused two-case evaluation
+option are documented in `evaluation/reports/2026-10-23-fourth-run/README.md`.
+Independent team confirmation and real verification of the repair path remain
+pending. Run `zsh scripts/start-course.zsh --evaluate --cases PAN05 DOM04` for a
+focused check; this is not a new complete-suite score.

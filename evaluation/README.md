@@ -96,3 +96,23 @@ A refusal after an unsuccessful repair is still a failed answerable case; never
 credit detection alone as a correct answer. No transport failures are retried.
 The offline detection replay is in `scope-replay.json`; it is not a new live
 score. See `../docs/ANSWER_SCOPE_REVIEW_2026-10-23.md` for validation and limits.
+
+
+## Fourth live run and focused follow-up
+
+The [fourth complete run](reports/2026-10-23-fourth-run/README.md) records
+25/26 rulings, 25/26 sufficient citations and 6/6 refusals under assisted review.
+DOM04 passes without a revision; PAN05 still fails because a new city-color
+wording escaped the initial detector. No successful live revision is established.
+The subsequent detector extension needs another real check. Original grades
+and results remain unchanged; independent team confirmation is pending.
+
+To check only the two target cases before spending quota on another full run:
+
+```sh
+zsh scripts/start-course.zsh --evaluate --cases PAN05 DOM04
+```
+
+The original frozen questions are used. Focused runs cannot establish a complete
+32-case pass and `--score` still requires all 32 distinct IDs. Do not combine a
+focused run with earlier passing outputs and call it a fresh complete run.

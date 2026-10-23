@@ -8,13 +8,14 @@ from referee.model import generate_answer
 PAN_BAD = [
     'Eradication occurs only when no cubes remain. Once eradicated, no new cubes can be placed in cities of that color.',
     'When eradicated, no new cubes are placed in cities of that color.',
+    'When eradicated, no new cubes are placed in cities of that disease color during infection steps.',
     'Eradication occurs only when a cured disease has no cubes left on the board, which prevents new cubes from being placed in cities of that color during infections.',
 ]
 DOM_BAD = 'A gained card only enters your hand or gets played if a specific card effect instructs you to do so.'
 
 
 class ScopeCheckTests(unittest.TestCase):
-    def test_all_three_observed_eradication_wordings_are_flagged(self):
+    def test_all_observed_eradication_wordings_are_flagged(self):
         for message in PAN_BAD:
             with self.subTest(message=message):
                 self.assertEqual(scope_findings(message, [{'game': 'pandemic'}]), ['eradication_city_scope'])
@@ -23,6 +24,7 @@ class ScopeCheckTests(unittest.TestCase):
         for message in (
             'An eradicated disease has no cubes remaining. No more cubes of that disease color are placed.',
             'Once eradicated, no new cubes of that disease color are placed in cities of that color.',
+            'Once eradicated, no new cubes of that disease color are placed in cities of that disease color.',
             'An eradicated disease has no cubes remaining. Other colors may still spread into those cities.',
         ):
             self.assertEqual(scope_findings(message, [{'game': 'pandemic'}]), [])

@@ -50,3 +50,11 @@ The current extraction/evaluation implementation is documented in
 A bounded model-revision check for the two observed wording errors is now
 implemented; see `ANSWER_SCOPE_REVIEW_2026-10-23.md`. A fresh complete live run
 must determine repair quality before either failure is described as resolved.
+
+
+The fourth complete run is now reviewed: 25/26 rulings, 25/26 citations and 6/6
+refusals under assisted review. DOM04 is correct in that run without revision;
+PAN05 remains wrong and its new wording escaped the original check. The detector
+extension is implemented and tested, but live repair remains unverified. See
+`evaluation/reports/2026-10-23-fourth-run/README.md`. A focused two-case check is
+available before rerunning the full suite.

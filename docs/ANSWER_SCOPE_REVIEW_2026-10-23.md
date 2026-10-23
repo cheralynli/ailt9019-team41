@@ -62,3 +62,14 @@ DOM04; if it refuses after a failed revision, that answerable case must still
 be graded incorrect. Run `zsh scripts/start-course.zsh --evaluate`, preserve
 all 32 new outputs, inspect revision metadata, and review all cases for regressions.
 Independent team confirmation of final grades remains pending.
+
+
+## Fourth-run observation
+
+The fourth live run did not trigger a revision. DOM04 was initially correct;
+PAN05 still said “cities of that disease color,” which escaped the original
+pattern. The check now covers this variant and feedback explicitly rejects
+moving the color qualifier to cities. This exact new clause is regression-tested,
+as is a safe statement that qualifies the cubes themselves. A successful live
+revision is still unverified. Use the focused `--cases PAN05 DOM04` run before
+another full-suite run; focused results cannot establish an aggregate pass.
