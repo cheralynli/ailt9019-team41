@@ -39,17 +39,25 @@ The initial retrieval preflight found all designated evidence for 13/26 answerab
 cases. General retrieval changes improve this to 19/26; the missing anchors are
 recorded openly. These are development diagnostics before a scored live run.
 
-## Remaining verification
+## Live results and remaining verification
 
-No new live course API requests were made by the assistant because the course
-key is entered interactively and is not stored. A member must run the live suite
-and review the outputs. The current extraction enables the Chess path in code;
-a correct live Chess response is still to be observed. Improve failures and
-rerun the unchanged suite, retaining the earlier results.
+The user ran the course API locally without sharing credentials. Three complete
+32-case runs and assisted reviews are preserved under `evaluation/reports/`.
+The third run records 24/26 correct full rulings, 24/26 sufficient citations and
+6/6 appropriate refusals, meeting the configured development-suite thresholds.
+All six answerable Chess cases use verified formal-law evidence and pass assisted
+review; both Chess refusal cases also pass. These are known development cases,
+not a held-out evaluation or a guarantee for all Chess questions.
+
+Independent team confirmation is still required. PAN05 eradication scope and
+DOM04 gained-card wording remain failures in the third run; see
+`evaluation/reports/2026-10-23-third-run/README.md`. Earlier results were not
+rewritten, and the fixed answer key has not been changed to fit model outputs.
 
 The five-person adult usability study, shared hosting, course/source permission
 confirmation and midterm recording/status sheet are not completed by this work.
 
-Final local validation: 44 automated tests passed with all local PDFs present;
-the offline 32-case run completed with 19/26 designated-reference coverage.
-No model accuracy score has been produced.
+Latest code validation: 48 automated tests passed with all local PDFs present;
+offline designated-reference coverage is 21/26. This preflight metric is separate
+from the actual live semantic grades above. Review-only documentation changes
+after the third run do not change the tested generation code.

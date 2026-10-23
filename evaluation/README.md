@@ -75,3 +75,12 @@ The [second live review](reports/2026-10-23-followup/README.md) improves to
 the citation threshold. PAN01/PAN05 remain incorrect in scope, and CHE05 has a
 citation timing regression. Another live run is required after the count-search
 and final cited-evidence-check changes. Independent team confirmation is pending.
+
+
+The [third complete live review](reports/2026-10-23-third-run/README.md) records
+24/26 correct full rulings, 24/26 sufficient citations and 6/6 refusals. This
+meets configured development-suite thresholds under assistant-assisted review;
+independent team confirmation remains pending. PAN05 and DOM04 are retained as
+failures. No raw outputs or frozen cases were edited, and no outputs from
+different runs were combined. These are development results on a known suite,
+not a held-out evaluation or a guarantee of correctness for other questions.

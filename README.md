@@ -134,10 +134,14 @@ evaluation. Source provenance is recorded in `docs/rulebook-sources.json`.
   remain search-only until rebuilt. See `docs/CHESS_AND_EVALUATION.md`.
 - Pandemic and Dark Ages edition labels still need verification.
 - PDF extraction can omit diagrams and symbols; chunks can cut sentences.
-- Pandemic wording about “infection step” versus “current Infection card” needs
-  the testing owner's review. Other refusal/ambiguity cases remain to be tested.
+- The third complete live run meets the fixed development-suite thresholds under
+  assisted review: 24/26 full rulings, 24/26 sufficient citations and 6/6 refusals.
+  Independent team confirmation remains pending. PAN05 eradication scope and
+  DOM04 gained-card wording remain failed cases; see
+  `evaluation/reports/2026-10-23-third-run/README.md`.
 - The server binds to localhost and is for local development, not production.
-- The midterm recording, deployment and full evaluation remain outstanding.
+- The midterm recording, deployment, usability study and independent evaluation
+  confirmation remain outstanding.
 
 ## Tests and project map
 
@@ -182,8 +186,9 @@ Recent fixes add truthful API configuration labels, clear results when changing
 rulesets, distinguish clarification/refusal/error states, clarify obvious vague
 questions before retrieval, reject explicit mismatched game names, and strengthen
 the evidence prompt to preserve conditions and timing. Keyword scope checks are
-conservative, not a complete semantic classifier. No live accuracy improvement
-is claimed until the group reruns its real API test cases.
+conservative, not a complete semantic classifier. Three preserved live runs and
+assisted reviews are recorded under `evaluation/reports/`; the latest meets the
+configured development thresholds with two known wording failures.
 
 ## Fixed 32-case rules evaluation
 
