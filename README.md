@@ -4,7 +4,30 @@ A local rules assistant: select a game/ruleset, ask a question, retrieve matchin
 rulebook passages and receive an explanation using the course-provided Alibaba
 Cloud Bailian API. Answers cite original local passages and PDF pages.
 
-## Setup
+## Player walkthrough
+
+On a running application, choose the game and ruleset, enter a complete question,
+and select **Ask BoardMaster**. Read the explanation and use **Open original PDF**
+to check the cited passage. Every question is independent: avoid references such
+as “that move” without describing it. A refusal means the request is outside the
+assistant's scope or the supplied evidence is insufficient; it is not an API error.
+
+| Game | Sample question | Expected response shape |
+| --- | --- | --- |
+| Catan / base | Can I build a settlement next to another settlement? | Distance-rule explanation plus base rulebook citation |
+| Dominion / base | How many cards do I draw at the end of my turn? | Clean-up rule explanation plus base rulebook citation |
+| Pandemic / base | What happens when an outbreak occurs? | Outbreak explanation with precise Infection-card timing plus citation |
+| Chess | Can I castle while my king is in check? | Currently source excerpts only, with an explicit laws/commentary warning |
+
+Try “Should I build a city or a settlement to win?” under Catan to check a
+strategy refusal. Switching game or edition clears the previous result so its
+answer cannot be mistaken for the new selection. The header reports server
+configuration, not a guarantee of provider availability or quota.
+
+This is a local development app. No shared hosted URL has been provided yet;
+end-user access without local installation is still an outstanding proposal item.
+
+## Developer setup
 
 Requires Python 3.10 or newer. In this repository:
 
@@ -14,7 +37,15 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-Place the six PDFs in `rulebooks/` using the filenames in `referee/sources.py`.
+Download and hash-check the pinned official PDFs with:
+
+```sh
+python scripts/download_rulebooks.py
+```
+
+Alternatively, place the six PDFs in `rulebooks/` using the filenames in
+`referee/sources.py`. The download script refuses changed files instead of
+silently mixing versions. `--check-only` checks local files without network access.
 Official download URLs, SHA-256 hashes and indexed ranges are recorded in
 `docs/rulebook-sources.json`. Then build the local index:
 
@@ -136,3 +167,17 @@ serve only allowlisted files. The missing-key fallback remains local search.
 
 Official API configuration reference:
 https://help.aliyun.com/zh/model-studio/more-tools
+
+## Website review — 23 October 2026
+
+The submitted revised proposal targets university students aged 18+ and requires
+five usability participants (at least four completing all four tasks unaided).
+Week 8 calls for all six documents, Chess and Dominion integration, and the fixed
+32-case rules evaluation. See `docs/WEEK8_REVIEW_2026-10-23.md` for the gap audit.
+
+Recent fixes add truthful API configuration labels, clear results when changing
+rulesets, distinguish clarification/refusal/error states, clarify obvious vague
+questions before retrieval, reject explicit mismatched game names, and strengthen
+the evidence prompt to preserve conditions and timing. Keyword scope checks are
+conservative, not a complete semantic classifier. No live accuracy improvement
+is claimed until the group reruns its real API test cases.

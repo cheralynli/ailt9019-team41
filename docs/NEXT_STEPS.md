@@ -29,3 +29,6 @@
 - One-page Word status sheet: progress, evidence, limitations, blockers and owners,
   three dated milestones, each member's completed work and scope decision.
 - ZIP at most 100 MB; verify playback and Moodle group receipt.
+
+See `WEEK8_REVIEW_2026-10-23.md` for the submitted-proposal audit, website fixes,
+verification boundaries and the Week 8 / Weeks 9–10 requirements.

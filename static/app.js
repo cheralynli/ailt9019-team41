@@ -7,15 +7,32 @@ const submit = document.querySelector("#submit");
 const sample = document.querySelector("#sample");
 const form = document.querySelector("#question-form");
 let games = [];
+let apiConfigured = false;
+
+function resetResult() {
+  const edition = editionSelect.selectedOptions[0]?.text || "this ruleset";
+  showResult("Ready", "Ask about the selected ruleset.", `Current selection: ${edition}. Each question is independent; include enough detail to identify the rule.`);
+  document.querySelector("#asked-question").hidden = true;
+  document.querySelector("#asked-question").textContent = "";
+  showCitations([]);
+  const chess = gameSelect.value === "chess";
+  document.querySelector("#ruleset-status").textContent = chess
+    ? "Chess is currently search-only: official laws and arbiter commentary have not yet been separated."
+    : "Search stays within the selected ruleset. Expansions include their base rules.";
+  const marker = document.querySelector("#model-step");
+  marker.classList.toggle("built", apiConfigured && !chess);
+  document.querySelector("#model-status").textContent = chess ? "Chess: search only" : apiConfigured ? "Course API configured · requests checked on use" : "Local search only · API key not configured";
+}
 
 function setEditions() {
   const game = games.find(item => item.id === gameSelect.value);
   editionSelect.replaceChildren(...game.editions.map(item => new Option(item.name, item.id)));
+  resetResult();
 }
 
 function showResult(status, heading, message) {
   document.querySelector("#result-status").textContent = status;
-  document.querySelector("#answer-label").textContent = status === "answer" ? "AI EXPLANATION · CHECK THE SOURCES" : "RULEBOOK ASSISTANT";
+  document.querySelector("#answer-label").textContent = status === "Answer" ? "AI EXPLANATION · CHECK THE SOURCES" : "RULEBOOK ASSISTANT";
   document.querySelector("#result-heading").textContent = heading;
   document.querySelector("#answer-text").textContent = message;
 }
@@ -57,7 +74,9 @@ function showCitations(citations) {
 }
 
 gameSelect.addEventListener("change", setEditions);
+editionSelect.addEventListener("change", resetResult);
 sample.addEventListener("click", () => {
+  resetResult();
   question.value = games.find(item => item.id === gameSelect.value).sample;
   question.focus();
 });
@@ -87,7 +106,8 @@ form.addEventListener("submit", async event => {
     const data = await response.json();
     if (!response.ok) throw new Error(data.error || "The request could not be completed.");
     const headings = { answer: "Here’s the supported explanation.", refusal: "Cannot provide a supported ruling.", clarification: "Please clarify your question.", api_error: "Model unavailable.", search_only: "Here’s where to look.", not_ready: "Rulebook index needed.", unsupported: "Outside the planned scope.", no_evidence: "No matching passage found." };
-    showResult(data.status === "api_error" ? "API issue" : data.status === "answer" ? "answer" : data.status === "search_only" ? "Search only" : data.status === "not_ready" ? "Setup needed" : "No ruling", headings[data.status] || "Pipeline response", data.message + (data.diagnostic ? ` [${data.diagnostic}]` : ""));
+    const labels = {answer: "Answer", refusal: "Refused", clarification: "Clarification needed", api_error: "API issue", search_only: "Search only", not_ready: "Setup needed", unsupported: "Unsupported", no_evidence: "No evidence"};
+    showResult(labels[data.status] || "Response", headings[data.status] || "Pipeline response", data.message + (data.diagnostic ? ` [${data.diagnostic}]` : ""));
     showCitations(data.citations || []);
   } catch (error) {
     showResult("Connection issue", "Let’s check the connection.", error.name === "AbortError" ? "The request timed out. Check that the Python server is running and try again." : error.message);
@@ -107,6 +127,10 @@ async function initialise() {
     if (!response.ok) throw new Error("Could not load the game list.");
     const data = await response.json();
     games = data.games;
+    apiConfigured = data.mode === "course";
+    document.querySelector("#service-status").textContent = apiConfigured
+      ? `Course API configured · ${data.model || "server-selected model"}`
+      : "Local search only · course API key not configured";
     document.querySelector("#collection-status").textContent = data.passage_count
       ? `${data.source_count} documents indexed · ${data.passage_count} searchable excerpts. Check every explanation against its cited source passages.`
       : "No passages indexed yet. Run python3 -m referee.indexer to connect the rulebooks.";

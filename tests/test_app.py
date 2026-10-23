@@ -59,6 +59,22 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(response["status"], "search_only")
         model.assert_not_called()
 
+    def test_obvious_vagueness_requests_clarification_without_api(self):
+        for question in ("Can I do that?", "Can I build?", "What happens next?"):
+            with self.subTest(question=question), patch("referee.pipeline.generate_answer") as model:
+                response = answer_question({**self.payload, "question": question}, self.passages)
+                self.assertEqual(response["status"], "clarification")
+                self.assertEqual(response["citations"], [])
+                model.assert_not_called()
+
+    def test_explicit_game_conflicts_are_not_answered_from_selected_game(self):
+        for question in ("In Catan can I castle?", "Compare Chess with Monopoly rules"):
+            with self.subTest(question=question), patch("referee.pipeline.generate_answer") as model:
+                response = answer_question({**self.payload, "question": question}, self.passages)
+                self.assertEqual(response["status"], "unsupported")
+                self.assertEqual(response["citations"], [])
+                model.assert_not_called()
+
     def test_expansion_includes_base_but_not_reverse(self):
         base = {"source_id": "catan-base", "game": "catan", "text": "testtoken"}
         expansion = {"source_id": "catan-seafarers", "game": "catan", "text": "testtoken"}
@@ -106,9 +122,21 @@ class HTTPTests(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertEqual(len(json.loads(body)["games"]), 4)
 
+    def test_catalogue_exposes_configuration_but_not_credentials(self):
+        with patch.dict("os.environ", {"COURSE_API_KEY": "private-test-key", "COURSE_MODEL": "qwen3.8-flash"}):
+            status, body = self.request("GET", "/api/games")
+        data = json.loads(body)
+        self.assertEqual(data["mode"], "course")
+        self.assertEqual(data["model"], "qwen3.8-flash")
+        self.assertNotIn("private-test-key", body.decode())
+        with patch.dict("os.environ", {}, clear=True):
+            _, body = self.request("GET", "/api/games")
+        self.assertEqual(json.loads(body)["mode"], "search_only")
+        self.assertIsNone(json.loads(body)["model"])
+
     def test_question_round_trip(self):
         with patch("app.load_passages", return_value=[]):
-            status, body = self.request("POST", "/api/ask", json.dumps({"game": "catan", "edition": "base-5", "question": "Can I build?"}))
+            status, body = self.request("POST", "/api/ask", json.dumps({"game": "catan", "edition": "base-5", "question": "Can I build a settlement adjacent to another settlement?"}))
         self.assertEqual(status, 200)
         self.assertEqual(json.loads(body)["status"], "not_ready")
 

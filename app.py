@@ -42,7 +42,8 @@ class Handler(BaseHTTPRequestHandler):
             except (OSError, ValueError, TypeError):
                 self.send_json(503, {"error": "Index could not be loaded. Rebuild with python3 -m referee.indexer."})
                 return
-            self.send_json(200, {"games": GAMES, "mode": "course" if os.environ.get("COURSE_API_KEY") else "search_only", "passage_count": len(passages),
+            self.send_json(200, {"games": GAMES, "mode": "course" if os.environ.get("COURSE_API_KEY") else "search_only",
+                                 "model": os.environ.get("COURSE_MODEL", "qwen3.8-flash") if os.environ.get("COURSE_API_KEY") else None, "passage_count": len(passages),
                                  "source_count": len({p["source_id"] for p in passages})})
         elif path.startswith("/api/sources/"):
             source = SOURCE_BY_ID.get(path.removeprefix("/api/sources/"))

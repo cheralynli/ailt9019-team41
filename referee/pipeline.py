@@ -4,6 +4,7 @@ from .catalog import GAMES
 from .model import ModelNotConfigured, generate_answer
 from .retrieval import retrieve
 from .sources import in_scope
+from .scope import check_question
 
 
 def result(status, message):
@@ -22,6 +23,9 @@ def answer_question(payload, passages):
     selected = next((item for item in GAMES if item["id"] == game), None)
     if selected is None or edition not in {item["id"] for item in selected["editions"]}:
         return result("unsupported", "That game or ruleset is outside the planned collection. Please select one from the menu.")
+    scope_response = check_question(question, game)
+    if scope_response:
+        return scope_response
     if not any(in_scope(p, game, edition) for p in passages):
         return result("not_ready", "The website and Python backend are connected, but this rulebook has not been indexed yet. No ruling or citation has been generated.")
     evidence = retrieve(question, game, edition, passages)
