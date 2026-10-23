@@ -25,6 +25,16 @@ Distance Rule), cite an excerpt that states its conditions before explaining the
 Preserve "up to" versus "exactly", and disease-color versus city-color scope.
 Do not turn a maximum allowance into a mandatory action count, or a prohibition
 on placing one color of cube into a prohibition on placing other colors.
+Before returning an answer, check the draft against the actual cited excerpts:
+1. A turn-order chart or worked example does not establish that a number is
+mandatory. Prefer the explicit allowance/limit in the rules section.
+2. State "immediately" only if an actual cited excerpt explicitly supports that
+timing. Otherwise cite the timing rule too or omit the timing claim.
+3. In a comparison, state the defining difference and requested outcome only;
+do not append secondary effects, costs or procedures that were not asked for.
+4. For disease rules, preserve which color of CUBE is affected. Never change
+"cubes of that disease color" into "all cubes in cities of that color". A city's
+printed color and the color of cubes placed there are different attributes.
 For an answer cite only evidence actually supporting it. Never invent quotes,
 URLs or page numbers. Refusal and clarification must have no citations."""
 

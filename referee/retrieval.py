@@ -66,6 +66,14 @@ def _rank(question, game, edition, passages, limit=6):
                     if terms & {"cost", "costs", "pay", "expend"} and terms & subjects:
                         score += 5
                         break
+            # Count questions need the allowance/limit, not a worked example
+            # or a turn-order chart repeating the same action count.
+            if "how many" in lowered:
+                subjects = set(query_words) - {"take", "during", "part", "turn", "normally", "normal", "each"}
+                for sentence in re.split(r"[.!?]", passage["text"]):
+                    if re.search(r"\b(?:up to|at most|at least|no more than)\s+\d+", sentence, re.I) and subjects & set(tokens(sentence)):
+                        score += 8
+                        break
             ranked.append((score, passage))
     ranked.sort(key=lambda item: item[0], reverse=True)
     selected = []

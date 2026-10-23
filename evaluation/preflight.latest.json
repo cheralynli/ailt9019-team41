@@ -40,15 +40,15 @@
           "kind": "rulebook_excerpt"
         },
         {
-          "id": "dominion-base-p11-1",
+          "id": "dominion-base-p12-2",
           "source_id": "dominion-base",
-          "page": 11,
+          "page": 12,
           "kind": "rulebook_excerpt"
         },
         {
-          "id": "dominion-base-p10-1",
+          "id": "dominion-base-p11-1",
           "source_id": "dominion-base",
-          "page": 10,
+          "page": 11,
           "kind": "rulebook_excerpt"
         }
       ]
@@ -93,15 +93,15 @@
           "kind": "rulebook_excerpt"
         },
         {
-          "id": "dominion-base-p6-1",
+          "id": "dominion-base-p12-2",
           "source_id": "dominion-base",
-          "page": 6,
+          "page": 12,
           "kind": "rulebook_excerpt"
         },
         {
-          "id": "dominion-base-p12-1",
+          "id": "dominion-base-p6-1",
           "source_id": "dominion-base",
-          "page": 12,
+          "page": 6,
           "kind": "rulebook_excerpt"
         }
       ]
@@ -116,6 +116,12 @@
         }
       ],
       "retrieved": [
+        {
+          "id": "pandemic-base-p4-1",
+          "source_id": "pandemic-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
         {
           "id": "pandemic-base-p8-1",
           "source_id": "pandemic-base",
@@ -144,12 +150,6 @@
           "id": "pandemic-base-p8-2",
           "source_id": "pandemic-base",
           "page": 8,
-          "kind": "rulebook_excerpt"
-        },
-        {
-          "id": "pandemic-base-p6-2",
-          "source_id": "pandemic-base",
-          "page": 6,
           "kind": "rulebook_excerpt"
         }
       ]

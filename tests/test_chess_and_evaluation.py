@@ -129,3 +129,10 @@ class LiveFailureRetrievalTests(unittest.TestCase):
         self.assertTrue(any(p['source_id']=='catan-base' and 'adjacent intersections' in p['text']
                             for p in evidence))
         self.assertLessEqual(len(evidence),6)
+
+    def test_action_count_search_includes_explicit_allowance(self):
+        for question in ('How many actions can I take during the actions part of my turn?',
+                         'How many actions may I do each turn?'):
+            evidence = retrieve(question, 'pandemic', 'base-en', self.passages)
+            self.assertTrue(any('up to 4 actions' in p['text'] for p in evidence))
+            self.assertLessEqual(len(evidence),6)

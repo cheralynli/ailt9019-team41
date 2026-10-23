@@ -52,9 +52,10 @@ The first law-separated, original-retrieval preflight covered all specified
 locations/anchors for 13/26 answerable cases. General stemming, phrase matching,
 larger page-bounded excerpts and six-result retrieval improved this to 19/26.
 This is a development diagnostic, not a scored rules-test result. At that stage seven cases
-still missed at least one specified anchor; see preflight.latest.json. Alternate
+still missed at least one specified anchor. Alternate
 correct passages may exist, so live answers and their actual citations still
-need review. No live accuracy or pass rate is claimed.
+need review. This preflight makes no live accuracy claim; actual run reviews
+are linked below.
 
 
 ## First live baseline and follow-up
@@ -67,3 +68,10 @@ retrieval/prompt fixes require a new live run, not rescoring edited answers.
 
 The post-baseline ship retrieval fix covers 21/26 designated reference sets in
 the offline preflight. This remains separate from live semantic grading.
+
+
+The [second live review](reports/2026-10-23-followup/README.md) improves to
+24/26 rulings and 23/26 sufficient citations, with 6/6 refusals. It still misses
+the citation threshold. PAN01/PAN05 remain incorrect in scope, and CHE05 has a
+citation timing regression. Another live run is required after the count-search
+and final cited-evidence-check changes. Independent team confirmation is pending.
