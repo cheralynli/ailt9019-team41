@@ -3,7 +3,7 @@
 from .catalog import GAMES
 from .model import ModelNotConfigured, generate_answer
 from .retrieval import retrieve
-from .sources import in_scope
+from .sources import in_scope, allows_ai_answer
 from .scope import check_question
 
 
@@ -31,7 +31,7 @@ def answer_question(payload, passages):
     evidence = retrieve(question, game, edition, passages)
     if not evidence:
         return result("no_evidence", "The starter search found no matching passage. I cannot provide a supported ruling. Try a more specific rules question.")
-    if any(p.get("kind") == "rules_and_commentary_unseparated" for p in evidence):
+    if any(not allows_ai_answer(p.get("source_id")) for p in evidence):
         return {"status": "search_only", "message": "These Chess excerpts mix official rules and arbiter commentary. AI explanations remain disabled for this source until they are separated and verified. Check the original PDF.", "citations": evidence}
     try:
         return generate_answer(question, evidence)

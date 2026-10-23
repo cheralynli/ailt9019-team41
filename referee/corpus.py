@@ -1,7 +1,7 @@
 """Load the generated index and reject malformed provenance."""
 
 import json
-from .sources import SOURCE_BY_ID
+from .sources import SOURCE_BY_ID, allows_ai_answer
 
 
 def load_passages(path):
@@ -26,5 +26,6 @@ def load_passages(path):
         # Display metadata comes from the allowlist, not arbitrary index strings.
         passage.update(document=source["document"], edition_label=source["edition_label"],
                        warning=source.get("warning", ""),
+                       kind="rulebook_excerpt" if allows_ai_answer(source["id"]) else "rules_and_commentary_unseparated",
                        source_url=f"/api/sources/{source['id']}#page={passage['page']}")
     return passages

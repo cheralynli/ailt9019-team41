@@ -32,3 +32,7 @@
 
 See `WEEK8_REVIEW_2026-10-23.md` for the submitted-proposal audit, website fixes,
 verification boundaries and the Week 8 / Weeks 9–10 requirements.
+
+The Chess source-policy bypass found during review was fixed; see
+`CHESS_GUARD_FIX_2026-10-23.md`. The current automated suite has 33 passing tests.
+This does not replace Chess source separation or the live 32-case evaluation.

@@ -128,7 +128,9 @@ evaluation. Source provenance is recorded in `docs/rulebook-sources.json`.
   searches include base rules; base-only searches exclude expansions.
 - Retrieval is a BM25-style keyword baseline, not semantic reasoning.
 - Chess uses PDF pages 16–67 of the 355-page 2025 FIDE Arbiters’ Manual. Laws and
-  commentary are not yet separated, so Chess remains search-only.
+  commentary are not yet separated, so Chess remains search-only. This restriction
+  is enforced by the checked-in source policy even if index classification
+  metadata is missing or incorrect.
 - Pandemic and Dark Ages edition labels still need verification.
 - PDF extraction can omit diagrams and symbols; chunks can cut sentences.
 - Pandemic wording about “infection step” versus “current Infection card” needs
