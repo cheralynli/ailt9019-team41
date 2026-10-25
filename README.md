@@ -29,6 +29,14 @@ end-user access without local installation is still an outstanding proposal item
 
 ## Developer setup
 
+### Local interface update
+
+The photo-backed question form fades into a black answer section. Supported answers scroll into view; refusals, clarification requests and errors stay beneath the question box. Local-search results require clicking “View matching passages” and are never labelled AI answers. Sources are expandable, and reduced-motion preferences are respected.
+
+After updating the UI for the first time, restart the Python server to register its new local image/font routes. Refreshing alone does not update server routes. The user-provided background is decorative, not evidence of support for Risk; confirm its reuse rights before public distribution.
+
+Run the offline UI behaviour tests with `node --test tests/test_ui.cjs` (Node 18+). They use synthetic responses and do not spend API credits.
+
 Requires Python 3.10 or newer. In this repository:
 
 ```sh

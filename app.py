@@ -14,12 +14,17 @@ from referee.sources import SOURCE_BY_ID, allows_passage_answer
 
 ROOT = Path(__file__).resolve().parent
 STATIC = {"/": ("index.html", "text/html"), "/style.css": ("style.css", "text/css"), "/app.js": ("app.js", "text/javascript")}
+STATIC.update({
+    "/assets/board-background.png": ("assets/board-background.png", "image/png"),
+    "/assets/Federo-Regular.ttf": ("assets/Federo-Regular.ttf", "font/ttf"),
+    "/assets/DancingScript.ttf": ("assets/DancingScript.ttf", "font/ttf"),
+})
 
 
 class Handler(BaseHTTPRequestHandler):
     def send_data(self, status, body, content_type="application/json"):
         self.send_response(status)
-        self.send_header("Content-Type", content_type if content_type == "application/pdf" else content_type + "; charset=utf-8")
+        self.send_header("Content-Type", content_type + "; charset=utf-8" if content_type.startswith("text/") or content_type == "application/json" else content_type)
         self.send_header("Content-Length", str(len(body)))
         self.send_header("Cache-Control", "no-store")
         self.send_header("X-Content-Type-Options", "nosniff")
