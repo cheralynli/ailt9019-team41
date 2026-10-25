@@ -1,0 +1,37 @@
+{
+  "run_id": "20261023T083311521478Z",
+  "review_type": "Assistant-assisted conservative review; independent team confirmation pending",
+  "original_outputs_sha256": "685e2dea5b09b536ed2d473fe3b0389239ae5c2a2af664eb26f87d2879c1273b",
+  "metadata": {
+    "mode": "live",
+    "started_utc": "20261023T083311521478Z",
+    "suite_sha256": "c82c1d14b5ffeb702ba7434852e386086cde63d330847f79a1513bc2c1240201",
+    "corpus_sha256": "ec124c2e7efde1272e478f09ab1156d04d75105ea6ab29c5bbf57bbc33846ae2",
+    "model": "qwen3.8-flash",
+    "commit": "c03c3fb19971809028f78274a6c13db7b6407b8f",
+    "working_tree_dirty": false,
+    "note": "Citation validity and retrieval coverage do not establish semantic correctness; explicit reviewer grading is required."
+  },
+  "score": {
+    "complete": true,
+    "pending_cases": [],
+    "ruling_correct": 24,
+    "ruling_total": 26,
+    "citation_correct": 23,
+    "citation_total": 26,
+    "refusals_correct": 6,
+    "refusal_total": 6,
+    "passed": false
+  },
+  "api_errors": 0,
+  "failed_rulings": [
+    "PAN01",
+    "PAN05"
+  ],
+  "failed_citations": [
+    "CHE05",
+    "PAN01",
+    "PAN05"
+  ],
+  "note": "Follow-up live result before subsequent fixes. Original run and frozen suite preserved. No post-fix model pass claimed."
+}

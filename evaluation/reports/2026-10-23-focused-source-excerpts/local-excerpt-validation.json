@@ -1,0 +1,58 @@
+{
+  "mode": "local_source_excerpt_validation",
+  "review_type": "Assistant-assisted source checks; team confirmation pending",
+  "suite_sha256": "c82c1d14b5ffeb702ba7434852e386086cde63d330847f79a1513bc2c1240201",
+  "implementation_sha256": {
+    "referee/source_excerpt.py": "cf5c55def6277895a3d2f1a3a44480be6b3829fa85a3b79bbeb7c570a87b5345",
+    "referee/model.py": "af00633dcea202d889055f6bf4709e68bc55a38f0aaa9c0f26faac9d0c667ab3"
+  },
+  "provider_requests": 0,
+  "run_complete": false,
+  "aggregate_score": null,
+  "note": "Production in-process pipeline checked against real local corpus, with provider calls blocked and a synthetic configuration flag. Not a new live model result or a 32-case score. No credentials stored.",
+  "cases": [
+    {
+      "id": "DOM04",
+      "question": "When I gain a card and no effect says otherwise, where does it go and do I play it immediately?",
+      "status": "answer",
+      "message": "The retrieved rules state:\n\n“Take a card from the Supply and put it into your discard pile.”\n\n“You do not play a card when you gain it; it just goes to your discard pile.”\n\n“Sometimes a card will let you gain a card to a location other than your discard pile, but by default all gained cards are put into your discard pile.”",
+      "answer_method": "source_excerpt",
+      "provider_requests": 0,
+      "all_rule_sentences_verbatim_in_actual_citations": true,
+      "citations": [
+        {
+          "id": "dominion-base-p7-1",
+          "source_id": "dominion-base",
+          "page": 7,
+          "edition": "2nd edition · 2021 PDF",
+          "warning": ""
+        }
+      ]
+    },
+    {
+      "id": "PAN05",
+      "question": "If all four diseases are cured but cubes remain, have we won, and how is curing different from eradication?",
+      "status": "answer",
+      "message": "The retrieved rules state:\n\n“The players win as soon as cures to all 4 diseases are discovered.”\n\n“When a disease is cured, its cubes remain on the board and new cubes can still be placed during epidemics or infections (see Epidemics and Infections on page 6).”\n\n“If no cubes of this color are on the board, this disease is now eradicated.”\n\n“Removing the last cube of a disease that is not cured has no effect.”",
+      "answer_method": "source_excerpt",
+      "provider_requests": 0,
+      "all_rule_sentences_verbatim_in_actual_citations": true,
+      "citations": [
+        {
+          "id": "pandemic-base-p7-1",
+          "source_id": "pandemic-base",
+          "page": 7,
+          "edition": "English base game · edition unconfirmed",
+          "warning": "The edition of this source still needs confirmation."
+        },
+        {
+          "id": "pandemic-base-p4-2",
+          "source_id": "pandemic-base",
+          "page": 4,
+          "edition": "English base game · edition unconfirmed",
+          "warning": "The edition of this source still needs confirmation."
+        }
+      ]
+    }
+  ]
+}

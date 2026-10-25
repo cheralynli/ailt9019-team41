@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import os
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -9,7 +10,7 @@ from urllib.parse import urlsplit
 from referee.catalog import GAMES
 from referee.pipeline import answer_question
 from referee.corpus import load_passages
-from referee.sources import SOURCE_BY_ID
+from referee.sources import SOURCE_BY_ID, allows_passage_answer
 
 ROOT = Path(__file__).resolve().parent
 STATIC = {"/": ("index.html", "text/html"), "/style.css": ("style.css", "text/css"), "/app.js": ("app.js", "text/javascript")}
@@ -41,7 +42,11 @@ class Handler(BaseHTTPRequestHandler):
             except (OSError, ValueError, TypeError):
                 self.send_json(503, {"error": "Index could not be loaded. Rebuild with python3 -m referee.indexer."})
                 return
-            self.send_json(200, {"games": GAMES, "mode": "search_only", "passage_count": len(passages),
+            catalogue = [{**game, "answer_mode": "ai_ready" if any(
+                p["game"] == game["id"] and allows_passage_answer(p) for p in passages) else "search_only"}
+                         for game in GAMES]
+            self.send_json(200, {"games": catalogue, "mode": "course" if os.environ.get("COURSE_API_KEY") else "search_only",
+                                 "model": os.environ.get("COURSE_MODEL", "qwen3.8-flash") if os.environ.get("COURSE_API_KEY") else None, "passage_count": len(passages),
                                  "source_count": len({p["source_id"] for p in passages})})
         elif path.startswith("/api/sources/"):
             source = SOURCE_BY_ID.get(path.removeprefix("/api/sources/"))

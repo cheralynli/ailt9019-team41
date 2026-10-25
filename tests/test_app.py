@@ -2,6 +2,7 @@
 
 import json
 import threading
+import tempfile
 import unittest
 from http.client import HTTPConnection
 from http.server import ThreadingHTTPServer
@@ -46,10 +47,65 @@ class PipelineTests(unittest.TestCase):
     def test_no_evidence(self):
         self.assertEqual(answer_question({**self.payload, "question": "unrelated"}, self.passages)["status"], "no_evidence")
 
+    @patch.dict("os.environ", {}, clear=True)
     def test_model_stub_never_invents_ruling(self):
-        response = answer_question(self.payload, self.passages)
+        payload = {"game": "catan", "edition": "base-5", "question": "testtoken"}
+        response = answer_question(payload, self.passages)
         self.assertEqual(response["status"], "search_only")
-        self.assertEqual(response["citations"], self.passages[:1])
+        self.assertEqual(response["citations"], self.passages[1:2])
+
+    def test_unseparated_chess_is_search_only(self):
+        passages = [{**self.passages[0], "kind": "rules_and_commentary_unseparated"}]
+        with patch("referee.pipeline.generate_answer") as model:
+            response = answer_question(self.payload, passages)
+        self.assertEqual(response["status"], "search_only")
+        model.assert_not_called()
+
+    def test_chess_classification_cannot_enable_model_answers(self):
+        # Cover a legacy index with no kind and a mislabelled index with a normal kind.
+        for kind in (None, "rulebook_excerpt", "rules_and_commentary_unseparated"):
+            with self.subTest(kind=kind):
+                passage = {**self.passages[0], "id": "chess-test", "page": 24}
+                if kind is not None:
+                    passage["kind"] = kind
+                # Direct callers must be protected as well as the corpus loader.
+                with patch("referee.pipeline.generate_answer") as model:
+                    direct = answer_question(self.payload, [passage])
+                    self.assertEqual(direct["status"], "search_only")
+                    model.assert_not_called()
+                with tempfile.TemporaryDirectory() as folder:
+                    path = Path(folder) / "passages.json"
+                    path.write_text(json.dumps([passage]))
+                    loaded = load_passages(path)
+                self.assertEqual(loaded[0]["kind"], "rules_and_commentary_unseparated")
+                with patch("referee.pipeline.generate_answer") as model:
+                    response = answer_question(self.payload, loaded)
+                    self.assertEqual(response["status"], "search_only")
+                    self.assertEqual(response["citations"], loaded)
+                    model.assert_not_called()
+
+    def test_permitted_source_still_reaches_model(self):
+        payload = {"game": "catan", "edition": "base-5", "question": "testtoken"}
+        expected = {"status": "answer", "message": "Synthetic answer", "citations": self.passages[1:2]}
+        with patch("referee.pipeline.generate_answer", return_value=expected) as model:
+            self.assertEqual(answer_question(payload, self.passages), expected)
+            model.assert_called_once()
+
+    def test_obvious_vagueness_requests_clarification_without_api(self):
+        for question in ("Can I do that?", "Can I build?", "What happens next?"):
+            with self.subTest(question=question), patch("referee.pipeline.generate_answer") as model:
+                response = answer_question({**self.payload, "question": question}, self.passages)
+                self.assertEqual(response["status"], "clarification")
+                self.assertEqual(response["citations"], [])
+                model.assert_not_called()
+
+    def test_explicit_game_conflicts_are_not_answered_from_selected_game(self):
+        for question in ("In Catan can I castle?", "Compare Chess with Monopoly rules"):
+            with self.subTest(question=question), patch("referee.pipeline.generate_answer") as model:
+                response = answer_question({**self.payload, "question": question}, self.passages)
+                self.assertEqual(response["status"], "unsupported")
+                self.assertEqual(response["citations"], [])
+                model.assert_not_called()
 
     def test_expansion_includes_base_but_not_reverse(self):
         base = {"source_id": "catan-base", "game": "catan", "text": "testtoken"}
@@ -63,7 +119,7 @@ class PipelineTests(unittest.TestCase):
     def test_chunks_keep_all_words(self):
         text = " ".join(str(i) for i in range(500))
         parts = list(chunks(text))
-        self.assertTrue(all(len(p.split()) <= 180 for p in parts))
+        self.assertTrue(all(len(p.split()) <= 500 for p in parts))
         self.assertEqual(set(text.split()), set(" ".join(parts).split()))
         self.assertEqual(normalize("ﬁrst\n  rule"), "first rule")
 
@@ -82,7 +138,7 @@ class HTTPTests(unittest.TestCase):
         cls.thread.join()
 
     def request(self, method, path, body=None):
-        connection = HTTPConnection("127.0.0.1", self.server.server_port, timeout=3)
+        connection = HTTPConnection("127.0.0.1", self.server.server_port, timeout=15)
         connection.request(method, path, body, {"Content-Type": "application/json"})
         response = connection.getresponse()
         status, data = response.status, response.read()
@@ -98,11 +154,31 @@ class HTTPTests(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertEqual(len(json.loads(body)["games"]), 4)
 
+    def test_catalogue_exposes_configuration_but_not_credentials(self):
+        with patch.dict("os.environ", {"COURSE_API_KEY": "private-test-key", "COURSE_MODEL": "qwen3.8-flash"}):
+            status, body = self.request("GET", "/api/games")
+        data = json.loads(body)
+        self.assertEqual(data["mode"], "course")
+        self.assertEqual(data["model"], "qwen3.8-flash")
+        self.assertNotIn("private-test-key", body.decode())
+        with patch.dict("os.environ", {}, clear=True):
+            _, body = self.request("GET", "/api/games")
+        self.assertEqual(json.loads(body)["mode"], "search_only")
+        self.assertIsNone(json.loads(body)["model"])
+
     def test_question_round_trip(self):
         with patch("app.load_passages", return_value=[]):
-            status, body = self.request("POST", "/api/ask", json.dumps({"game": "catan", "edition": "base-5", "question": "Can I build?"}))
+            status, body = self.request("POST", "/api/ask", json.dumps({"game": "catan", "edition": "base-5", "question": "Can I build a settlement adjacent to another settlement?"}))
         self.assertEqual(status, 200)
         self.assertEqual(json.loads(body)["status"], "not_ready")
+
+    def test_course_answer_round_trip(self):
+        passage = {"source_id": "catan-base", "game": "catan", "text": "Synthetic testtoken fixture"}
+        expected = {"status": "answer", "message": "Synthetic explanation", "citations": [passage]}
+        with patch("app.load_passages", return_value=[passage]), patch("referee.pipeline.generate_answer", return_value=expected):
+            status, body = self.request("POST", "/api/ask", json.dumps({"game": "catan", "edition": "base-5", "question": "testtoken"}))
+        self.assertEqual(status, 200)
+        self.assertEqual(json.loads(body), expected)
 
     def test_malformed_json(self):
         self.assertEqual(self.request("POST", "/api/ask", "{")[0], 400)

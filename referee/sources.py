@@ -9,7 +9,7 @@ SOURCES = [
      "pages": [1, 32], "page_count": 32},
     {"id": "chess-laws", "filename": "Arbiters_Manual_2025.pdf", "game": "chess",
      "edition": "laws-2023", "edition_label": "2023 Laws · 2025 manual", "document": "FIDE Arbiters’ Manual — Laws of Chess section",
-     "pages": [16, 67], "page_count": 355,
+     "pages": [16, 67], "page_count": 355, "ai_answers_allowed": False,
      "warning": "This section mixes Laws of Chess and arbiter commentary. Extraction does not yet separate them. Check the original page; do not treat commentary as an official rule."},
     {"id": "dominion-base", "filename": "Dominion2nd.pdf", "game": "dominion",
      "edition": "base-2", "edition_label": "2nd edition · 2021 PDF", "document": "Dominion Base Rules",
@@ -35,3 +35,18 @@ RULESET_SOURCES = {
 
 def in_scope(passage, game, edition):
     return passage["game"] == game and passage.get("source_id") in RULESET_SOURCES.get((game, edition), set())
+
+
+def allows_ai_answer(source_id):
+    """Trust the checked-in source policy, never optional index classification."""
+    source = SOURCE_BY_ID.get(source_id)
+    return source is not None and source.get("ai_answers_allowed", True)
+
+
+def allows_passage_answer(passage):
+    """Chess requires exact re-extraction from the pinned local PDF."""
+    if passage.get("source_id") == "chess-laws":
+        from .chess import verified_passage
+        verified = verified_passage(passage)
+        return verified is not None and verified["kind"] == "official_law"
+    return allows_ai_answer(passage.get("source_id"))

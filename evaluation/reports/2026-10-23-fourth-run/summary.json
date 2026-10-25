@@ -1,0 +1,38 @@
+{
+  "run_id": "20261023T110703343791Z",
+  "review_type": "Assistant-assisted conservative review; independent team confirmation pending",
+  "original_outputs_sha256": "7aa9e2e4d3537f099f5c82792900b0cfab41d53010bc746f3cebeafad922cdca",
+  "metadata": {
+    "mode": "live",
+    "started_utc": "20261023T110703343791Z",
+    "suite_sha256": "c82c1d14b5ffeb702ba7434852e386086cde63d330847f79a1513bc2c1240201",
+    "corpus_sha256": "ec124c2e7efde1272e478f09ab1156d04d75105ea6ab29c5bbf57bbc33846ae2",
+    "model": "qwen3.8-flash",
+    "commit": "a8288812c828707a8ea11a5473f2ca6febd11eae",
+    "max_provider_requests_per_case": 2,
+    "answer_review_policy": "At most one evidence-based revision for recognized scope errors; no transport retries.",
+    "working_tree_dirty": false,
+    "note": "Citation validity and retrieval coverage do not establish semantic correctness; explicit reviewer grading is required."
+  },
+  "score": {
+    "complete": true,
+    "pending_cases": [],
+    "ruling_correct": 25,
+    "ruling_total": 26,
+    "citation_correct": 25,
+    "citation_total": 26,
+    "refusals_correct": 6,
+    "refusal_total": 6,
+    "passed": true
+  },
+  "api_errors": 0,
+  "failed_rulings": [
+    "PAN05"
+  ],
+  "failed_citations": [
+    "PAN05"
+  ],
+  "citation_integrity": "Every recorded citation ID, source ID, page, text and kind matches the current validated local corpus. This is not a semantic correctness guarantee.",
+  "reviewed_revisions": 0,
+  "note": "Development suite meets configured thresholds under assisted review, with known failures retained. Not an independent human or held-out evaluation. No outputs or frozen cases edited."
+}

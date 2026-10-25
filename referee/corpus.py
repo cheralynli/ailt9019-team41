@@ -22,9 +22,17 @@ def load_passages(path):
         if (passage.get("game") != source["game"] or passage.get("edition") != source["edition"]
                 or not source["pages"][0] <= passage["page"] <= source["pages"][1]):
             raise ValueError("Passage source does not match the approved collection.")
+        if source["id"] == "chess-laws":
+            from .chess import verified_passage
+            verified = verified_passage(passage)
+            kind = verified["kind"] if verified else "rules_and_commentary_unseparated"
+            warning = ("Law-only excerpt from the pinned manual; commentary and non-law guidance are excluded from AI evidence. Check the original PDF."
+                       if kind == "official_law" else "This text is commentary, guidance, reference material or an unverified legacy excerpt; not used as official-law AI evidence.")
+        else:
+            kind, warning = "rulebook_excerpt", source.get("warning", "")
         ids.add(passage["id"])
         # Display metadata comes from the allowlist, not arbitrary index strings.
         passage.update(document=source["document"], edition_label=source["edition_label"],
-                       warning=source.get("warning", ""),
+                       warning=warning, kind=kind,
                        source_url=f"/api/sources/{source['id']}#page={passage['page']}")
     return passages

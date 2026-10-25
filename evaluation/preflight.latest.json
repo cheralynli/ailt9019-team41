@@ -1,0 +1,259 @@
+{
+  "mode": "retrieval_only",
+  "model_calls": 0,
+  "answerable_total": 26,
+  "all_designated_anchors_covered": 21,
+  "not_a_model_accuracy_score": true,
+  "missing_designated_evidence": [
+    {
+      "id": "DOM02",
+      "expected_references": [
+        {
+          "source_id": "dominion-base",
+          "page": 5,
+          "anchor": "new hand of 5 cards"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "dominion-base-p12-1",
+          "source_id": "dominion-base",
+          "page": 12,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p7-1",
+          "source_id": "dominion-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p6-1",
+          "source_id": "dominion-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p4-1",
+          "source_id": "dominion-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p12-2",
+          "source_id": "dominion-base",
+          "page": 12,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p11-1",
+          "source_id": "dominion-base",
+          "page": 11,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    {
+      "id": "DOM06",
+      "expected_references": [
+        {
+          "source_id": "dominion-base",
+          "page": 4,
+          "anchor": "one Action card"
+        },
+        {
+          "source_id": "dominion-base",
+          "page": 6,
+          "anchor": "+2 Actions"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "dominion-base-p14-1",
+          "source_id": "dominion-base",
+          "page": 14,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p4-1",
+          "source_id": "dominion-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p7-1",
+          "source_id": "dominion-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p13-1",
+          "source_id": "dominion-base",
+          "page": 13,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p12-2",
+          "source_id": "dominion-base",
+          "page": 12,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p6-1",
+          "source_id": "dominion-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    {
+      "id": "PAN01",
+      "expected_references": [
+        {
+          "source_id": "pandemic-base",
+          "page": 3,
+          "anchor": "Do 4 actions"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "pandemic-base-p4-1",
+          "source_id": "pandemic-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p8-1",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p5-1",
+          "source_id": "pandemic-base",
+          "page": 5,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p7-1",
+          "source_id": "pandemic-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p4-2",
+          "source_id": "pandemic-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p8-2",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    {
+      "id": "PAN04",
+      "expected_references": [
+        {
+          "source_id": "pandemic-base",
+          "page": 4,
+          "anchor": "discard 5 City cards"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "pandemic-base-p8-2",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p1-1",
+          "source_id": "pandemic-base",
+          "page": 1,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p8-1",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p4-1",
+          "source_id": "pandemic-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p2-1",
+          "source_id": "pandemic-base",
+          "page": 2,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p1-2",
+          "source_id": "pandemic-base",
+          "page": 1,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    {
+      "id": "PAN05",
+      "expected_references": [
+        {
+          "source_id": "pandemic-base",
+          "page": 1,
+          "anchor": "all 4 diseases"
+        },
+        {
+          "source_id": "pandemic-base",
+          "page": 4,
+          "anchor": "this disease is eradicated"
+        }
+      ],
+      "retrieved": [
+        {
+          "id": "pandemic-base-p4-2",
+          "source_id": "pandemic-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p1-1",
+          "source_id": "pandemic-base",
+          "page": 1,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p6-1",
+          "source_id": "pandemic-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p7-1",
+          "source_id": "pandemic-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p5-1",
+          "source_id": "pandemic-base",
+          "page": 5,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p8-1",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    }
+  ]
+}

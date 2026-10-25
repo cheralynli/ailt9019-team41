@@ -1,0 +1,86 @@
+{
+  "retrieved_on": "2026-10-19",
+  "permission_note": "Officially hosted downloads; this is provenance, not an open licence. Local copies only. Permission for external model processing and redistribution remains unconfirmed.",
+  "sources": [
+    {
+      "source_id": "catan-base",
+      "filename": "catan_base_rules_2020_200707.pdf",
+      "sha256": "3fed941bf202314ed462d4d0cdfb0384c97fe04166b48a7186833b3f6f4ac024",
+      "pdf_pages": 16,
+      "indexed_range": [
+        1,
+        16
+      ],
+      "passages": 75,
+      "skipped_short_pages": [],
+      "download_url": "https://www.catan.com/sites/default/files/2021-06/catan_base_rules_2020_200707.pdf"
+    },
+    {
+      "source_id": "catan-seafarers",
+      "filename": "catan-seafarers_2021_rule_book_201201.pdf",
+      "sha256": "9bd556db354078c270bbf3594694b2049aa97b988666d4cbce8ee16a745a1d69",
+      "pdf_pages": 32,
+      "indexed_range": [
+        1,
+        32
+      ],
+      "passages": 87,
+      "skipped_short_pages": [
+        31
+      ],
+      "download_url": "https://www.catan.com/sites/default/files/2021-06/catan-seafarers_2021_rule_book_201201.pdf"
+    },
+    {
+      "source_id": "chess-laws",
+      "filename": "Arbiters_Manual_2025.pdf",
+      "sha256": "0e199bed153ce908c08bd595a4c5eb4b73e435d6f44f3905d683a1c7124d36ed",
+      "pdf_pages": 355,
+      "indexed_range": [
+        16,
+        67
+      ],
+      "passages": 143,
+      "skipped_short_pages": [],
+      "download_url": "https://arbiters.fide.com/wp-content/uploads/Publications/Manual/Arbiters_Manual_2025.pdf"
+    },
+    {
+      "source_id": "dominion-base",
+      "filename": "Dominion2nd.pdf",
+      "sha256": "4c109459b5253acc7611bb2c14f98a90a4f60f7cce3311bfab6cbac7ab3e8ac9",
+      "pdf_pages": 16,
+      "indexed_range": [
+        1,
+        16
+      ],
+      "passages": 69,
+      "skipped_short_pages": [],
+      "download_url": "https://www.riograndegames.com/wp-content/uploads/2016/09/Dominion2nd.pdf"
+    },
+    {
+      "source_id": "dominion-dark-ages",
+      "filename": "Dominion-Rules-DarkAges.pdf",
+      "sha256": "c8b770b5b80daafa08e12d7f91076ab64acebc97b3779d3c7899bbfabee53fdc",
+      "pdf_pages": 12,
+      "indexed_range": [
+        1,
+        12
+      ],
+      "passages": 49,
+      "skipped_short_pages": [],
+      "download_url": "https://www.riograndegames.com/wp-content/uploads/2022/03/Dominion-Rules-DarkAges.pdf"
+    },
+    {
+      "source_id": "pandemic-base",
+      "filename": "Pandemic_Rulebook.pdf",
+      "sha256": "f1d93b126f13d53decea29ef04a8cb549687b36de5ab0b479567216f2d8a8a61",
+      "pdf_pages": 8,
+      "indexed_range": [
+        1,
+        8
+      ],
+      "passages": 44,
+      "skipped_short_pages": [],
+      "download_url": "https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/Pandemic_Rulebook.pdf"
+    }
+  ]
+}

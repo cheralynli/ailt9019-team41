@@ -1,0 +1,62 @@
+{
+  "run_id": "20261023T111457076868Z",
+  "original_outputs_sha256": "198187ddc65f15e0fb39e36f00d5c803d3cfc6d16f72722902edd88e3dabccb0",
+  "metadata": {
+    "mode": "focused_live",
+    "started_utc": "20261023T111457076868Z",
+    "suite_sha256": "c82c1d14b5ffeb702ba7434852e386086cde63d330847f79a1513bc2c1240201",
+    "selected_case_ids": [
+      "DOM04",
+      "PAN05"
+    ],
+    "corpus_sha256": "ec124c2e7efde1272e478f09ab1156d04d75105ea6ab29c5bbf57bbc33846ae2",
+    "model": "qwen3.8-flash",
+    "commit": "13bfdd13f7725f3155cdf753e5ef4355641305f7",
+    "max_provider_requests_per_case": 2,
+    "answer_review_policy": "At most one evidence-based revision for recognized scope errors; no transport retries.",
+    "working_tree_dirty": false,
+    "note": "Citation validity and retrieval coverage do not establish semantic correctness; explicit reviewer grading is required."
+  },
+  "review_type": "Assistant-assisted focused citation review; team confirmation pending",
+  "run_complete": false,
+  "aggregate_score": null,
+  "cases": [
+    {
+      "id": "DOM04",
+      "actual_status": "answer",
+      "actual_message": "By default, when you gain a card, it goes into your discard pile. You do not play it immediately; gaining and playing are separate actions. A gained card only enters play if you specifically choose to play it during your Action or Buy phase.",
+      "citations": [
+        {
+          "id": "dominion-base-p7-1",
+          "source_id": "dominion-base",
+          "page": 7
+        }
+      ],
+      "core_ruling_correct": true,
+      "citation_sufficient": false,
+      "review_note": "Default gain destination and no immediate play are correct. Extra exclusive Action/Buy-phase claim is not established by the sole actual page-7 citation.",
+      "revision_recorded": false
+    },
+    {
+      "id": "PAN05",
+      "actual_status": "answer",
+      "actual_message": "Yes, you win if all four diseases are cured, even if cubes remain. The game ends immediately when cures for all four diseases are discovered; eradication is not required to win. Curing a disease means discarding five matching City cards at a research station (or four for the Scientist). Eradication occurs only when a disease is cured and no cubes of that color remain on the board. While cured diseases still allow new cubes to be placed during infections, treating them becomes easier.",
+      "citations": [
+        {
+          "id": "pandemic-base-p4-2",
+          "source_id": "pandemic-base",
+          "page": 4
+        },
+        {
+          "id": "pandemic-base-p7-1",
+          "source_id": "pandemic-base",
+          "page": 7
+        }
+      ],
+      "core_ruling_correct": true,
+      "citation_sufficient": false,
+      "review_note": "Win and cure/eradication core are correct. Scientist four-card exception is not supported by actual cited pages 4 and 7; it appears elsewhere in supplied evidence but is not actually cited.",
+      "revision_recorded": false
+    }
+  ]
+}
