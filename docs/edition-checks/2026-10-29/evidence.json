@@ -1,0 +1,74 @@
+{
+  "checked_on": "2026-10-29",
+  "timezone": "Asia/Hong_Kong",
+  "review_method": "AI-assisted local PDF text/metadata and visual inspection; official web sources; independent direct download comparison where available.",
+  "independent_team_review": "pending",
+  "application_metadata_changed": false,
+  "scope": "Findings due Nov 1; metadata/team review milestone Nov 8. No new model evaluation or rules-accuracy result.",
+  "sources": [
+    {
+      "source_id": "dominion-dark-ages",
+      "filename": "Dominion-Rules-DarkAges.pdf",
+      "official_product_url": "https://www.riograndegames.com/games/dominion-dark-ages/",
+      "official_pdf_url": "https://www.riograndegames.com/wp-content/uploads/2022/03/Dominion-Rules-DarkAges.pdf",
+      "local_sha256": "c8b770b5b80daafa08e12d7f91076ab64acebc97b3779d3c7899bbfabee53fdc",
+      "matches_pinned_manifest": true,
+      "pdf_pages": 12,
+      "copyright_evidence_pdf_page": 12,
+      "copyright_years": [
+        2012,
+        2017,
+        2020
+      ],
+      "copyright_page_visually_inspected": true,
+      "pdf_metadata": {
+        "/CreationDate": "D:20200205185744-07'00'",
+        "/Creator": "QuarkXPress(R) 15.2",
+        "/ModDate": "D:20220310102456-05'00'",
+        "/Producer": "QuarkXPress(R) 15.2",
+        "/Title": "WideDominion"
+      },
+      "direct_download_check": {
+        "source_id": "dominion-dark-ages",
+        "url": "https://www.riograndegames.com/wp-content/uploads/2022/03/Dominion-Rules-DarkAges.pdf",
+        "local_sha256": "c8b770b5b80daafa08e12d7f91076ab64acebc97b3779d3c7899bbfabee53fdc",
+        "download_error": "HTTP Error 403: Forbidden"
+      },
+      "formal_edition_or_printing_confirmed": false,
+      "decision": "Retain uncertainty label; source provenance and edition/printing are separate findings."
+    },
+    {
+      "source_id": "pandemic-base",
+      "filename": "Pandemic_Rulebook.pdf",
+      "official_product_url": "https://www.zmangames.com/game/pandemic/",
+      "official_pdf_url": "https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/Pandemic_Rulebook.pdf",
+      "local_sha256": "f1d93b126f13d53decea29ef04a8cb549687b36de5ab0b479567216f2d8a8a61",
+      "matches_pinned_manifest": true,
+      "pdf_pages": 8,
+      "copyright_evidence_pdf_page": 8,
+      "copyright_years": [
+        2013
+      ],
+      "copyright_page_visually_inspected": true,
+      "pdf_metadata": {
+        "/CreationDate": "D:20191106172644-06'00'",
+        "/Creator": "Adobe InDesign CC 14.0 (Macintosh)",
+        "/ModDate": "D:20191212122701-06'00'",
+        "/Producer": "Adobe PDF Library 15.0"
+      },
+      "direct_download_check": {
+        "source_id": "pandemic-base",
+        "url": "https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/Pandemic_Rulebook.pdf",
+        "local_sha256": "f1d93b126f13d53decea29ef04a8cb549687b36de5ab0b479567216f2d8a8a61",
+        "final_url": "https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/Pandemic_Rulebook.pdf",
+        "http_status": 200,
+        "remote_sha256": "f1d93b126f13d53decea29ef04a8cb549687b36de5ab0b479567216f2d8a8a61",
+        "remote_bytes": 6218245,
+        "matches_local": true,
+        "matches_manifest": true
+      },
+      "formal_edition_or_printing_confirmed": false,
+      "decision": "Retain uncertainty label; source provenance and edition/printing are separate findings."
+    }
+  ]
+}
