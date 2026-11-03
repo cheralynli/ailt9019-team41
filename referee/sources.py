@@ -16,10 +16,10 @@ SOURCES = [
      "pages": [1, 16], "page_count": 16},
     {"id": "dominion-dark-ages", "filename": "Dominion-Rules-DarkAges.pdf", "game": "dominion",
      "edition": "dark-ages", "edition_label": "Dark Ages · edition unconfirmed", "document": "Dominion Dark Ages Rules",
-     "pages": [1, 12], "page_count": 12, "warning": "The edition of this source still needs confirmation."},
+     "pages": [1, 12], "page_count": 12, "warning": "Official-hosted rulebook inspected on 29 October 2026. Exact edition/printing remains unconfirmed; a fresh download hash comparison was blocked by HTTP 403."},
     {"id": "pandemic-base", "filename": "Pandemic_Rulebook.pdf", "game": "pandemic",
      "edition": "base-en", "edition_label": "English base game · edition unconfirmed", "document": "Pandemic Rulebook",
-     "pages": [1, 8], "page_count": 8, "warning": "The edition of this source still needs confirmation."},
+     "pages": [1, 8], "page_count": 8, "warning": "Publisher-linked English base-game PDF verified by SHA-256 on 29 October 2026. Exact edition/printing remains unconfirmed."},
 ]
 
 SOURCE_BY_ID = {source["id"]: source for source in SOURCES}

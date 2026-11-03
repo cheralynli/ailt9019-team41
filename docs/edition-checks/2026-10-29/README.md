@@ -14,7 +14,7 @@ Neither inspected rulebook establishes an explicit numbered edition or exact
 physical printing. Retain the existing uncertainty labels pending team review.
 Copyright years, file timestamps and URL folders are separate evidence, not
 interchangeable edition identifiers. No application metadata, PDF or index was
-changed by this check.
+changed during the 29 October check. The metadata follow-up is recorded below.
 
 ## Evidence by source
 
@@ -80,3 +80,18 @@ copyrighted rulebooks have not been added to Git.
    explicit uncertainty label. Rebuild/retest only if source content or answering
    behavior changes. This check does not grant external-model or redistribution
    permissions, which remain separate from source provenance.
+
+## Metadata follow-up — 3 November 2026
+
+- Added per-source check dates, official product links, evidence references,
+  copyright-page observations and conclusions to `docs/rulebook-sources.json`.
+  The original retrieval date and pinned source fingerprints are unchanged.
+- Updated the two source warnings in `referee/sources.py` to distinguish the
+  recorded provenance checks from unresolved edition/printing identification.
+  Both `edition unconfirmed` labels remain in place.
+- Existing indexes load the current allowlist warnings at runtime, so this
+  metadata update does not require rebuilding the corpus. Restart a running
+  server to load the updated source configuration.
+- Independent team review remains pending. A teammate still needs to record
+  their name, review date and findings for the 8 November milestone. No team
+  approval, new remote download check or new model-evaluation result is claimed.
