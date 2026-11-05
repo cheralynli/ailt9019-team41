@@ -148,9 +148,9 @@ evaluation. Source provenance is recorded in `docs/rulebook-sources.json`.
   remain search-only until rebuilt. See `docs/CHESS_AND_EVALUATION.md`.
 - Pandemic and Dark Ages edition labels still need verification.
 - PDF extraction can omit diagrams and symbols; chunks can cut sentences.
-- Latest complete live evaluation: fourth run, 25/26 rulings, 25/26 supported
-  citations and 6/6 refusals under assisted review. Independent confirmation and
-  a complete rerun after the later source-extractive changes remain pending.
+- Latest complete live evaluation: 6 November run, 25/26 rulings, 25/26 supported
+  citations and 6/6 refusals under assisted review. Independent confirmation
+  remains pending; CAT02 is conservatively failed. See the latest report below.
 - The server binds to localhost and is for local development. Shared deployment
   and the five-person usability study remain outstanding.
 - Current actions: `docs/NEXT_STEPS.md`; usability materials:
@@ -278,3 +278,14 @@ pipeline, and all 64 program tests pass. This is not a new complete 32-case scor
 the last full live score is still the recorded fourth-run result. See
 `evaluation/reports/2026-10-23-focused-source-excerpts/README.md` for the preserved
 focused failures, transparent extraction policy, validation and limits.
+
+## Latest complete evaluation — 6 November 2026
+
+Run `20261105T170819421563Z` completed all 32 cases at clean commit `48ef049`.
+Conservative assisted review: 25/26 full rulings, 25/26 sufficient citations and
+6/6 refusals. This meets development-suite thresholds; independent team review
+remains pending. PAN05 and DOM04 pass as literal source-extractive answers, and
+all six answerable Chess cases pass. CAT02 retains an unnecessary unqualified
+trade-before-building restriction; the resource list itself is correct.
+See `evaluation/reports/2026-11-06-full-run/README.md` for the complete review and
+interpretation limits. Earlier dated results above are historical.

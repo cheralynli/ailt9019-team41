@@ -5,17 +5,18 @@
 - PR #1 is merged; main includes the course API and redesigned interface.
 - Source checks and the 3 November metadata update are committed. Pandemic and
   Dark Ages exact editions/printings remain unconfirmed; independent review is pending.
-- Latest complete live evaluation remains the fourth 23 October run: 25/26
-  rulings, 25/26 citations and 6/6 refusals under assisted review.
-- Later PAN05/DOM04 source-extractive changes passed local checks; they have not
-  established a new complete live score. See evaluation/reports/.
+- Latest complete live evaluation is the 6 November run: 25/26 rulings,
+  25/26 citations and 6/6 refusals under assisted review. CAT02 is retained as
+  a conservative scope/citation failure; independent review remains pending.
+- PAN05/DOM04 source-extractive answers now pass in the complete 6 November run.
+  See evaluation/reports/2026-11-06-full-run/.
 
 ## This week's work
 
 | Action | Owner / status | Evidence to save |
 | --- | --- | --- |
-| Clean-install reproduction and setup repair | Lu Weidi; in progress | docs/reproduction/2026-11-06.md |
-| Fresh complete 32-case live run | Lu Weidi; awaiting local key entry | Unmodified evaluation/results/<run>/ outputs and metadata |
+| Clean-install reproduction and setup repair | Lu Weidi; completed with dependency fix | docs/reproduction/2026-11-06.md |
+| Fresh complete 32-case live run | Lu Weidi; completed 6 November; assisted review saved | Unmodified evaluation/results/<run>/ outputs and metadata |
 | Independent answer/citation review | Teammate confirmation pending; previous owner To Yan Kiu | Named review CSV and dated report |
 | Independent source-metadata review by Nov 8 | Teammate confirmation pending | Reviewer name/date and findings in edition-check record |
 | Five-person usability study | Lu Weidi preparing; recruitment/sessions pending | docs/usability/STUDY_PLAN.md and anonymous observations |
