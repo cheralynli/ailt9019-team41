@@ -148,14 +148,13 @@ evaluation. Source provenance is recorded in `docs/rulebook-sources.json`.
   remain search-only until rebuilt. See `docs/CHESS_AND_EVALUATION.md`.
 - Pandemic and Dark Ages edition labels still need verification.
 - PDF extraction can omit diagrams and symbols; chunks can cut sentences.
-- The third complete live run meets the fixed development-suite thresholds under
-  assisted review: 24/26 full rulings, 24/26 sufficient citations and 6/6 refusals.
-  Independent team confirmation remains pending. PAN05 eradication scope and
-  DOM04 gained-card wording remain failed cases; see
-  `evaluation/reports/2026-10-23-third-run/README.md`.
-- The server binds to localhost and is for local development, not production.
-- The midterm recording, deployment, usability study and independent evaluation
-  confirmation remain outstanding.
+- Latest complete live evaluation: fourth run, 25/26 rulings, 25/26 supported
+  citations and 6/6 refusals under assisted review. Independent confirmation and
+  a complete rerun after the later source-extractive changes remain pending.
+- The server binds to localhost and is for local development. Shared deployment
+  and the five-person usability study remain outstanding.
+- Current actions: `docs/NEXT_STEPS.md`; usability materials:
+  `docs/usability/STUDY_PLAN.md`.
 
 ## Tests and project map
 
@@ -200,9 +199,10 @@ Recent fixes add truthful API configuration labels, clear results when changing
 rulesets, distinguish clarification/refusal/error states, clarify obvious vague
 questions before retrieval, reject explicit mismatched game names, and strengthen
 the evidence prompt to preserve conditions and timing. Keyword scope checks are
-conservative, not a complete semantic classifier. Three preserved live runs and
-assisted reviews are recorded under `evaluation/reports/`; the latest meets the
-configured development thresholds with two known wording failures.
+conservative, not a complete semantic classifier. Four preserved complete live runs and
+assisted reviews are recorded under `evaluation/reports/`; the latest complete run meets the
+configured development thresholds with one known failed case. Later targeted
+changes still require a fresh complete run.
 
 ## Fixed 32-case rules evaluation
 
@@ -249,8 +249,9 @@ are separate from these rules-accuracy results. See `evaluation/README.md`.
 
 Recognized eradication-color and gained-card scope errors now trigger at most
 one evidence-based revision, with citation revalidation and refusal if the known
-error persists. This is a narrow safeguard, not an accuracy guarantee. All 58
-program tests pass; a new live run is still required to measure repair quality.
+error persists. This is a narrow safeguard, not an accuracy guarantee. The scope-check update originally passed 58
+program tests; later updates expanded the suite. A new live run is still
+required to measure current repair quality.
 See `docs/ANSWER_SCOPE_REVIEW_2026-10-23.md` for scope, request budget and limits.
 
 

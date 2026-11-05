@@ -1,68 +1,35 @@
-# From course API integration to midterm demo
+# Current project actions — 6 November 2026
 
-## Working now
+## Recorded progress
 
-- Python retrieval feeds server-side course API explanations with validated source IDs.
-- Course API adapter added on 21 October: `qwen3.8-flash`, configured through COURSE_MODEL.
-  Three user-observed browser cases are recorded in `COURSE_API_PROGRESS_2026-10-21.md`; screenshots do not include provider metadata.
-- Hidden key prompt, live connection check, model listing and safe failure diagnostics.
-- The rebuilt six-document corpus produces 227 indexed passages. Source URLs and hashes are tracked;
-  PDFs and generated excerpts remain ignored.
-- One live Catan distance-rule example was observed in the browser on 19 October
-  2026. See `docs/API_PROGRESS_2026-10-19.md` for evidence and limitations.
+- PR #1 is merged; main includes the course API and redesigned interface.
+- Source checks and the 3 November metadata update are committed. Pandemic and
+  Dark Ages exact editions/printings remain unconfirmed; independent review is pending.
+- Latest complete live evaluation remains the fourth 23 October run: 25/26
+  rulings, 25/26 citations and 6/6 refusals under assisted review.
+- Later PAN05/DOM04 source-extractive changes passed local checks; they have not
+  established a new complete live score. See evaluation/reports/.
 
-## Next build steps
+## This week's work
 
-1. Have the testing owner confirm all 32 grades from the third preserved live run.
-   Assisted review meets the configured thresholds (24/26 rulings, 24/26 citations,
-   6/6 refusals); this is not independent human or held-out evaluation.
-2. Retain and investigate PAN05 eradication-color scope and DOM04 gained-card
-   wording failures. Do not describe the system as fully accurate. See
-   `evaluation/reports/2026-10-23-third-run/README.md` for all decisions.
-3. Expand testing beyond the known development suite, including ambiguity and
-   realistic user tasks. Do not deliberately exhaust quota to test API failures;
-   those paths also have automated mocked coverage.
-4. Review the pinned Chess extraction and source-use permissions. Six answerable
-   Chess questions now have correct live formal-law answers in the fixed suite;
-   this is not evidence about all Chess positions, diagrams or dispute scenarios.
-5. Confirm deployment arrangements and prepare the adult usability study.
-   The current server remains a local development server.
+| Action | Owner / status | Evidence to save |
+| --- | --- | --- |
+| Clean-install reproduction and setup repair | Lu Weidi; in progress | docs/reproduction/2026-11-06.md |
+| Fresh complete 32-case live run | Lu Weidi; awaiting local key entry | Unmodified evaluation/results/<run>/ outputs and metadata |
+| Independent answer/citation review | Teammate confirmation pending; previous owner To Yan Kiu | Named review CSV and dated report |
+| Independent source-metadata review by Nov 8 | Teammate confirmation pending | Reviewer name/date and findings in edition-check record |
+| Five-person usability study | Lu Weidi preparing; recruitment/sessions pending | docs/usability/STUDY_PLAN.md and anonymous observations |
+| Shared access/deployment | Unassigned; decision pending | Accessible URL and verified setup/security/source permissions |
+| Individual weekly report | Each member | Actual contributions and limitations; Moodle receipt |
 
-## Midterm handoff (26 October; Moodle cutoff is authoritative)
+Do not label same-computer reproduction as another-computer verification.
+Do not replace the old live score with offline retrieval coverage or combine
+outputs from different runs. Keep original failed results. A fresh run needs
+review against the frozen key and cited original sources before scoring.
 
-- MP4 of at most 60 seconds showing a real input → processing → output.
-- repository_link.txt, staff repository access and reproducible README instructions.
-- One-page Word status sheet: progress, evidence, limitations, blockers and owners,
-  three dated milestones, each member's completed work and scope decision.
-- ZIP at most 100 MB; verify playback and Moodle group receipt.
+## Submission status
 
-See `WEEK8_REVIEW_2026-10-23.md` for the submitted-proposal audit, website fixes,
-verification boundaries and the Week 8 / Weeks 9–10 requirements.
-
-The Chess source-policy bypass found during review was fixed; see
-`CHESS_GUARD_FIX_2026-10-23.md`. The current automated suite has 64 passing tests.
-These program checks are separate from the documented live evaluation grades.
-
-The current extraction/evaluation implementation is documented in
-`CHESS_AND_EVALUATION.md`; previous search-only descriptions are historical.
-
-
-A bounded model-revision check for the two observed wording errors is now
-implemented; see `ANSWER_SCOPE_REVIEW_2026-10-23.md`. A fresh complete live run
-must determine repair quality before either failure is described as resolved.
-
-
-The fourth complete run is now reviewed: 25/26 rulings, 25/26 citations and 6/6
-refusals under assisted review. DOM04 is correct in that run without revision;
-PAN05 remains wrong and its new wording escaped the original check. The detector
-extension is implemented and tested, but live repair remains unverified. See
-`evaluation/reports/2026-10-23-fourth-run/README.md`. A focused two-case check is
-available before rerunning the full suite.
-
-
-The focused follow-up found additional unsupported claims despite correct core
-answers. These two explicit question intents now return complete verbatim source
-excerpts with truthful UI labeling and zero provider calls; other intents retain
-the course API. Both targets pass local production-pipeline citation checks.
-See `evaluation/reports/2026-10-23-focused-source-excerpts/README.md`. This is not
-a new complete live score; independent source-selection review remains pending.
+Midterm recording and status-sheet preparation were reported in the group.
+Moodle submission receipt has not been checked in this repository review.
+Final submission requirements and deadlines must be checked against the latest
+course notice; they are not established by this task list.

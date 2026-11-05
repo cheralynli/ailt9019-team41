@@ -1,5 +1,5 @@
 # Local PDF indexing
-pypdf==6.10.0
+pypdf[crypto]==6.10.0
 
 # Course API HTTP transport
 httpx==0.28.1
