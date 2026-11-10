@@ -34,3 +34,11 @@ Midterm recording and status-sheet preparation were reported in the group.
 Moodle submission receipt has not been checked in this repository review.
 Final submission requirements and deadlines must be checked against the latest
 course notice; they are not established by this task list.
+
+## 10 November follow-up
+
+CAT02 now passes a focused live retest at clean commit `9ef637e`, without the
+unsolicited trade-before-building restriction. See
+`evaluation/reports/2026-11-10-cat02/`. This does not replace the 6 November
+complete-run score or establish a new 26/26 result. Prioritize actual usability
+sessions and independent review; a full rerun is required for a new total.

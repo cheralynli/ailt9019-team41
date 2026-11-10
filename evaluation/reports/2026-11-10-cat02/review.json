@@ -1,0 +1,32 @@
+{
+  "run_id": "20261110T090056916362Z",
+  "review_type": "Assistant-assisted review; independent team confirmation pending",
+  "original_outputs_sha256": "0fecd47b7dbca6d303d4c8f68fe693db448b6aceb816e9080c2f7ac855e1b0f5",
+  "metadata": {
+    "mode": "focused_live",
+    "started_utc": "20261110T090056916362Z",
+    "suite_sha256": "c82c1d14b5ffeb702ba7434852e386086cde63d330847f79a1513bc2c1240201",
+    "selected_case_ids": [
+      "CAT02"
+    ],
+    "corpus_sha256": "ec124c2e7efde1272e478f09ab1156d04d75105ea6ab29c5bbf57bbc33846ae2",
+    "model": "qwen3.8-flash",
+    "commit": "9ef637e20321ce9d0fa9d0f5ce956fb94f77e080",
+    "max_provider_requests_per_case": 2,
+    "answer_review_policy": "Complete local source-excerpt answers use zero provider requests; otherwise at most one content revision for recognized scope errors; no transport retries.",
+    "working_tree_dirty": false,
+    "note": "Citation validity and retrieval coverage do not establish semantic correctness; explicit reviewer grading is required."
+  },
+  "case_id": "CAT02",
+  "actual_message": "To build one settlement, you must turn in exactly one of each of the following resource cards: Brick, Lumber, Wool, and Grain.",
+  "citations": [
+    {
+      "id": "catan-base-p5-1",
+      "source_id": "catan-base",
+      "page": 5
+    }
+  ],
+  "ruling_correct": true,
+  "citation_correct": true,
+  "note": "Focused one-case result only. No new complete 32-case score. Original outputs unchanged."
+}
