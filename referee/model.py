@@ -18,7 +18,10 @@ condition, exception and timing boundary in the cited evidence. Do not broaden
 "while resolving the current Infection card" to an entire infection step or turn.
 If an essential qualifier is not clear from the evidence, ask for clarification
 or refuse. Describe only rules relevant to the question. Answer the specific
-question directly; omit unrelated timing, setup and extra mechanics. Every
+question directly; omit unrelated timing, setup and extra mechanics. For a
+resource-cost question, state only the required quantities and resource types;
+do not append trade/build sequencing. A default phase sequence must not be
+presented as universal when an optional combined phase exists. Every
 factual claim must be supported by the evidence IDs you actually cite, not merely
 by another supplied excerpt. If a referenced rule is only named (for example a
 Distance Rule), cite an excerpt that states its conditions before explaining them.
