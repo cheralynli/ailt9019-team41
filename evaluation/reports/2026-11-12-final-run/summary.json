@@ -1,0 +1,27 @@
+{
+  "run_id": "20261112T155755901888Z",
+  "review_type": "Manual human review by project member Lu Weidi against the frozen key and original PDFs",
+  "metadata": {
+    "mode": "live",
+    "model": "qwen3.8-flash",
+    "commit": "159e217f44eb57b77ab74606ca0cdcd6370fcfae",
+    "working_tree_dirty": false,
+    "suite_sha256": "c82c1d14b5ffeb702ba7434852e386086cde63d330847f79a1513bc2c1240201",
+    "corpus_sha256": "ec124c2e7efde1272e478f09ab1156d04d75105ea6ab29c5bbf57bbc33846ae2"
+  },
+  "score": {
+    "complete": true,
+    "ruling_correct": 26,
+    "ruling_total": 26,
+    "citation_correct": 26,
+    "citation_total": 26,
+    "refusals_correct": 6,
+    "refusal_total": 6,
+    "passed": true
+  },
+  "limitations": [
+    "Reviewer participated in project development.",
+    "The frozen suite was known during development and is not held out.",
+    "The result does not establish accuracy on new phrasings."
+  ]
+}

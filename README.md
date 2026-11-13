@@ -148,9 +148,10 @@ evaluation. Source provenance is recorded in `docs/rulebook-sources.json`.
   remain search-only until rebuilt. See `docs/CHESS_AND_EVALUATION.md`.
 - Pandemic and Dark Ages edition labels still need verification.
 - PDF extraction can omit diagrams and symbols; chunks can cut sentences.
-- Latest complete live evaluation: 6 November run, 25/26 rulings, 25/26 supported
-  citations and 6/6 refusals under assisted review. Independent confirmation
-  remains pending; CAT02 is conservatively failed. See the latest report below.
+- Latest complete live evaluation: 12 November run, 26/26 rulings, 26/26
+  supported citations and 6/6 refusals under manual review by Lu Weidi against
+  the original PDFs. The reviewer participated in development, and the suite
+  was known during development; this is not an independent or held-out result.
 - The server binds to localhost and is for local development. Shared deployment
   and the five-person usability study remain outstanding.
 - Current actions: `docs/NEXT_STEPS.md`; usability materials:
@@ -250,8 +251,8 @@ are separate from these rules-accuracy results. See `evaluation/README.md`.
 Recognized eradication-color and gained-card scope errors now trigger at most
 one evidence-based revision, with citation revalidation and refusal if the known
 error persists. This is a narrow safeguard, not an accuracy guarantee. The scope-check update originally passed 58
-program tests; later updates expanded the suite. A new live run is still
-required to measure current repair quality.
+program tests; later updates expanded the suite. The subsequent 12 November
+complete live run is recorded below.
 See `docs/ANSWER_SCOPE_REVIEW_2026-10-23.md` for scope, request budget and limits.
 
 
@@ -274,8 +275,8 @@ falls back to the existing model path. Other question intents retain course API
 answering. Runtime code does not read evaluation IDs or answer-key files.
 
 Both target questions pass local source/citation checks through the production
-pipeline, and all 64 program tests pass. This is not a new complete 32-case score;
-the last full live score is still the recorded fourth-run result. See
+pipeline, and all 64 program tests pass. This focused validation was not a new
+complete 32-case score at that stage. See
 `evaluation/reports/2026-10-23-focused-source-excerpts/README.md` for the preserved
 focused failures, transparent extraction policy, validation and limits.
 
@@ -289,3 +290,14 @@ all six answerable Chess cases pass. CAT02 retains an unnecessary unqualified
 trade-before-building restriction; the resource list itself is correct.
 See `evaluation/reports/2026-11-06-full-run/README.md` for the complete review and
 interpretation limits. Earlier dated results above are historical.
+
+## Latest complete evaluation — 12 November 2026
+
+Run `20261112T155755901888Z` completed all 32 cases at clean commit `159e217`.
+Manual review by Lu Weidi against the frozen key and original PDFs records
+26/26 correct rulings, 26/26 supported citations and 6/6 correct refusals.
+CAT02 passes without the earlier unsolicited sequencing statement. The reviewer
+participated in development and the suite was known during development, so this
+is not independent or held-out evidence. See
+`evaluation/reports/2026-11-12-final-run/` for the compact record. The original
+local outputs and completed review CSV remain preserved.
