@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BoardMaster is a source-grounded board-game rules assistant built by AILT9019 Team 41.">
+  <title>BoardMaster · AILT9019 Team 41</title>
+  <link rel="stylesheet" href="showcase.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to project overview</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="BoardMaster home"><span aria-hidden="true">♟</span> BM<span>.</span></a>
+    <nav aria-label="Primary navigation">
+      <a href="#workflow">How it works</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#limitations">Limits</a>
+      <a class="nav-cta" href="https://github.com/cheralynli/ailt9019-team41">Repository ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="kicker">AILT9019 · TEAM 41 · FINAL PROJECT</p>
+        <h1>Know the rule.<br><em>Keep the game going.</em></h1>
+        <p class="lede">BoardMaster helps players resolve board-game rule questions with concise answers, checkable excerpts, and exact PDF pages shown alongside every result.</p>
+        <div class="actions">
+          <a class="button primary" href="#evidence">See a real result ↓</a>
+          <a class="button secondary" href="https://github.com/cheralynli/ailt9019-team41">View the code ↗</a>
+        </div>
+      </div>
+      <div class="hero-board" aria-label="Supported games and rulebooks">
+        <div class="board-grid" aria-hidden="true">
+          <span>♟</span><span>⬡</span><span>♙</span><span>⬢</span><span>♜</span><span>⬡</span>
+        </div>
+        <div class="scope-card">
+          <p>Current collection</p>
+          <strong>6 official PDFs</strong>
+          <span>Catan + Seafarers · Chess · Dominion + Dark Ages · Pandemic</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="problem band">
+      <div>
+        <p class="section-number">01 · THE PROBLEM</p>
+        <h2>Rulebook answers are hard to find when a game is already in motion.</h2>
+      </div>
+      <div class="problem-copy">
+        <p>Players often search long PDFs, debate from memory, or accept an answer without knowing where it came from. BoardMaster keeps the source attached to the ruling so the table can verify it.</p>
+        <p class="boundary"><strong>Scope:</strong> written rules from the supported rulebooks. Strategy advice, disputed physical play, and other games are directed to a clear fallback response.</p>
+      </div>
+    </section>
+
+    <section class="workflow" id="workflow">
+      <div class="section-heading">
+        <p class="section-number">02 · HOW IT WORKS</p>
+        <h2>Evidence first, explanation second.</h2>
+      </div>
+      <ol class="steps">
+        <li><span>1</span><div><h3>Select the ruleset</h3><p>The game and edition constrain the search. Expansion searches include the required base rules.</p></div></li>
+        <li><span>2</span><div><h3>Retrieve passages</h3><p>A local BM25-style keyword retriever searches page-bounded excerpts from the selected official PDFs.</p></div></li>
+        <li><span>3</span><div><h3>Generate with evidence</h3><p>The course-provided qwen3.8-flash model receives the question and up to six retrieved excerpts.</p></div></li>
+        <li><span>4</span><div><h3>Validate and show sources</h3><p>The backend rejects unknown citation IDs, then returns the explanation, excerpt, and original PDF page—or a clarification, refusal, or error state.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="built band">
+      <div>
+        <p class="section-number">03 · WHAT WE BUILT</p>
+        <h2>More than a model call.</h2>
+      </div>
+      <div class="chip-list" aria-label="Team-built system components">
+        <span>Rulebook catalogue & hash checks</span><span>PDF indexing</span><span>Ruleset-scoped retrieval</span><span>Evidence prompt</span><span>Citation validation</span><span>Fallback states</span><span>32-case evaluator</span><span>Responsive interface</span>
+      </div>
+    </section>
+
+    <section class="evidence" id="evidence">
+      <div class="section-heading">
+        <p class="section-number">04 · GENUINE RUN EVIDENCE</p>
+        <h2>A ruling you can inspect.</h2>
+        <p>The example below was produced by the running system for Catan base game. It answers the question, quotes the matching passage, and links to PDF page 5.</p>
+      </div>
+      <figure class="run-figure">
+        <div class="screenshot-wrap">
+          <p class="screenshot-label">Static screenshot · Actual system output · Not interactive</p>
+          <img src="evidence/catan-distance-course-2026-10-21.png" alt="Screenshot of BoardMaster answering whether a settlement can be built next to another settlement, with a Catan rulebook excerpt and PDF page 5 citation.">
+        </div>
+        <figcaption><strong>Screenshot summary</strong><br><strong>Question:</strong> “Can I build a settlement next to another settlement?” <strong>Result:</strong> No—the Distance Rule requires all three adjacent intersections to be vacant.</figcaption>
+      </figure>
+    </section>
+
+    <section class="results band">
+      <div>
+        <p class="section-number">05 · EVALUATION</p>
+        <h2>Evaluation results</h2>
+        <p class="run-meta">12 November 2026 · 32 frozen cases · qwen3.8-flash · commit <code>159e217</code></p>
+      </div>
+      <div class="score-grid" aria-label="Evaluation scores">
+        <div><strong>26/26</strong><span>correct rulings</span></div>
+        <div><strong>26/26</strong><span>supported citations</span></div>
+        <div><strong>6/6</strong><span>correct refusals</span></div>
+      </div>
+    </section>
+
+    <section class="cases">
+      <article>
+        <p class="case-label failure">FAILURE → RETEST</p>
+        <h3>Unsupported sequencing claim</h3>
+        <p>In a 6 November test, the system was asked, “Which resources are required to build one settlement?” It listed the four correct resources but also added an incorrect restriction about trading before building. We narrowed the evidence prompt, reran this question successfully, and then confirmed the fix in the full 12 November evaluation.</p>
+      </article>
+      <article>
+        <p class="case-label boundary-label">BOUNDARY CASE</p>
+        <h3>Knowing when not to answer</h3>
+        <p>For “Should I build a city or a settlement to win?”, BoardMaster explains that it answers written rules rather than strategy. For a request to combine Monopoly rent with Chess castling, it states that Monopoly is outside the selected rulebook instead of producing a mixed ruling.</p>
+      </article>
+    </section>
+
+    <section class="limitations" id="limitations">
+      <div class="section-heading">
+        <p class="section-number">06 · LIMITATIONS</p>
+        <h2>Current limitations</h2>
+      </div>
+      <ul>
+        <li>The evaluation covers 32 predefined questions; more varied user phrasings still need testing.</li>
+        <li>Keyword retrieval is a lexical baseline; it can miss semantically related passages.</li>
+        <li>PDF extraction can omit diagrams or symbols and can split sentences at page boundaries.</li>
+        <li>Exact edition/printing metadata for Pandemic and Dark Ages remains unconfirmed.</li>
+        <li>The working assistant runs locally and depends on the course API, model access, and shared quota.</li>
+        <li>Source permissions and provider terms must be checked before broader deployment.</li>
+      </ul>
+    </section>
+
+    <section class="run band" id="run">
+      <div>
+        <p class="section-number">07 · REPRODUCE IT</p>
+        <h2>Run BoardMaster locally.</h2>
+        <p>The app uses Python 3.10+ and the course-provided Alibaba Cloud Bailian key. The key is entered at a hidden prompt and is not saved.</p>
+      </div>
+      <pre aria-label="Local setup commands"><code>python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python scripts/download_rulebooks.py
+python -m referee.indexer
+zsh scripts/start-course.zsh</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#top"><span aria-hidden="true">♟</span> BOARDMASTER</a>
+    <p>Source-grounded rules assistance · AILT9019 Team 41</p>
+    <a href="https://github.com/cheralynli/ailt9019-team41">GitHub repository ↗</a>
+  </footer>
+</body>
+</html>
