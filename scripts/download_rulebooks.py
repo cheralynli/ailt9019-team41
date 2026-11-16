@@ -4,10 +4,30 @@ import hashlib
 import json
 from pathlib import Path
 from urllib.parse import urlsplit
-from urllib.request import Request, urlopen
+
+import httpx
 
 ROOT = Path(__file__).resolve().parents[1]
 ALLOWED_HOSTS = {'www.catan.com', 'arbiters.fide.com', 'www.riograndegames.com', 'cdn.svc.asmodee.net'}
+MAX_PDF_BYTES = 30 * 1024 * 1024
+
+
+def download_pdf(url):
+    """Download one PDF with the same CA bundle as the project's API client."""
+    data = bytearray()
+    with httpx.stream(
+        'GET',
+        url,
+        headers={'User-Agent': 'Team41-course-corpus-setup/1.0'},
+        follow_redirects=True,
+        timeout=45,
+    ) as response:
+        response.raise_for_status()
+        for chunk in response.iter_bytes():
+            data.extend(chunk)
+            if len(data) > MAX_PDF_BYTES:
+                break
+    return bytes(data)
 
 
 def main():
@@ -32,10 +52,17 @@ def main():
         parsed = urlsplit(source['download_url'])
         if parsed.scheme != 'https' or parsed.hostname not in ALLOWED_HOSTS:
             raise ValueError('Source URL is not an allowlisted official download')
-        request = Request(source['download_url'], headers={'User-Agent': 'Team41-course-corpus-setup/1.0'})
-        with urlopen(request, timeout=45) as response:
-            data = response.read(30 * 1024 * 1024 + 1)
-        if len(data) > 30 * 1024 * 1024 or not data.startswith(b'%PDF-'):
+        try:
+            data = download_pdf(source['download_url'])
+        except httpx.HTTPStatusError as error:
+            if error.response.status_code == 403:
+                raise RuntimeError(
+                    f'{filename}: the publisher blocked automated download (HTTP 403). '
+                    f'Download it in a browser from {source["download_url"]}, save it as '
+                    f'rulebooks/{filename}, then rerun this command to verify its SHA-256 hash.'
+                ) from error
+            raise
+        if len(data) > MAX_PDF_BYTES or not data.startswith(b'%PDF-'):
             raise ValueError(f'{filename}: download is not a valid PDF within the size limit')
         if hashlib.sha256(data).hexdigest() != source['sha256']:
             raise ValueError(f'{filename}: publisher file changed. Review its version before updating the manifest.')

@@ -51,11 +51,13 @@ Download and hash-check the pinned official PDFs with:
 python scripts/download_rulebooks.py
 ```
 
-Alternatively, place the six PDFs in `rulebooks/` using the filenames in
-`referee/sources.py`. The download script refuses changed files instead of
-silently mixing versions. `--check-only` checks local files without network access.
-Official download URLs, SHA-256 hashes and indexed ranges are recorded in
-`docs/rulebook-sources.json`. Then build the local index:
+Some publishers may reject automated downloads with HTTP 403. If the command
+prints that message, open the exact official URL it reports in a browser, save
+the PDF under the reported `rulebooks/FILENAME`, and rerun the command. Existing
+files are never trusted silently: the script checks every PDF against its pinned
+SHA-256 hash before continuing. You may also use `--check-only` to verify all
+six local files without network access. Official URLs, filenames, hashes and
+indexed ranges are recorded in `docs/rulebook-sources.json`. Then build the index:
 
 ```sh
 python -m referee.indexer
@@ -137,6 +139,8 @@ See `docs/COURSE_API_PROGRESS_2026-10-21.md` for user-observed Catan answering,
 strategy refusal and Pandemic answering screenshots, with limitations. These
 examples do not establish aggregate accuracy or replace the proposed 32-case
 evaluation. Source provenance is recorded in `docs/rulebook-sources.json`.
+The clean-environment setup and test record is
+`docs/reproduction/2026-11-16.md`.
 
 - The rebuilt six-document corpus yields 227 local excerpts, filtered by game/ruleset. Expansion
   searches include base rules; base-only searches exclude expansions.

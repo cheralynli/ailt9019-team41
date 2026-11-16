@@ -1,5 +1,5 @@
 # Local PDF indexing
 pypdf[crypto]==6.10.0
 
-# Course API HTTP transport
-httpx==0.28.1
+# Course API and reproducible corpus-download HTTP transport
+httpx[socks]==0.28.1
