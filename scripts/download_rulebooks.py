@@ -33,6 +33,11 @@ def download_pdf(url):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--check-only', action='store_true', help='Verify existing PDFs without network access')
+    parser.add_argument(
+        '--import-dir',
+        type=Path,
+        help='Use matching PDFs from this browser-download directory before trying the network',
+    )
     args = parser.parse_args()
     manifest = json.loads((ROOT / 'docs/rulebook-sources.json').read_text())
     destination = ROOT / 'rulebooks'
@@ -49,19 +54,26 @@ def main():
             continue
         if args.check_only:
             raise ValueError(f'{filename}: missing local PDF')
-        parsed = urlsplit(source['download_url'])
-        if parsed.scheme != 'https' or parsed.hostname not in ALLOWED_HOSTS:
-            raise ValueError('Source URL is not an allowlisted official download')
-        try:
-            data = download_pdf(source['download_url'])
-        except httpx.HTTPStatusError as error:
-            if error.response.status_code == 403:
-                raise RuntimeError(
-                    f'{filename}: the publisher blocked automated download (HTTP 403). '
-                    f'Download it in a browser from {source["download_url"]}, save it as '
-                    f'rulebooks/{filename}, then rerun this command to verify its SHA-256 hash.'
-                ) from error
-            raise
+        imported = args.import_dir / filename if args.import_dir else None
+        if imported and imported.is_file():
+            data = imported.read_bytes()
+            origin = f'imported from {imported}'
+        else:
+            parsed = urlsplit(source['download_url'])
+            if parsed.scheme != 'https' or parsed.hostname not in ALLOWED_HOSTS:
+                raise ValueError('Source URL is not an allowlisted official download')
+            try:
+                data = download_pdf(source['download_url'])
+                origin = 'downloaded'
+            except httpx.HTTPStatusError as error:
+                if error.response.status_code == 403:
+                    raise RuntimeError(
+                        f'{filename}: the publisher blocked automated download (HTTP 403). '
+                        f'Download it in a browser from {source["download_url"]}, then run '
+                        f'python scripts/download_rulebooks.py --import-dir PATH_TO_DOWNLOADS. '
+                        f'The script will verify the file before using it.'
+                    ) from error
+                raise
         if len(data) > MAX_PDF_BYTES or not data.startswith(b'%PDF-'):
             raise ValueError(f'{filename}: download is not a valid PDF within the size limit')
         if hashlib.sha256(data).hexdigest() != source['sha256']:
@@ -69,7 +81,7 @@ def main():
         temporary = path.with_suffix('.pdf.tmp')
         temporary.write_bytes(data)
         temporary.replace(path)
-        print(f'Downloaded and verified: {filename}')
+        print(f'Verified and saved ({origin}): {filename}')
     print('All six source files match the pinned corpus. Next: python -m referee.indexer')
 
 

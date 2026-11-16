@@ -52,12 +52,18 @@ python scripts/download_rulebooks.py
 ```
 
 Some publishers may reject automated downloads with HTTP 403. If the command
-prints that message, open the exact official URL it reports in a browser, save
-the PDF under the reported `rulebooks/FILENAME`, and rerun the command. Existing
-files are never trusted silently: the script checks every PDF against its pinned
-SHA-256 hash before continuing. You may also use `--check-only` to verify all
-six local files without network access. Official URLs, filenames, hashes and
-indexed ranges are recorded in `docs/rulebook-sources.json`. Then build the index:
+prints that message, open the exact official URL it reports in a browser and
+save the PDF with its original filename. Then import browser downloads with:
+
+```sh
+python scripts/download_rulebooks.py --import-dir ~/Downloads
+```
+
+Files are never trusted silently: the script checks every imported or downloaded
+PDF against its pinned SHA-256 hash before saving it in `rulebooks/`. You may
+also use `--check-only` to verify all six local files without network access.
+Official URLs, filenames, hashes and indexed ranges are recorded in
+`docs/rulebook-sources.json`. Then build the index:
 
 ```sh
 python -m referee.indexer
