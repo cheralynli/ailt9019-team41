@@ -137,11 +137,15 @@
         <p class="section-number">07 · REPRODUCE IT</p>
         <h2>Run BoardMaster locally.</h2>
         <p>The app uses Python 3.10+ and the course-provided Alibaba Cloud Bailian key. The key is entered at a hidden prompt and is not saved.</p>
+        <p>Clean-clone check, 16 November 2026: six hash-verified PDFs, 227 indexed passages, 67/67 Python tests, 10/10 UI tests, and all 32 retrieval-preflight cases completed.</p>
+        <p>If Rio Grande Games blocks automated PDF download, download the reported file in a browser and use the verified <code>--import-dir</code> fallback.</p>
       </div>
       <pre aria-label="Local setup commands"><code>python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python scripts/download_rulebooks.py
+# If a publisher returns HTTP 403:
+python scripts/download_rulebooks.py --import-dir ~/Downloads
 python -m referee.indexer
 zsh scripts/start-course.zsh</code></pre>
     </section>
