@@ -162,6 +162,7 @@ The clean-environment setup and test record is
   supported citations and 6/6 refusals under manual review by Lu Weidi against
   the original PDFs. The reviewer participated in development, and the suite
   was known during development; this is not an independent or held-out result.
+- Final report submission: The evaluation results and system limits documented in the final report    align with the 12 November live run and the current codebase. 
 - The server binds to localhost and is for local development. Shared deployment
   and the five-person usability study remain outstanding.
 - Current actions: `docs/NEXT_STEPS.md`; usability materials:
