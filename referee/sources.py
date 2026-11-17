@@ -10,7 +10,7 @@ SOURCES = [
     {"id": "chess-laws", "filename": "Arbiters_Manual_2025.pdf", "game": "chess",
      "edition": "laws-2023", "edition_label": "2023 Laws · 2025 manual", "document": "FIDE Arbiters’ Manual — Laws of Chess section",
      "pages": [16, 67], "page_count": 355, "ai_answers_allowed": False,
-     "warning": "This section mixes Laws of Chess and arbiter commentary. Extraction does not yet separate them. Check the original page; do not treat commentary as an official rule."},
+     "warning": "Law-only extraction separates official Laws text from commentary and non-law guidance in the pinned manual. Only freshly verified official-law passages may be used as AI evidence; check the original page for context."},
     {"id": "dominion-base", "filename": "Dominion2nd.pdf", "game": "dominion",
      "edition": "base-2", "edition_label": "2nd edition · 2021 PDF", "document": "Dominion Base Rules",
      "pages": [1, 16], "page_count": 16},
