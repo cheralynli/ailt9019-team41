@@ -147,6 +147,9 @@ examples do not establish aggregate accuracy or replace the proposed 32-case
 evaluation. Source provenance is recorded in `docs/rulebook-sources.json`.
 The clean-environment setup and test record is
 `docs/reproduction/2026-11-16.md`.
+That recorded run passed 66 Python tests and 10 UI tests, built 227 passages from
+six hash-verified PDFs, and completed all 32 retrieval-preflight cases. These are
+the results of that dated run, not a claim about the current test-suite size.
 
 - The rebuilt six-document corpus yields 227 local excerpts, filtered by game/ruleset. Expansion
   searches include base rules; base-only searches exclude expansions.
