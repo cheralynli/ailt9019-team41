@@ -141,6 +141,12 @@ requests contain no fabricated ruling or citations.
 
 ## Current evidence and limits
 
+Latest fresh-clone verification: 19 November 2026, Linux/Python 3.12.14 at
+`9f069ad`: 67/67 Python tests and 10/10 UI tests, no skips; six hash-verified
+downloads and 227 passages. All 32 retrieval cases were processed (designated
+reference coverage 21/26; no model accuracy measured). See the
+[verification record](docs/reproduction/2026-11-19.md).
+
 See `docs/COURSE_API_PROGRESS_2026-10-21.md` for user-observed Catan answering,
 strategy refusal and Pandemic answering screenshots, with limitations. These
 examples do not establish aggregate accuracy or replace the proposed 32-case
