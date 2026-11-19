@@ -313,5 +313,7 @@ Manual review by Lu Weidi against the frozen key and original PDFs records
 CAT02 passes without the earlier unsolicited sequencing statement. The reviewer
 participated in development and the suite was known during development, so this
 is not independent or held-out evidence. See
-`evaluation/reports/2026-11-12-final-run/` for the compact record. The original
-local outputs and completed review CSV remain preserved.
+[the compact record](evaluation/reports/2026-11-12-final-run/) and
+[published outputs, metadata and reviewed CSV](evaluation/evidence/2026-11-12/).
+The [frozen cases](evaluation/cases.v1.json) are also available.
+DOM04 and PAN05 return verified excerpts without a model call; the scores measure the complete system.
