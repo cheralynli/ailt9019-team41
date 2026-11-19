@@ -1,0 +1,74 @@
+test_dominion_revision_preserves_immediate_scope (test_answer_review.RevisionTests.test_dominion_revision_preserves_immediate_scope) ... ok
+test_focused_answer_and_refusal_need_only_one_call (test_answer_review.RevisionTests.test_focused_answer_and_refusal_need_only_one_call) ... ok
+test_one_grounded_revision_replaces_bad_draft_not_local_citations (test_answer_review.RevisionTests.test_one_grounded_revision_replaces_bad_draft_not_local_citations) ... ok
+test_persistent_error_is_not_displayed_and_does_not_loop (test_answer_review.RevisionTests.test_persistent_error_is_not_displayed_and_does_not_loop) ... ok
+test_revised_citations_are_validated_again (test_answer_review.RevisionTests.test_revised_citations_are_validated_again) ... ok
+test_revision_transport_failure_is_not_retried_or_exposed (test_answer_review.RevisionTests.test_revision_transport_failure_is_not_retried_or_exposed) ... ok
+test_all_observed_eradication_wordings_are_flagged (test_answer_review.ScopeCheckTests.test_all_observed_eradication_wordings_are_flagged) ... ok
+test_checks_do_not_apply_to_other_or_mixed_games (test_answer_review.ScopeCheckTests.test_checks_do_not_apply_to_other_or_mixed_games) ... ok
+test_disease_cube_scope_is_not_confused_with_city_scope (test_answer_review.ScopeCheckTests.test_disease_cube_scope_is_not_confused_with_city_scope) ... ok
+test_gain_event_exception_does_not_restrict_future_draw_or_play (test_answer_review.ScopeCheckTests.test_gain_event_exception_does_not_restrict_future_draw_or_play) ... ok
+test_bad_corpus_returns_error (test_app.HTTPTests.test_bad_corpus_returns_error) ... ok
+test_catalogue (test_app.HTTPTests.test_catalogue) ... ok
+test_catalogue_exposes_configuration_but_not_credentials (test_app.HTTPTests.test_catalogue_exposes_configuration_but_not_credentials) ... ok
+test_course_answer_round_trip (test_app.HTTPTests.test_course_answer_round_trip) ... ok
+test_malformed_json (test_app.HTTPTests.test_malformed_json) ... ok
+test_original_pdf_is_served (test_app.HTTPTests.test_original_pdf_is_served) ... ok
+test_private_files_not_served (test_app.HTTPTests.test_private_files_not_served) ... ok
+test_question_round_trip (test_app.HTTPTests.test_question_round_trip) ... ok
+test_static_files (test_app.HTTPTests.test_static_files) ... ok
+test_all_rulesets_return_scoped_candidates (test_app.LocalIndexTests.test_all_rulesets_return_scoped_candidates) ... ok
+test_representative_page_retrieval (test_app.LocalIndexTests.test_representative_page_retrieval) ... ok
+test_six_sources_and_chess_page_boundaries (test_app.LocalIndexTests.test_six_sources_and_chess_page_boundaries) ... ok
+test_bad_input (test_app.PipelineTests.test_bad_input) ... ok
+test_chess_classification_cannot_enable_model_answers (test_app.PipelineTests.test_chess_classification_cannot_enable_model_answers) ... ok
+test_chunks_keep_all_words (test_app.PipelineTests.test_chunks_keep_all_words) ... ok
+test_empty_corpus_is_not_ready (test_app.PipelineTests.test_empty_corpus_is_not_ready) ... ok
+test_expansion_includes_base_but_not_reverse (test_app.PipelineTests.test_expansion_includes_base_but_not_reverse) ... ok
+test_explicit_game_conflicts_are_not_answered_from_selected_game (test_app.PipelineTests.test_explicit_game_conflicts_are_not_answered_from_selected_game) ... ok
+test_model_stub_never_invents_ruling (test_app.PipelineTests.test_model_stub_never_invents_ruling) ... ok
+test_no_evidence (test_app.PipelineTests.test_no_evidence) ... ok
+test_obvious_vagueness_requests_clarification_without_api (test_app.PipelineTests.test_obvious_vagueness_requests_clarification_without_api) ... ok
+test_permitted_source_still_reaches_model (test_app.PipelineTests.test_permitted_source_still_reaches_model) ... ok
+test_retrieval_filters_game_and_edition (test_app.PipelineTests.test_retrieval_filters_game_and_edition) ... ok
+test_stopword_only_query_returns_nothing (test_app.PipelineTests.test_stopword_only_query_returns_nothing) ... ok
+test_unseparated_chess_is_search_only (test_app.PipelineTests.test_unseparated_chess_is_search_only) ... ok
+test_unsupported_game_and_edition (test_app.PipelineTests.test_unsupported_game_and_edition) ... ok
+test_all_52_pages_are_classified (test_chess_and_evaluation.ChessTests.test_all_52_pages_are_classified) ... ok
+test_commentary_excluded_and_original_encoding_preserved (test_chess_and_evaluation.ChessTests.test_commentary_excluded_and_original_encoding_preserved) ... ok
+test_reference_anchors_match_original_rulebooks (test_chess_and_evaluation.ChessTests.test_reference_anchors_match_original_rulebooks) ... ok
+test_tampered_text_and_non_law_never_enable_answers (test_chess_and_evaluation.ChessTests.test_tampered_text_and_non_law_never_enable_answers) ... ok
+test_unknown_pdf_is_rejected (test_chess_and_evaluation.ChessTests.test_unknown_pdf_is_rejected) ... ok
+test_verified_law_can_reach_the_model (test_chess_and_evaluation.ChessTests.test_verified_law_can_reach_the_model) ... ok
+test_each_refusal_is_required (test_chess_and_evaluation.EvaluationTests.test_each_refusal_is_required) ... ok
+test_missing_or_duplicate_cases_rejected (test_chess_and_evaluation.EvaluationTests.test_missing_or_duplicate_cases_rejected) ... ok
+test_suite_changes_require_a_new_frozen_version (test_chess_and_evaluation.EvaluationTests.test_suite_changes_require_a_new_frozen_version) ... ok
+test_thresholds_and_separate_denominators (test_chess_and_evaluation.EvaluationTests.test_thresholds_and_separate_denominators) ... ok
+test_unreviewed_rows_never_pass (test_chess_and_evaluation.EvaluationTests.test_unreviewed_rows_never_pass) ... ok
+test_action_count_search_includes_explicit_allowance (test_chess_and_evaluation.LiveFailureRetrievalTests.test_action_count_search_includes_explicit_allowance) ... ok
+test_composite_search_stays_in_selected_ruleset (test_chess_and_evaluation.LiveFailureRetrievalTests.test_composite_search_stays_in_selected_ruleset) ... ok
+test_expansion_distance_reference_includes_base_definition (test_chess_and_evaluation.LiveFailureRetrievalTests.test_expansion_distance_reference_includes_base_definition) ... ok
+test_ship_cost_and_move_conditions_are_both_supplied (test_chess_and_evaluation.LiveFailureRetrievalTests.test_ship_cost_and_move_conditions_are_both_supplied) ... ok
+test_concurrent_call_is_not_sent (test_course_api.CourseTests.test_concurrent_call_is_not_sent) ... ok
+test_course_request_and_local_citations (test_course_api.CourseTests.test_course_request_and_local_citations) ... ok
+test_invalid_citation_is_rejected (test_course_api.CourseTests.test_invalid_citation_is_rejected) ... ok
+test_invalid_envelope_and_truncated_output (test_course_api.CourseTests.test_invalid_envelope_and_truncated_output) ... ok
+test_no_key_uses_local_search_configuration (test_course_api.CourseTests.test_no_key_uses_local_search_configuration) ... ok
+test_refusal_has_no_citations (test_course_api.CourseTests.test_refusal_has_no_citations) ... ok
+test_status_errors_hide_provider_response (test_course_api.CourseTests.test_status_errors_hide_provider_response) ... ok
+test_download_stops_after_size_limit (test_download_rulebooks.DownloadTests.test_download_stops_after_size_limit) ... ok
+test_download_uses_verified_http_client_and_returns_pdf (test_download_rulebooks.DownloadTests.test_download_uses_verified_http_client_and_returns_pdf) ... ok
+test_import_dir_hash_checks_and_saves_browser_download (test_download_rulebooks.DownloadTests.test_import_dir_hash_checks_and_saves_browser_download) ... ok
+test_every_displayed_rule_is_verbatim_in_an_actual_citation (test_source_excerpt.SourceExcerptTests.test_every_displayed_rule_is_verbatim_in_an_actual_citation) ... ok
+test_known_extra_claims_cannot_be_appended_by_the_model (test_source_excerpt.SourceExcerptTests.test_known_extra_claims_cannot_be_appended_by_the_model) ... ok
+test_missing_required_rule_uses_normal_model_path (test_source_excerpt.SourceExcerptTests.test_missing_required_rule_uses_normal_model_path) ... ok
+test_other_fixed_questions_still_use_existing_path (test_source_excerpt.SourceExcerptTests.test_other_fixed_questions_still_use_existing_path) ... ok
+test_paraphrases_do_not_require_exact_benchmark_question (test_source_excerpt.SourceExcerptTests.test_paraphrases_do_not_require_exact_benchmark_question) ... ok
+test_wrong_source_and_missing_metadata_cannot_supply_quotes (test_source_excerpt.SourceExcerptTests.test_wrong_source_and_missing_metadata_cannot_supply_quotes) ... ok
+
+----------------------------------------------------------------------
+Ran 67 tests in 11.849s
+
+OK
+Verified and saved (imported from /var/folders/ls/yk1wm2s11vq79tm9yqg1nbm40000gn/T/tmpo59k0rcy/downloads/rules.pdf): rules.pdf
+All six source files match the pinned corpus. Next: python -m referee.indexer

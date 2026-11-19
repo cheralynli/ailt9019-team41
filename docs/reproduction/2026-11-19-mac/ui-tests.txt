@@ -1,0 +1,18 @@
+✔ supported answer reveals and scrolls to the black results section (3.02875ms)
+✔ all non-answer states stay inline without scrolling (2.89775ms)
+✔ search-only results require an explicit click and are not labelled AI answers (0.562625ms)
+✔ reduced motion disables smooth scrolling (0.473875ms)
+✔ ask another question gently returns all the way to page top (0.471042ms)
+✔ return to top respects reduced motion and replaces an active scroll (0.776958ms)
+✔ player interaction cancels the gentle scroll (0.438542ms)
+✔ source-extractive answer retains truthful label (0.47175ms)
+✔ citations use expandable details and never inject response HTML (0.527042ms)
+✔ empty question is handled inline without a request (0.629917ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 159.526958

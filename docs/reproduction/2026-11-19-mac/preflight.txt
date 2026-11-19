@@ -1,0 +1,44 @@
+01/32 CAT01: retrieval checked; model NOT run
+02/32 CAT02: retrieval checked; model NOT run
+03/32 CAT03: retrieval checked; model NOT run
+04/32 CAT04: retrieval checked; model NOT run
+05/32 CAT05: retrieval checked; model NOT run
+06/32 CAT06: retrieval checked; model NOT run
+07/32 CAT07: retrieval checked; model NOT run
+08/32 CAT08: retrieval checked; model NOT run
+09/32 CHE01: retrieval checked; model NOT run
+10/32 CHE02: retrieval checked; model NOT run
+11/32 CHE03: retrieval checked; model NOT run
+12/32 CHE04: retrieval checked; model NOT run
+13/32 CHE05: retrieval checked; model NOT run
+14/32 CHE06: retrieval checked; model NOT run
+15/32 CHE07: retrieval checked; model NOT run
+16/32 CHE08: retrieval checked; model NOT run
+17/32 DOM01: retrieval checked; model NOT run
+18/32 DOM02: retrieval checked; model NOT run
+19/32 DOM03: retrieval checked; model NOT run
+20/32 DOM04: retrieval checked; model NOT run
+21/32 DOM05: retrieval checked; model NOT run
+22/32 DOM06: retrieval checked; model NOT run
+23/32 DOM07: retrieval checked; model NOT run
+24/32 DOM08: retrieval checked; model NOT run
+25/32 PAN01: retrieval checked; model NOT run
+26/32 PAN02: retrieval checked; model NOT run
+27/32 PAN03: retrieval checked; model NOT run
+28/32 PAN04: retrieval checked; model NOT run
+29/32 PAN05: retrieval checked; model NOT run
+30/32 PAN06: retrieval checked; model NOT run
+31/32 PAN07: retrieval checked; model NOT run
+32/32 PAN08: retrieval checked; model NOT run
+{
+  "mode": "retrieval_only",
+  "cases": 32,
+  "answerable_reference_coverage": 21,
+  "answerable_total": 26,
+  "selected_answerable_total": 26,
+  "run_complete": true,
+  "selection_complete": true,
+  "accuracy_scored": false,
+  "next": "Run --live for actual answers; no model accuracy is measured by this preflight."
+}
+Results: /Users/jianrunlu/Desktop/y2sem1/AILT9019/ailt9019-team41/evaluation/results/20261119T071112899019Z

@@ -17,4 +17,6 @@ This is a manual human review by a project member, not an independent or
 held-out assessment. The suite was used during development, so the result does
 not establish accuracy on new phrasings. Original outputs, metadata and the
 completed review CSV remain in the local result directory and were not edited.
+Published copies of the [outputs, metadata and reviewed CSV](../../evidence/2026-11-12/)
+are available in this repository for assessment.
 The compact score and run metadata are recorded in `summary.json`.
