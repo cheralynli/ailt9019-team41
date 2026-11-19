@@ -1,0 +1,2775 @@
+[
+  {
+    "case": {
+      "id": "CAT01",
+      "game": "catan",
+      "edition": "base-5",
+      "category": "ordinary",
+      "question": "Can I build a settlement next to another settlement?",
+      "expected": "No. All three adjacent intersections must be vacant, including your own settlements or cities.",
+      "references": [
+        {
+          "source_id": "catan-base",
+          "page": 5,
+          "anchor": "adjacent intersections"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "CAT01",
+      "category": "ordinary",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "catan-base-p11-2",
+          "source_id": "catan-base",
+          "page": 11,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p12-1",
+          "source_id": "catan-base",
+          "page": 12,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p7-1",
+          "source_id": "catan-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p5-1",
+          "source_id": "catan-base",
+          "page": 5,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p13-1",
+          "source_id": "catan-base",
+          "page": 13,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p6-1",
+          "source_id": "catan-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "No. You must observe the Distance Rule, which states you may only build a settlement on an unoccupied intersection if none of the 3 adjacent intersections contain a settlement or city. This applies to all settlements, including your own.",
+      "citations": [
+        {
+          "id": "catan-base-p11-2",
+          "source_id": "catan-base",
+          "game": "catan",
+          "edition": "base-5",
+          "edition_label": "5th edition · 2020",
+          "document": "CATAN Game Rules & Almanac",
+          "page": 11,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "resource production of this hex, until the robber moves to another number token or the desert. (3) After discarding occurs, you also steal 1 resource card at random from a player who has a settlement or city adjacent to this new hex. If there are 2 or more players with buildings there, you may choose from which one to steal. The robber must be moved. You may not choose to leave the robber on the same hex. After moving the robber, your turn continues with the trade phase. See also Knights Y. SS s ettlements A settlement is worth 1 victory point. Settlements are built on intersections Y (where 3 hexes meet or 1 or 2 hexes meet the frame). You share in all of the resource production of each terrain hex adjacent to your settlements. You must meet 2 conditions when building a settlement: (1) Y our settlement must always connect to 1 or more of your own roads Y. (2) Y ou must observe the Distance Rule Y. For an example of the distance rule, see Illustration M on page 12. Example: See Illustration L. It is Xander’s turn and he rolls a “7.” He must move the robber. The robber was in a fields hex. Xander places it on the “4” number token of a hills hex. If a “4” is rolled in the coming turns, the owners of settlements Illustration L JJ 44•••••• AA BB RobberRobber Illustration K",
+          "source_url": "/api/sources/catan-base#page=11"
+        },
+        {
+          "id": "catan-base-p7-1",
+          "source_id": "catan-base",
+          "game": "catan",
+          "edition": "base-5",
+          "edition_label": "5th edition · 2020",
+          "document": "CATAN Game Rules & Almanac",
+          "page": 7,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "77 DD d esert The desert is the only terrain hex that does not produce resources. The robber Y starts the game there. A settlement or a city built adjacent to the desert yields fewer resources than those built next to one of the other terrain types. d evelopment Cards There are 3 different kinds of development cards: Knight Cards Y, Progress Cards Y, and Victory Point Cards Y. When you buy a development card, take the top card of the draw pile into your hand. Keep your development cards hidden until you play them. This keeps the other players in the dark. You cannot trade or give away development cards. You may only play 1 development card during your turn— either 1 knight card or 1 progress card. You can play the card at any time, even before you roll the dice. You may not, however, play a card that you bought during the same turn. Exception: If you buy a card and it is a victory point card Y that brings you to 10 points, you may immediately reveal this card (and all other VP cards) and win the game. You only reveal victory point cards when the game is over—once you or an opponent reaches 10+ victory points and declares victory. d istan Ce r ule You may only build a settlement on an unoccupied intersection Y and only if none of the 3 adjacent intersections contains a settlement or city. Example: See Illustration F. Coleman, the blue player, wants to build a settlement. The settlements marked “A” are already in play. Coleman cannot build on the intersections marked “B.” He can only build at intersection “C.” d omesti C t rade On your turn, you may trade resources with the other players (after rolling for resource production). You and the other players negotiate the terms of your trades—such as which cards will be exchanged. You may trade as many times as you can, using single or multiple cards. However, you cannot give away cards, or trade matching resources (“trade” 3 ore for 1 ore, for example). Important: While it is your turn, you must be a part of all trades, and the other players may not trade among themselves. Example: It is Pete’s turn. He needs one brick to build a road. He has 2 lumber and 3 ore. Pete asks aloud, “Who will give me 1 brick for 1 ore?” Beth answers, “If you give me 3 ore, I’ll give you a brick.” Cooper interjects, “I’ll give you 1 brick if you give me 1 lumber and 1 ore.” Pete accepts Cooper’s offer and trades a lumber and an ore for a brick. Note Beth may not trade with Cooper, since it is Pete’s turn. EE e ndin G the Game If you have—or reach—10 victory points on your turn, the game ends immediately and you win! You can only win during your turn. If somehow you find you have 10 victory points during another",
+          "source_url": "/api/sources/catan-base#page=7"
+        },
+        {
+          "id": "catan-base-p5-1",
+          "source_id": "catan-base",
+          "game": "catan",
+          "edition": "base-5",
+          "edition_label": "5th edition · 2020",
+          "document": "CATAN Game Rules & Almanac",
+          "page": 5,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "55 b) Settlement Y Requires: Brick, Lumber, Wool, & Grain Take special note of the “Distance Rule” Y: you may only build a settlement at an intersection if all 3 of the adjacent intersections are vacant (i.e., none are occupied by any settlements or cities—even yours). Each of your settlements must connect to at least 1 of your own roads. Regardless of whose turn it is (i.e., during any production phase), when a terrain hex produces resources, you receive 1 resource card for each settlement you have adjacent to that terrain hex. Each settlement is worth 1 victory point. c) City Y Requires: 3 Ore & 2 Grain You may only establish a city by upgrading one of your settlements. When you upgrade a settlement to a city, put the settlement (house) piece back in your supply and replace it with a city piece (church). Cities produce twice as many resources as settlements. You acquire 2 resource cards for an adjacent terrain hex that produces resources. Each city is worth 2 victory points. d) Buying a Development Card Y Requires: Ore, Wool, & Grain When you buy a development card, draw the top card from the deck. There are 3 different kinds of these cards: knight Y, progress Y, and victory point Y. Each has a different effect (see 4.b, below). Development cards never go back into the supply, and you cannot buy development cards if the supply is empty. Keep your development cards hidden (in your hand) until you use them, so your opponents can’t anticipate your play. 4. Special Cases a) Rolling a “7” and Activating the Robber Y If you roll a “7,” no one receives any resources. Instead, every player who has more than 7 resource cards must select half (rounded down) of their resource cards and return them to the bank. Then you must move the robber Y. Proceed as follows: (1) You must move the robber Y immediately to the number token of any other terrain hex or to the desert Y hex. (2) Then you steal 1 (random) resource card from an opponent who has a settlement or city adjacent to the target terrain hex. The player who is robbed holds their resource cards face down. You then take 1 card at random. If the target hex is adjacent to 2 or more players’ settlements or cities, you choose which one you want to steal from. Important: If the production number for the hex containing the robber is rolled, the owners of adjacent settlements and cities do not receive resources. The robber prevents it. b) Playing Development Cards Y At any time during your turn, you may play 1 development card (put it face up on the table). That card, however, may not be a card you bought during the same turn (except for a victory point card, as described below)! Knight Cards (Purple Frame) Y If you play a knight card, you must immediately move the robber. See “Rolling a ‘7’ and",
+          "source_url": "/api/sources/catan-base#page=5"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "CAT02",
+      "game": "catan",
+      "edition": "base-5",
+      "category": "ordinary",
+      "question": "Which resources are required to build one settlement?",
+      "expected": "One brick, one lumber, one wool and one grain.",
+      "references": [
+        {
+          "source_id": "catan-base",
+          "page": 5,
+          "anchor": "Brick, Lumber, Wool"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "CAT02",
+      "category": "ordinary",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "catan-base-p6-1",
+          "source_id": "catan-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p5-1",
+          "source_id": "catan-base",
+          "page": 5,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p4-1",
+          "source_id": "catan-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p7-1",
+          "source_id": "catan-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p10-1",
+          "source_id": "catan-base",
+          "page": 10,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p14-1",
+          "source_id": "catan-base",
+          "page": 14,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "To build one settlement, you must pay exactly 1 Brick, 1 Lumber, 1 Wool, and 1 Grain.",
+      "citations": [
+        {
+          "id": "catan-base-p5-1",
+          "source_id": "catan-base",
+          "game": "catan",
+          "edition": "base-5",
+          "edition_label": "5th edition · 2020",
+          "document": "CATAN Game Rules & Almanac",
+          "page": 5,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "55 b) Settlement Y Requires: Brick, Lumber, Wool, & Grain Take special note of the “Distance Rule” Y: you may only build a settlement at an intersection if all 3 of the adjacent intersections are vacant (i.e., none are occupied by any settlements or cities—even yours). Each of your settlements must connect to at least 1 of your own roads. Regardless of whose turn it is (i.e., during any production phase), when a terrain hex produces resources, you receive 1 resource card for each settlement you have adjacent to that terrain hex. Each settlement is worth 1 victory point. c) City Y Requires: 3 Ore & 2 Grain You may only establish a city by upgrading one of your settlements. When you upgrade a settlement to a city, put the settlement (house) piece back in your supply and replace it with a city piece (church). Cities produce twice as many resources as settlements. You acquire 2 resource cards for an adjacent terrain hex that produces resources. Each city is worth 2 victory points. d) Buying a Development Card Y Requires: Ore, Wool, & Grain When you buy a development card, draw the top card from the deck. There are 3 different kinds of these cards: knight Y, progress Y, and victory point Y. Each has a different effect (see 4.b, below). Development cards never go back into the supply, and you cannot buy development cards if the supply is empty. Keep your development cards hidden (in your hand) until you use them, so your opponents can’t anticipate your play. 4. Special Cases a) Rolling a “7” and Activating the Robber Y If you roll a “7,” no one receives any resources. Instead, every player who has more than 7 resource cards must select half (rounded down) of their resource cards and return them to the bank. Then you must move the robber Y. Proceed as follows: (1) You must move the robber Y immediately to the number token of any other terrain hex or to the desert Y hex. (2) Then you steal 1 (random) resource card from an opponent who has a settlement or city adjacent to the target terrain hex. The player who is robbed holds their resource cards face down. You then take 1 card at random. If the target hex is adjacent to 2 or more players’ settlements or cities, you choose which one you want to steal from. Important: If the production number for the hex containing the robber is rolled, the owners of adjacent settlements and cities do not receive resources. The robber prevents it. b) Playing Development Cards Y At any time during your turn, you may play 1 development card (put it face up on the table). That card, however, may not be a card you bought during the same turn (except for a victory point card, as described below)! Knight Cards (Purple Frame) Y If you play a knight card, you must immediately move the robber. See “Rolling a ‘7’ and",
+          "source_url": "/api/sources/catan-base#page=5"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "CAT03",
+      "game": "catan",
+      "edition": "base-5",
+      "category": "ordinary",
+      "question": "A 7 is rolled and I hold exactly seven resource cards. Must I discard any?",
+      "expected": "No. Only players holding more than seven resource cards discard half, rounded down.",
+      "references": [
+        {
+          "source_id": "catan-base",
+          "page": 5,
+          "anchor": "more than 7"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "CAT03",
+      "category": "ordinary",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "catan-base-p11-1",
+          "source_id": "catan-base",
+          "page": 11,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p5-1",
+          "source_id": "catan-base",
+          "page": 5,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p10-1",
+          "source_id": "catan-base",
+          "page": 10,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p8-1",
+          "source_id": "catan-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p4-1",
+          "source_id": "catan-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p9-1",
+          "source_id": "catan-base",
+          "page": 9,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "No, you do not need to discard any cards. The rules state that only players with more than 7 resource cards (8 or more) must discard half of them. Since you hold exactly seven, you are below the threshold and keep all your cards.",
+      "citations": [
+        {
+          "id": "catan-base-p11-1",
+          "source_id": "catan-base",
+          "game": "catan",
+          "edition": "base-5",
+          "edition_label": "5th edition · 2020",
+          "document": "CATAN Game Rules & Almanac",
+          "page": 11,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "1111 r esour Ce t rade In the second phase of your turn, you may trade with the other players. The other players may not trade among themselves, only with the player whose turn it is. There are 2 different kinds of trade: • Domestic trade Y and • Maritime trade Y. r oads The roads connect your settlements and cities. You build roads on paths Y. You cannot build new settlements without also building roads. Roads provide victory points only if you hold the Longest Road Y special card. Only 1 road may be built on each path. You can build roads along the coast. Example: See Illustration K. Liam, the white player, would like to build a road. He may build (place) his road on any of the paths outlined in green. Each of these paths connects to either Liam’s road or his settlement, and is not blocked by the blue player’s settlement (see the path outlined in red). r o BBer The robber begins the game in the desert Y. It is moved only by rolling a “7” Y or playing a Knight Y card. If the robber is moved to any other terrain hex, it prevents that hex from producing resources. Players with settlements and/or cities adjacent to the target terrain hex receive no resources from this hex as long as the robber is in the hex. “A” and “B” do not receive a brick resource card. This lasts until the robber is moved again by another “7” or a knight card. Xander may also take 1 resource card at random from 1 of the players who own settlements “A” or “B”. r ollin G a “7” and a Ctivatin G the r o BBer If you roll a “7” for resource production, none of the players receive resources. Instead: (1) Each player counts their resource cards. Any player with more than 7 resource cards (i.e., 8 or more) must choose and discard half of them. Return discards to the supply stacks. If you hold an odd number of cards, round down (e.g., if you have 9 resource cards, you discard 4). Example: Alex rolls a “7.” He has only 6 cards in his hand. Larry has 8 cards and Will has 11. Larry must discard 4 cards and Will 5 (rounding down). (2) Then you (the player who rolled the “7”) must move the robber Y to the number token Y of any other terrain hex (or to the desert Y hex). This blocks the resource production of this hex, until the robber moves to another number token or the desert. (3) After discarding occurs, you also steal 1 resource card at random from a player who has a settlement or city adjacent to this new hex. If there are 2 or more players with buildings there, you may choose from which one to steal. The robber must be moved. You may not choose to leave the robber on the same hex. After moving the",
+          "source_url": "/api/sources/catan-base#page=11"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "CAT04",
+      "game": "catan",
+      "edition": "base-5",
+      "category": "ordinary",
+      "question": "How many resource cards does a city receive when its adjacent terrain hex produces?",
+      "expected": "Two of the resource produced by that hex, subject to normal supply rules.",
+      "references": [
+        {
+          "source_id": "catan-base",
+          "page": 5,
+          "anchor": "2 resource cards"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "CAT04",
+      "category": "ordinary",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "catan-base-p3-1",
+          "source_id": "catan-base",
+          "page": 3,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p16-1",
+          "source_id": "catan-base",
+          "page": 16,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p5-1",
+          "source_id": "catan-base",
+          "page": 5,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p10-1",
+          "source_id": "catan-base",
+          "page": 10,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p4-2",
+          "source_id": "catan-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p8-1",
+          "source_id": "catan-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "A city receives 2 resource cards for each adjacent terrain hex that produces resources. This is double the amount a settlement receives (1 card). The specific type of resource depends on the terrain hex (e.g., brick from hills, lumber from forest). If multiple adjacent hexes produce on the same roll, the city collects 2 cards for each of those hexes.",
+      "citations": [
+        {
+          "id": "catan-base-p5-1",
+          "source_id": "catan-base",
+          "game": "catan",
+          "edition": "base-5",
+          "edition_label": "5th edition · 2020",
+          "document": "CATAN Game Rules & Almanac",
+          "page": 5,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "55 b) Settlement Y Requires: Brick, Lumber, Wool, & Grain Take special note of the “Distance Rule” Y: you may only build a settlement at an intersection if all 3 of the adjacent intersections are vacant (i.e., none are occupied by any settlements or cities—even yours). Each of your settlements must connect to at least 1 of your own roads. Regardless of whose turn it is (i.e., during any production phase), when a terrain hex produces resources, you receive 1 resource card for each settlement you have adjacent to that terrain hex. Each settlement is worth 1 victory point. c) City Y Requires: 3 Ore & 2 Grain You may only establish a city by upgrading one of your settlements. When you upgrade a settlement to a city, put the settlement (house) piece back in your supply and replace it with a city piece (church). Cities produce twice as many resources as settlements. You acquire 2 resource cards for an adjacent terrain hex that produces resources. Each city is worth 2 victory points. d) Buying a Development Card Y Requires: Ore, Wool, & Grain When you buy a development card, draw the top card from the deck. There are 3 different kinds of these cards: knight Y, progress Y, and victory point Y. Each has a different effect (see 4.b, below). Development cards never go back into the supply, and you cannot buy development cards if the supply is empty. Keep your development cards hidden (in your hand) until you use them, so your opponents can’t anticipate your play. 4. Special Cases a) Rolling a “7” and Activating the Robber Y If you roll a “7,” no one receives any resources. Instead, every player who has more than 7 resource cards must select half (rounded down) of their resource cards and return them to the bank. Then you must move the robber Y. Proceed as follows: (1) You must move the robber Y immediately to the number token of any other terrain hex or to the desert Y hex. (2) Then you steal 1 (random) resource card from an opponent who has a settlement or city adjacent to the target terrain hex. The player who is robbed holds their resource cards face down. You then take 1 card at random. If the target hex is adjacent to 2 or more players’ settlements or cities, you choose which one you want to steal from. Important: If the production number for the hex containing the robber is rolled, the owners of adjacent settlements and cities do not receive resources. The robber prevents it. b) Playing Development Cards Y At any time during your turn, you may play 1 development card (put it face up on the table). That card, however, may not be a card you bought during the same turn (except for a victory point card, as described below)! Knight Cards (Purple Frame) Y If you play a knight card, you must immediately move the robber. See “Rolling a ‘7’ and",
+          "source_url": "/api/sources/catan-base#page=5"
+        },
+        {
+          "id": "catan-base-p10-1",
+          "source_id": "catan-base",
+          "game": "catan",
+          "edition": "base-5",
+          "edition_label": "5th edition · 2020",
+          "document": "CATAN Game Rules & Almanac",
+          "page": 10,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "1010 NN n um Ber t o Kens The 18 number tokens are marked with the numerals “2” through “12.” There is only one “2” and one “12.” There is no “7.” The more often a number is rolled, the more often each associated hex produces resources. Note the size of the numbers and the dots (pips) beneath the numbers on the tokens. The taller the number and the larger the quantity of dots, the more likely it is that number will be rolled. “6” and “8” (the red numbers) are the most frequently rolled numbers. They each have 5 dots, because there are 5 ways to roll these numbers on the 2 dice. The letters on the back of the number tokens are only used during the setup phase (see Set-up, Variable Y). PP p aths Paths are defined as the edges where 2 hexes and/or hexes and the frame meet. Paths run along the border of 2 terrain hexes or between a land hex and the frame. Only one road Y can be built on any path. At each end of a path is an intersection Y. p ro Gress Cards Progress cards are a type of development card. They have green frames. There are 2 each of 3 varieties: Road Building: If you play this card, you may immediately place 2 free roads on the board (according to normal building rules). Year of Plenty: If you play this card you may immediately take any 2 resource cards from the supply stacks. You may use these cards to build in the same turn. Monopoly: If you play this card, you must name 1 type of resource. All the other players must give you all of the resource cards of this type that they have in their hands. If an opponent does not have a resource card of the specified type, they do not have to give you anything. You may play only 1 development card Y during your turn. RR r esour Ce Cards (r esour Ces ) There are 5 different types of resources (see page 3): grain (from fields), brick (from hills), ore (from mountains), lumber (from forest), and wool (from pasture). These resources are represented by “resource cards.” You receive these cards as income from the resource production of these hexes. Resource production is determined by the dice roll at the beginning of each turn. You receive your income for each terrain hex adjacent to your settlements or cities every time the production number on the hex is rolled (exception: see Robber Y). r esour Ce p rodu Ction On your turn, you must roll the dice for the turn’s resource production. The number rolled determines which hexes produce resources. Each number appears twice—except for “2” and “12,” which only appear once. All players who have settlements Y or cities Y on the hexes indicated by the roll receive the yields (resource cards) of those hexes. Each settlement produces 1 resource card and each city",
+          "source_url": "/api/sources/catan-base#page=10"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "CAT05",
+      "game": "catan",
+      "edition": "seafarers-5",
+      "category": "two_passage",
+      "question": "When my shipping route reaches a new island, may I build a settlement there, and what exact distance restriction applies?",
+      "expected": "A connected shipping route can permit a new coastal settlement; all three neighbouring intersections must still be vacant.",
+      "references": [
+        {
+          "source_id": "catan-seafarers",
+          "page": 4,
+          "anchor": "new settlement"
+        },
+        {
+          "source_id": "catan-base",
+          "page": 5,
+          "anchor": "adjacent intersections"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "CAT05",
+      "category": "two_passage",
+      "reference_coverage": true,
+      "covered_references": [
+        true,
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "catan-seafarers-p4-1",
+          "source_id": "catan-seafarers",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-seafarers-p26-1",
+          "source_id": "catan-seafarers",
+          "page": 26,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p12-1",
+          "source_id": "catan-base",
+          "page": 12,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p4-1",
+          "source_id": "catan-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-seafarers-p24-2",
+          "source_id": "catan-seafarers",
+          "page": 24,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p5-1",
+          "source_id": "catan-base",
+          "page": 5,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "Yes, you may build a settlement on a new island if your shipping route reaches its coastline. You must obey the standard Distance Rule: you can only build at an intersection if all three adjacent intersections are vacant (occupied by no settlements or cities). Additionally, the settlement must connect to your network of roads and shipping routes.",
+      "citations": [
+        {
+          "id": "catan-seafarers-p4-1",
+          "source_id": "catan-seafarers",
+          "game": "catan",
+          "edition": "seafarers-5",
+          "edition_label": "5th edition · 2021",
+          "document": "CATAN Seafarers Game Rules & Scenarios",
+          "page": 4,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "44 Since the ships represent established sea routes, they may not be connected to roads, nor can roads connect directly to ships (see Illustration C). You may only connect a land network of roads to a sea network of shipping routes if you first build a settlement where they come together. Ships and roads can be built towards each other; but even if they both reach the same intersection, they are not connected until you build a settlement there. Unconnected networks do not count toward the “Longest T rade Route” (see page 5). Roads and ships may not be built along the same coastline. There can only be one ship OR one road along any given coastal hex side (see the Catan rules on road building). 4. Shipping Routes A shipping route is either “closed” or “open.” A “closed shipping route” is any unbroken line of ships that interconnects two of your settlements and/or cities. You may never move any ships that are part of a closed shipping route, even if that movement would not break the connection between the two settlements/cities. An “open shipping route” is any route that does not interconnect two of your settlements or cities. 5. Moving Ships The biggest difference between ships and roads is the ability of ships to sail from one location to another. Unlike road pieces, ships may be moved. However, there are limits to how ships may be moved. You must obey these restrictions when you move your ships: • Y ou may only move 1 ship per turn, and only during your building phase. • Y ou may not move a ship on the same turn you originally built it. • When y ou move a ship, you must obey all of the usual rules for placing a new ship. • Y ou may only move a ship where one of its two ends is not adjacent to any of your other pieces. In Illustration D the ships outlined in white can move. So, none of the orange ships can move. Three of the red ships, and only one of the blue ships can move. 3. The Purpose of Ships Shipping routes act as roads across water (or along the coast). You build and place ships in much the same way as roads. They connect two adjacent intersections. A chain of connected ships of the same color form a “shipping route.” Shipping routes act the same way as roads for expanding your principality. You can build new pieces anywhere that is connected to your network of roads and shipping routes. Count shipping routes when you calculate the “Longest T rade Route” (see page 5). If your shipping route reaches a coastline, you can then build a new settlement on that coast, even if it is a new island. Of course, you must still obey the “distance rule” from basic Catan, even if you are building on a new island. Once you build a settlement on a new island, you can",
+          "source_url": "/api/sources/catan-seafarers#page=4"
+        },
+        {
+          "id": "catan-base-p5-1",
+          "source_id": "catan-base",
+          "game": "catan",
+          "edition": "base-5",
+          "edition_label": "5th edition · 2020",
+          "document": "CATAN Game Rules & Almanac",
+          "page": 5,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "55 b) Settlement Y Requires: Brick, Lumber, Wool, & Grain Take special note of the “Distance Rule” Y: you may only build a settlement at an intersection if all 3 of the adjacent intersections are vacant (i.e., none are occupied by any settlements or cities—even yours). Each of your settlements must connect to at least 1 of your own roads. Regardless of whose turn it is (i.e., during any production phase), when a terrain hex produces resources, you receive 1 resource card for each settlement you have adjacent to that terrain hex. Each settlement is worth 1 victory point. c) City Y Requires: 3 Ore & 2 Grain You may only establish a city by upgrading one of your settlements. When you upgrade a settlement to a city, put the settlement (house) piece back in your supply and replace it with a city piece (church). Cities produce twice as many resources as settlements. You acquire 2 resource cards for an adjacent terrain hex that produces resources. Each city is worth 2 victory points. d) Buying a Development Card Y Requires: Ore, Wool, & Grain When you buy a development card, draw the top card from the deck. There are 3 different kinds of these cards: knight Y, progress Y, and victory point Y. Each has a different effect (see 4.b, below). Development cards never go back into the supply, and you cannot buy development cards if the supply is empty. Keep your development cards hidden (in your hand) until you use them, so your opponents can’t anticipate your play. 4. Special Cases a) Rolling a “7” and Activating the Robber Y If you roll a “7,” no one receives any resources. Instead, every player who has more than 7 resource cards must select half (rounded down) of their resource cards and return them to the bank. Then you must move the robber Y. Proceed as follows: (1) You must move the robber Y immediately to the number token of any other terrain hex or to the desert Y hex. (2) Then you steal 1 (random) resource card from an opponent who has a settlement or city adjacent to the target terrain hex. The player who is robbed holds their resource cards face down. You then take 1 card at random. If the target hex is adjacent to 2 or more players’ settlements or cities, you choose which one you want to steal from. Important: If the production number for the hex containing the robber is rolled, the owners of adjacent settlements and cities do not receive resources. The robber prevents it. b) Playing Development Cards Y At any time during your turn, you may play 1 development card (put it face up on the table). That card, however, may not be a card you bought during the same turn (except for a victory point card, as described below)! Knight Cards (Purple Frame) Y If you play a knight card, you must immediately move the robber. See “Rolling a ‘7’ and",
+          "source_url": "/api/sources/catan-base#page=5"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "CAT06",
+      "game": "catan",
+      "edition": "seafarers-5",
+      "category": "two_passage",
+      "question": "What resources does a ship cost, and may I move that ship on the same turn I built it?",
+      "expected": "A ship costs one wool and one lumber. A newly built ship cannot move in the same turn.",
+      "references": [
+        {
+          "source_id": "catan-seafarers",
+          "page": 3,
+          "anchor": "wool"
+        },
+        {
+          "source_id": "catan-seafarers",
+          "page": 4,
+          "anchor": "same turn"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "CAT06",
+      "category": "two_passage",
+      "reference_coverage": true,
+      "covered_references": [
+        true,
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "catan-seafarers-p3-1",
+          "source_id": "catan-seafarers",
+          "page": 3,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p6-1",
+          "source_id": "catan-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-seafarers-p4-1",
+          "source_id": "catan-seafarers",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-seafarers-p20-2",
+          "source_id": "catan-seafarers",
+          "page": 20,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-seafarers-p28-1",
+          "source_id": "catan-seafarers",
+          "page": 28,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p5-1",
+          "source_id": "catan-base",
+          "page": 5,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "To build a ship, you must expend 1 wool resource and 1 lumber resource. You may not move a ship on the same turn you originally built it.",
+      "citations": [
+        {
+          "id": "catan-seafarers-p3-1",
+          "source_id": "catan-seafarers",
+          "game": "catan",
+          "edition": "seafarers-5",
+          "edition_label": "5th edition · 2021",
+          "document": "CATAN Seafarers Game Rules & Scenarios",
+          "page": 3,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "33 coast route if there is already a road along that hex side (and vice versa). When you build a new ship, you may place it adjacent to any settlement or city you have already built on the coast (see Illustration A). 88 •••••••••• OR—you may place your new ship adjacent to any of your other ships that are already on the board (see the paths marked “YES” in Illustration B). When you place ships, any amount of branching is allowed, just like when you build roads. Illustration A The Frame Pieces T o assemble the frame for a Seafarers scenario, you have to use the six frame pieces from Catan and the Seafarers frame pieces. T o use the six Catan frame pieces, you need to turn them over so that the all-sea sides are face up—you do not use the harbors that are printed on those frame pieces. Each scenario illustration shows how the frame pieces should be put together. The Hexagonal Tiles and the Harbor T okens After you built the frame, place the hexagonal tiles (hexes). Arrange these hexes exactly as shown in the scenario diagram. After you place the hexes, you need to arrange the round tokens with the production numbers. These are also placed exactly as shown in the scenario diagram. After you build the board, randomly place the harbor tokens. Take the harbor tokens listed in the scenario description and shuffle them face down in a pile. Randomly select the harbor tokens, one at a time, and place them on the board where the scenario diagram indicates. Important Note: Do not use the smaller harbor tokens from the Catan game when playing with the Seafarers expansion! 2. Ship Building In order to travel from one island to another, you need to build ships. You cannot satisfy your hunger to expand with roads alone! The ship pieces in the game do not represent the individual ships, just as roads do not represent the actual carts and wagons that travel along your trade routes. Instead, the ship pieces represent a “shipping route.” This is the route that ships use to trade and travel between the islands. T o build a ship, expend 1 wool resource (to make sails) and 1 lumber resource (to build hulls and masts). Like roads, ships can only be placed on the boundary (hex side) between two hexes. Unlike roads, ships cannot be placed between two land hexes. You may only build ships between two sea hexes (forming an aquatic route) or between a sea hex and a land hex (a coastal route). You may not build a ship along a Asia is summer and we sail five paths with the moon Illustration B YES YES YES YES YES NO",
+          "source_url": "/api/sources/catan-seafarers#page=3"
+        },
+        {
+          "id": "catan-seafarers-p4-1",
+          "source_id": "catan-seafarers",
+          "game": "catan",
+          "edition": "seafarers-5",
+          "edition_label": "5th edition · 2021",
+          "document": "CATAN Seafarers Game Rules & Scenarios",
+          "page": 4,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "44 Since the ships represent established sea routes, they may not be connected to roads, nor can roads connect directly to ships (see Illustration C). You may only connect a land network of roads to a sea network of shipping routes if you first build a settlement where they come together. Ships and roads can be built towards each other; but even if they both reach the same intersection, they are not connected until you build a settlement there. Unconnected networks do not count toward the “Longest T rade Route” (see page 5). Roads and ships may not be built along the same coastline. There can only be one ship OR one road along any given coastal hex side (see the Catan rules on road building). 4. Shipping Routes A shipping route is either “closed” or “open.” A “closed shipping route” is any unbroken line of ships that interconnects two of your settlements and/or cities. You may never move any ships that are part of a closed shipping route, even if that movement would not break the connection between the two settlements/cities. An “open shipping route” is any route that does not interconnect two of your settlements or cities. 5. Moving Ships The biggest difference between ships and roads is the ability of ships to sail from one location to another. Unlike road pieces, ships may be moved. However, there are limits to how ships may be moved. You must obey these restrictions when you move your ships: • Y ou may only move 1 ship per turn, and only during your building phase. • Y ou may not move a ship on the same turn you originally built it. • When y ou move a ship, you must obey all of the usual rules for placing a new ship. • Y ou may only move a ship where one of its two ends is not adjacent to any of your other pieces. In Illustration D the ships outlined in white can move. So, none of the orange ships can move. Three of the red ships, and only one of the blue ships can move. 3. The Purpose of Ships Shipping routes act as roads across water (or along the coast). You build and place ships in much the same way as roads. They connect two adjacent intersections. A chain of connected ships of the same color form a “shipping route.” Shipping routes act the same way as roads for expanding your principality. You can build new pieces anywhere that is connected to your network of roads and shipping routes. Count shipping routes when you calculate the “Longest T rade Route” (see page 5). If your shipping route reaches a coastline, you can then build a new settlement on that coast, even if it is a new island. Of course, you must still obey the “distance rule” from basic Catan, even if you are building on a new island. Once you build a settlement on a new island, you can",
+          "source_url": "/api/sources/catan-seafarers#page=4"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "CAT07",
+      "game": "catan",
+      "edition": "base-5",
+      "category": "routing",
+      "question": "In the selected base game, is upgrading a settlement to a city worth one or two victory points?",
+      "expected": "A city is worth two victory points in total, replacing a one-point settlement.",
+      "references": [
+        {
+          "source_id": "catan-base",
+          "page": 5,
+          "anchor": "2 victory points"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "CAT07",
+      "category": "routing",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "catan-base-p6-1",
+          "source_id": "catan-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p5-1",
+          "source_id": "catan-base",
+          "page": 5,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p16-1",
+          "source_id": "catan-base",
+          "page": 16,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p14-1",
+          "source_id": "catan-base",
+          "page": 14,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p8-1",
+          "source_id": "catan-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p4-2",
+          "source_id": "catan-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "In the base game, a city is worth 2 victory points. Since you upgrade an existing settlement (which was worth 1 point) to a city, the total value of that location becomes 2 points.",
+      "citations": [
+        {
+          "id": "catan-base-p6-1",
+          "source_id": "catan-base",
+          "game": "catan",
+          "edition": "base-5",
+          "edition_label": "5th edition · 2020",
+          "document": "CATAN Game Rules & Almanac",
+          "page": 6,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "66 a lmanac This “Catan Almanac” contains detailed, alphabetical entries and examples for Catan. These are not the “Game Rules.” You do not have to read this material prior to your first game. Instead, use the Game Rules. Then read this to enjoy the complete experience. This almanac includes advanced rules and clarifications. You can also refer to it if any questions arise during a game. BB Build (Buildin G) You may build on your turn after you have rolled for resource production and finished trading. To build, you must turn in the specified combinations of resource cards (see the Building Costs Cards Y). Return the resource cards to the supply stacks. You can build as many items and buy as many cards as you desire—as long as you have enough resources to “pay” for them and they are still available in the supply. (See Settlements Y, Cities Y, Roads Y, and Development Cards Y.) Each player has a supply of 15 roads, 5 settlements, and 4 cities. If you build a city, return the settlement to your supply. Roads and cities, however, remain on the board until the end of the game once they are built. Your turn is over after “building,” and the player to your left continues the game. New rule variant: see Combined Trade/Build Phase Y . Buildin G Costs Cards The building costs cards show what can be built and which resources are required. When you pay building costs, you must return the necessary resources to their supply stacks. You can build settlements Y and roads Y, upgrade settlements to cities Y, and buy development cards Y. CC Cities You cannot build a city directly. You can only upgrade an existing settlement to a city. You pay the required resources, return the settlement to your supply, and replace the settlement with a city on the same intersection Y. Each city is worth 2 victory points. You receive double resource production (2 resource cards) from the adjacent terrain hexes whenever those numbers are rolled. When you build a city, the upgraded settlement piece becomes available again. You can use it to build another settlement later. Example: See Illustration E. Claudia, the blue player, rolls a resource production roll of “8.” She receives 3 ore cards: 1 ore for her settlement and 2 ore for her city. Benny, the red player, receives 2 lumber for his city. Hint: It is extremely difficult to win the game without upgrading settlements to cities. Since you only have 5 settlements available, you can only reach 5 victory points by only building settlements. Coast When a terrain hex borders on the sea (i.e., a frame piece), it is called a “coast.” You can build a road along a coast. You can build settlements and upgrade settlements to cities on intersections that border on the sea. However, since a site on the coast borders only 1 or 2 terrain hexes, coastal settlements generate smaller resource yields. Still, coastal sites often lie on",
+          "source_url": "/api/sources/catan-base#page=6"
+        },
+        {
+          "id": "catan-base-p14-1",
+          "source_id": "catan-base",
+          "game": "catan",
+          "edition": "base-5",
+          "edition_label": "5th edition · 2020",
+          "document": "CATAN Game Rules & Almanac",
+          "page": 14,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "1414 t rade After you roll for resource production, you may trade with other players (domestic trade Y) or with the bank (maritime trade Y). • Y ou may trade as long as you have resource cards. • If you decide not to trade during your turn, no one can trade. • Y ou may trade with another player between your turns, but only if it is that player’s turn and they elect to trade with you. • Y ou may not trade with the bank during another player’s turn. • Y ou may not give away cards. • Y ou may not trade development cards. • Y ou may not trade like resources (e.g., 2 wool for 1 wool). VV v i Ctory p oint Cards Victory point cards are development cards Y, so they can be “bought.” These orange framed development cards represent important cultural achievements, represented by certain buildings. Each victory point card is worth 1 victory point. You only reveal your victory point cards when you or someone else wins the game! Keep victory point cards hidden until you have 10 points during your turn and you can declare victory. (You should also reveal them if someone else wins.) Hint: Again, keep your victory point cards hidden until the end of the game. Place them face down in front of you. Of course, if you have 1 or 2 unused cards face down in front of you for a long time, the other players will assume that they are victory point cards. v i Ctory p oints The first player to reach (be at) 10 victory points (VPs) on their turn wins the game. Players acquire victory points (VPs) for the following: 1 settlement = 1 VP 1 city = 2 VPs Longest Road special card = 2 VPs Largest Army special card = 2 VPs Victory point (VP) card = 1 VP Since each player begins with 2 settlements, each player begins the game with 2 victory points. Therefore, you only need 8 more victory points to win the game! Hint: In Catan, you will often see an icon of a rising sun (on VP cards and special VP cards, etc.). This is the VP symbol. It is a visual reminder for the things, other than settlements and cities, that earn you VPs. Each VP symbol you see is worth 1 VP . © 2015 Catan GmbH 1 Victory Point! Reveal this card on your turn if, with it, you reach the number of points required for victory. LIBRARY © 2015 Catan GmbH 1 Victory Point! Reveal this card on your turn if, with it, you reach the number of points required for victory. MARKET © 2015 Catan GmbH 1 Victory Point! Reveal this card on your turn if, with it, you reach the number of points required for victory. CHAPEL © 2015 Catan GmbH 1 Victory Point! Reveal this card on your turn if, with it, you reach the number of points required for",
+          "source_url": "/api/sources/catan-base#page=14"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "CAT08",
+      "game": "catan",
+      "edition": "base-5",
+      "category": "refusal",
+      "question": "Should I build a city or a settlement to win?",
+      "expected": "Decline strategy advice; offer to explain the written building rules instead.",
+      "references": [],
+      "review_note": "Strategy request; refusal is required by the proposal boundary, not by a rulebook."
+    },
+    "preflight": {
+      "id": "CAT08",
+      "category": "refusal",
+      "reference_coverage": null,
+      "covered_references": [],
+      "retrieved": [
+        {
+          "id": "catan-base-p4-1",
+          "source_id": "catan-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p6-1",
+          "source_id": "catan-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p7-1",
+          "source_id": "catan-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p13-1",
+          "source_id": "catan-base",
+          "page": 13,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p14-1",
+          "source_id": "catan-base",
+          "page": 14,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "catan-base-p16-1",
+          "source_id": "catan-base",
+          "page": 16,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "refusal",
+      "message": "I cannot provide strategy advice on which structure to build to win. I can only explain the rules regarding victory points and building mechanics.",
+      "citations": []
+    }
+  },
+  {
+    "case": {
+      "id": "CHE01",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "ordinary",
+      "question": "Can I castle while my king is in check?",
+      "expected": "No. Castling is temporarily prevented when the king’s starting square is attacked.",
+      "references": [
+        {
+          "source_id": "chess-laws",
+          "page": 24,
+          "anchor": "Castling is prevented temporarily"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "CHE01",
+      "category": "ordinary",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "chess-laws-p24-official_law-1",
+          "source_id": "chess-laws",
+          "page": 24,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p26-official_law-1",
+          "source_id": "chess-laws",
+          "page": 26,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p27-official_law-1",
+          "source_id": "chess-laws",
+          "page": 27,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p23-official_law-1",
+          "source_id": "chess-laws",
+          "page": 23,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p28-official_law-1",
+          "source_id": "chess-laws",
+          "page": 28,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p41-official_law-1",
+          "source_id": "chess-laws",
+          "page": 41,
+          "kind": "official_law"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "No, you cannot castle while your king is in check. According to the rules, castling is temporarily prevented if the square on which the king stands, or the square it must cross, or the square it is to occupy, is attacked by one or more of the opponent's pieces. Since being 'in check' means the king is attacked, this condition prevents castling.",
+      "citations": [
+        {
+          "id": "chess-laws-p24-official_law-1",
+          "source_id": "chess-laws",
+          "game": "chess",
+          "edition": "laws-2023",
+          "page": 24,
+          "printed_page": "15",
+          "kind": "official_law",
+          "text": "15 3.8.2.1 The right to castle has been lost: 3.8.2.1.1 If the king has already moved, or 3.8.2.1.2 With a rook that has already moved. 3.8.2.2 Castling is prevented temporarily: 3.8.2.2.1 if the square on which the king stands, or the square which it must cross, or the square which it is to occupy, is attacked by one or more of the opponent's pieces, or 3.8.2.2.2 if there is any piece between the king and the rook with which castling is to be effected. 3.9 The king in check: 3.9.1 The king is said to be 'in check' if it is attacked by one or more of the opponent's pieces, even if such pieces are constrained from moving to the square occupied by the king because they would then leave or place their own king in check. 3.9.2 No piece can be moved that will either expose the king of the same colour to check or leave that king in check. 3.10 Legal and illegal moves; illegal positions: 3.10.1 A move is legal when all the relevant requirements of Articles 3.1 – 3.9 have been fulfilled. 3.10.2 A move is illegal when it fails to meet the relevant requirements of Articles 3.1 –3.9 3.10.3 A position is illegal when it cannot have been reached by any series of legal moves.",
+          "extraction_profile": "fide-2025-laws-upright-v1",
+          "document": "FIDE Arbiters’ Manual — Laws of Chess section",
+          "edition_label": "2023 Laws · 2025 manual",
+          "warning": "Law-only excerpt from the pinned manual; commentary and non-law guidance are excluded from AI evidence. Check the original PDF.",
+          "source_url": "/api/sources/chess-laws#page=24"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "CHE02",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "ordinary",
+      "question": "Which side makes the first move under the selected Laws?",
+      "expected": "White, the player with light-coloured pieces, makes the first move.",
+      "references": [
+        {
+          "source_id": "chess-laws",
+          "page": 17,
+          "anchor": "makes the first move"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "CHE02",
+      "category": "ordinary",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "chess-laws-p17-official_law-1",
+          "source_id": "chess-laws",
+          "page": 17,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p21-official_law-1",
+          "source_id": "chess-laws",
+          "page": 21,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p16-official_law-1",
+          "source_id": "chess-laws",
+          "page": 16,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p26-official_law-1",
+          "source_id": "chess-laws",
+          "page": 26,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p27-official_law-1",
+          "source_id": "chess-laws",
+          "page": 27,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p39-official_law-1",
+          "source_id": "chess-laws",
+          "page": 39,
+          "kind": "official_law"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "Under the selected Laws, the player with the light-coloured pieces (White) makes the first move. After that, players move alternately.",
+      "citations": [
+        {
+          "id": "chess-laws-p17-official_law-1",
+          "source_id": "chess-laws",
+          "game": "chess",
+          "edition": "laws-2023",
+          "page": 17,
+          "printed_page": "8",
+          "kind": "official_law",
+          "text": "8 BASIC RULES OF PLAY Article 1: The Nature and Objectives of the Game of Chess 1.1 The game of chess is played between two opponents who move their pieces on a square board called a ‘chessboard’. 1.2 The player with the light-coloured pieces (White) makes the first move, then the players move alternately, with the player with the dark-coloured pieces (Black) making the next move. 1.3 A player is said to ‘have the move’ when h i s / h e r opponent’s move has been ‘made’. 1.4 The objective of each player is to place the opponent’s king ‘under attack’ in such a way that the opponent has no legal move. 1.4.1 The player who achieves this goal is said to have ‘checkmated’ the opponent’s king and to have won the game. Leaving one’s own king under attack, exposing one’s own king to attack and also ’capturing’ the opponent’s king is not allowed. 1.4.2 The opponent whose king has been checkmated has lost the game. 1.5 If the position is such that neither player can possibly checkmate the opponent’s king, the game is drawn (see Article 5.2.2).",
+          "extraction_profile": "fide-2025-laws-upright-v1",
+          "document": "FIDE Arbiters’ Manual — Laws of Chess section",
+          "edition_label": "2023 Laws · 2025 manual",
+          "warning": "Law-only excerpt from the pinned manual; commentary and non-law guidance are excluded from AI evidence. Check the original PDF.",
+          "source_url": "/api/sources/chess-laws#page=17"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "CHE03",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "ordinary",
+      "question": "On its first move, can a pawn advance two squares if both squares are unoccupied?",
+      "expected": "Yes, along the same file on its first move if both squares are unoccupied.",
+      "references": [
+        {
+          "source_id": "chess-laws",
+          "page": 21,
+          "anchor": "both squares are unoccupied"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "CHE03",
+      "category": "ordinary",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "chess-laws-p21-official_law-1",
+          "source_id": "chess-laws",
+          "page": 21,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p22-official_law-1",
+          "source_id": "chess-laws",
+          "page": 22,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p23-official_law-1",
+          "source_id": "chess-laws",
+          "page": 23,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p53-official_law-1",
+          "source_id": "chess-laws",
+          "page": 53,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p41-official_law-1",
+          "source_id": "chess-laws",
+          "page": 41,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p52-official_law-1",
+          "source_id": "chess-laws",
+          "page": 52,
+          "kind": "official_law"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "Yes. On its first move, a pawn may advance two squares along the same file, provided that both squares are unoccupied.",
+      "citations": [
+        {
+          "id": "chess-laws-p21-official_law-1",
+          "source_id": "chess-laws",
+          "game": "chess",
+          "edition": "laws-2023",
+          "page": 21,
+          "printed_page": "12",
+          "kind": "official_law",
+          "text": "12 3.4 The queen may move to any square along the file, the rank or a diagonal on which it stands. 3.5 When making these moves, the bishop, rook or queen may not move over any intervening pieces. 3.6 The knight may move to one of the squares nearest to that on which it stands but not on the same rank, file or diagonal. 3.7 The pawn: 3.7.1 The pawn may move forward to the square immediately in front of it on the same file, provided that this square is unoccupied, or 3.7.2 on its first move the pawn may move as in 3.7.1 or alternatively it may advance two squares along the same file, provided that both squares are unoccupied, or 3.7.3 the pawn may move to a square occupied by an opponent’s piece diagonally in front of it on an adjacent file, capturing that piece.",
+          "extraction_profile": "fide-2025-laws-upright-v1",
+          "document": "FIDE Arbiters’ Manual — Laws of Chess section",
+          "edition_label": "2023 Laws · 2025 manual",
+          "warning": "Law-only excerpt from the pinned manual; commentary and non-law guidance are excluded from AI evidence. Check the original PDF.",
+          "source_url": "/api/sources/chess-laws#page=21"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "CHE04",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "ordinary",
+      "question": "Can I promote a pawn to a queen even if I have not lost my original queen?",
+      "expected": "Yes. Promotion choice is not restricted to previously captured pieces; a pawn can become a queen, rook, bishop or knight of the same colour.",
+      "references": [
+        {
+          "source_id": "chess-laws",
+          "page": 22,
+          "anchor": "captured previously"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "CHE04",
+      "category": "ordinary",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "chess-laws-p22-official_law-1",
+          "source_id": "chess-laws",
+          "page": 22,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p21-official_law-1",
+          "source_id": "chess-laws",
+          "page": 21,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p36-official_law-1",
+          "source_id": "chess-laws",
+          "page": 36,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p46-official_law-1",
+          "source_id": "chess-laws",
+          "page": 46,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p24-official_law-1",
+          "source_id": "chess-laws",
+          "page": 24,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p20-official_law-1",
+          "source_id": "chess-laws",
+          "page": 20,
+          "kind": "official_law"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "Yes. When a pawn reaches the rank furthest from its starting position, you must exchange it for a new queen, rook, bishop, or knight of the same color. Your choice is not restricted to pieces that have been captured previously. Therefore, you can promote a pawn to a queen even if your original queen is still on the board.",
+      "citations": [
+        {
+          "id": "chess-laws-p22-official_law-1",
+          "source_id": "chess-laws",
+          "game": "chess",
+          "edition": "laws-2023",
+          "page": 22,
+          "printed_page": "13",
+          "kind": "official_law",
+          "text": "13 3.7.3.1 A pawn occupying a square on the same rank as and on an adjacent file to an opponent’s pawn which has just advanced two squares in one move from its original square may capture this opponent’s pawn as though the latter had been moved only one square. 3.7.3.2 This capture is only legal on the move following this advance and is called an ‘en passant’ capture. 3.7.3.3 When a player, having the move, plays a pawn to the rank furthest from its starting position, he/she must exchange that pawn as part of the same move for a new queen, rook, bishop or knight of the same colour on the intended square of arrival. This is called the square of ‘promotion’. 3.7.3.4 The player's choice is not restricted to pieces that have been captured previously. 3.7.3.5 This exchange of a pawn for another piece is called promotion, and the effect of the new piece is immediate.",
+          "extraction_profile": "fide-2025-laws-upright-v1",
+          "document": "FIDE Arbiters’ Manual — Laws of Chess section",
+          "edition_label": "2023 Laws · 2025 manual",
+          "warning": "Law-only excerpt from the pinned manual; commentary and non-law guidance are excluded from AI evidence. Check the original PDF.",
+          "source_url": "/api/sources/chess-laws#page=22"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "CHE05",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "two_passage",
+      "question": "Why is capturing the opponent’s king illegal, and what result follows when the opponent is checkmated?",
+      "expected": "Capturing the king is prohibited; a legal checkmate wins and immediately ends the game.",
+      "references": [
+        {
+          "source_id": "chess-laws",
+          "page": 17,
+          "anchor": "capturing"
+        },
+        {
+          "source_id": "chess-laws",
+          "page": 28,
+          "anchor": "checkmate"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "CHE05",
+      "category": "two_passage",
+      "reference_coverage": true,
+      "covered_references": [
+        true,
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "chess-laws-p17-official_law-1",
+          "source_id": "chess-laws",
+          "page": 17,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p24-official_law-1",
+          "source_id": "chess-laws",
+          "page": 24,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p28-official_law-1",
+          "source_id": "chess-laws",
+          "page": 28,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p36-official_law-1",
+          "source_id": "chess-laws",
+          "page": 36,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p23-official_law-1",
+          "source_id": "chess-laws",
+          "page": 23,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p37-official_law-1",
+          "source_id": "chess-laws",
+          "page": 37,
+          "kind": "official_law"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "Capturing the opponent's king is illegal because the objective of chess is to place the opponent's king 'under attack' such that they have no legal move, not to physically remove it. The rules explicitly state that capturing the opponent's king is not allowed. When a player achieves this goal, they are said to have 'checkmated' the opponent's king. This immediately ends the game, and the player who delivered checkmate wins.",
+      "citations": [
+        {
+          "id": "chess-laws-p17-official_law-1",
+          "source_id": "chess-laws",
+          "game": "chess",
+          "edition": "laws-2023",
+          "page": 17,
+          "printed_page": "8",
+          "kind": "official_law",
+          "text": "8 BASIC RULES OF PLAY Article 1: The Nature and Objectives of the Game of Chess 1.1 The game of chess is played between two opponents who move their pieces on a square board called a ‘chessboard’. 1.2 The player with the light-coloured pieces (White) makes the first move, then the players move alternately, with the player with the dark-coloured pieces (Black) making the next move. 1.3 A player is said to ‘have the move’ when h i s / h e r opponent’s move has been ‘made’. 1.4 The objective of each player is to place the opponent’s king ‘under attack’ in such a way that the opponent has no legal move. 1.4.1 The player who achieves this goal is said to have ‘checkmated’ the opponent’s king and to have won the game. Leaving one’s own king under attack, exposing one’s own king to attack and also ’capturing’ the opponent’s king is not allowed. 1.4.2 The opponent whose king has been checkmated has lost the game. 1.5 If the position is such that neither player can possibly checkmate the opponent’s king, the game is drawn (see Article 5.2.2).",
+          "extraction_profile": "fide-2025-laws-upright-v1",
+          "document": "FIDE Arbiters’ Manual — Laws of Chess section",
+          "edition_label": "2023 Laws · 2025 manual",
+          "warning": "Law-only excerpt from the pinned manual; commentary and non-law guidance are excluded from AI evidence. Check the original PDF.",
+          "source_url": "/api/sources/chess-laws#page=17"
+        },
+        {
+          "id": "chess-laws-p28-official_law-1",
+          "source_id": "chess-laws",
+          "game": "chess",
+          "edition": "laws-2023",
+          "page": 28,
+          "printed_page": "19",
+          "kind": "official_law",
+          "text": "19 Article 5: The Completion of the Game 5.1.1 The game is won by the player who has checkmated his/her opponent’s king. This immediately ends the game, provided that the move producing the checkmate position was in accordance with Article 3 and Articles 4.2 – 4.7. 5.1.2 The game is lost by the player who declares he/she resigns (this immediately ends the game), unless the position is such that the opponent cannot checkmate the player’s king by any possible series of legal moves. In this case the result of the game is a draw. 5.2.1 The game is drawn when the player to move has no legal move and his/her king is not in check. The game is said to end in ‘stalemate’. This immediately ends the game, provided that the move producing the stalemate position was in accordance with Article 3 and Articles 4.2 – 4.7. 5.2.2 The game is drawn when a position has arisen in which neither player can checkmate the opponent’s king with any series of legal moves. The game is said to end in a ‘dead position’. This immediately ends the game, provided that the move producing the position was in accordance with Article 3 and Articles 4.2 – 4.7. 5.2.3 The game is drawn upon agreement between the two players during the game, provided both players have made at least one move. This immediately ends the game.",
+          "extraction_profile": "fide-2025-laws-upright-v1",
+          "document": "FIDE Arbiters’ Manual — Laws of Chess section",
+          "edition_label": "2023 Laws · 2025 manual",
+          "warning": "Law-only excerpt from the pinned manual; commentary and non-law guidance are excluded from AI evidence. Check the original PDF.",
+          "source_url": "/api/sources/chess-laws#page=28"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "CHE06",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "routing",
+      "question": "Under the selected Laws, if I intentionally touch my own piece and it has a legal move, must I move that piece?",
+      "expected": "Yes, subject to the adjustment exception: move the first own piece intentionally touched that can legally move.",
+      "references": [
+        {
+          "source_id": "chess-laws",
+          "page": 25,
+          "anchor": "first piece"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "CHE06",
+      "category": "routing",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "chess-laws-p25-official_law-1",
+          "source_id": "chess-laws",
+          "page": 25,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p27-official_law-1",
+          "source_id": "chess-laws",
+          "page": 27,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p26-official_law-1",
+          "source_id": "chess-laws",
+          "page": 26,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p42-official_law-1",
+          "source_id": "chess-laws",
+          "page": 42,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p17-official_law-1",
+          "source_id": "chess-laws",
+          "page": 17,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p20-official_law-1",
+          "source_id": "chess-laws",
+          "page": 20,
+          "kind": "official_law"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "Yes. Under the selected Laws, if you intentionally touch one of your own pieces with the intention of moving it, you must move that piece if it has a legal move. Specifically, Article 4.3.1 states that if the player having the move touches their own pieces with the intention of moving or capturing, they must move the first piece touched that can be moved. Any physical contact other than clearly accidental is considered intent (Article 4.2.2).",
+      "citations": [
+        {
+          "id": "chess-laws-p25-official_law-1",
+          "source_id": "chess-laws",
+          "game": "chess",
+          "edition": "laws-2023",
+          "page": 25,
+          "printed_page": "16",
+          "kind": "official_law",
+          "text": "16 Article 4: The Act of Moving the Pieces 4.1 Each move must be played with one hand only. 4.2.1 Only the player having the move may adjust one or more pieces on their squares, provided that he/she first expresses his/her intention (for example by saying “j’adoube” or “I adjust”). 4.2.2 Any other physical contact with a piece, except for clearly accidental contact, shall be considered to be intent. 4.3 Except as provided in Article 4.2.1, if the player having the move touches on the chessboard, with the intention of moving or capturing: 4.3.1 one or more of his/her own pieces, he/she must move the first piece touched that can be moved. 4.3.2 one or more of his/her opponent’s pieces, he /she must capture the first piece touched that can be captured. 4.3.3 one or more pieces of each colour, he/she must capture the first touched opponent’s piece with his/her first touched piece or, if this is illegal, move or capture the first piece touched that can be moved or captured. If it is unclear whether the player’s own piece or his/her opponent’s was touched first, the player’s own piece shall be considered to have been touched before his/her opponent’s.",
+          "extraction_profile": "fide-2025-laws-upright-v1",
+          "document": "FIDE Arbiters’ Manual — Laws of Chess section",
+          "edition_label": "2023 Laws · 2025 manual",
+          "warning": "Law-only excerpt from the pinned manual; commentary and non-law guidance are excluded from AI evidence. Check the original PDF.",
+          "source_url": "/api/sources/chess-laws#page=25"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "CHE07",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "refusal",
+      "question": "Compare Monopoly rent rules with Chess castling and give one combined ruling.",
+      "expected": "Decline the cross-game/unsupported request; no combined ruling.",
+      "references": [],
+      "review_note": "Cross-game and unsupported-game case."
+    },
+    "preflight": {
+      "id": "CHE07",
+      "category": "refusal",
+      "reference_coverage": null,
+      "covered_references": [],
+      "retrieved": [
+        {
+          "id": "chess-laws-p16-official_law-1",
+          "source_id": "chess-laws",
+          "page": 16,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p55-official_law-1",
+          "source_id": "chess-laws",
+          "page": 55,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p24-official_law-1",
+          "source_id": "chess-laws",
+          "page": 24,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p26-official_law-1",
+          "source_id": "chess-laws",
+          "page": 26,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p37-official_law-1",
+          "source_id": "chess-laws",
+          "page": 37,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p27-official_law-1",
+          "source_id": "chess-laws",
+          "page": 27,
+          "kind": "official_law"
+        }
+      ]
+    },
+    "actual": {
+      "status": "unsupported",
+      "message": "This question names a different or unsupported game. Ask about one game at a time and select its matching ruleset.",
+      "citations": []
+    }
+  },
+  {
+    "case": {
+      "id": "CHE08",
+      "game": "chess",
+      "edition": "laws-2023",
+      "category": "refusal",
+      "question": "According only to the selected Laws of Chess section, what is the official maximum weight in grams of a wooden king?",
+      "expected": "State that the selected evidence does not establish that equipment weight; do not invent a number.",
+      "references": [],
+      "review_note": "Missing-data case: the fixed Laws section does not specify a maximum king weight in grams. Do not retrieve other manual sections or equipment regulations."
+    },
+    "preflight": {
+      "id": "CHE08",
+      "category": "refusal",
+      "reference_coverage": null,
+      "covered_references": [],
+      "retrieved": [
+        {
+          "id": "chess-laws-p16-official_law-1",
+          "source_id": "chess-laws",
+          "page": 16,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p46-official_law-1",
+          "source_id": "chess-laws",
+          "page": 46,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p47-official_law-1",
+          "source_id": "chess-laws",
+          "page": 47,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p51-official_law-1",
+          "source_id": "chess-laws",
+          "page": 51,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p29-official_law-1",
+          "source_id": "chess-laws",
+          "page": 29,
+          "kind": "official_law"
+        },
+        {
+          "id": "chess-laws-p45-official_law-1",
+          "source_id": "chess-laws",
+          "page": 45,
+          "kind": "official_law"
+        }
+      ]
+    },
+    "actual": {
+      "status": "refusal",
+      "message": "The provided excerpts from the Laws of Chess do not contain information regarding the physical specifications, materials, or weight of chess pieces. Therefore, I cannot answer what the maximum weight of a wooden king is based on this evidence.",
+      "citations": []
+    }
+  },
+  {
+    "case": {
+      "id": "DOM01",
+      "game": "dominion",
+      "edition": "base-2",
+      "category": "ordinary",
+      "question": "What cards are in each player’s starting deck in the base game?",
+      "expected": "Seven Coppers and three Estates, shuffled face down.",
+      "references": [
+        {
+          "source_id": "dominion-base",
+          "page": 3,
+          "anchor": "3 Estates and 7 Coppers"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "DOM01",
+      "category": "ordinary",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "dominion-base-p9-1",
+          "source_id": "dominion-base",
+          "page": 9,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p3-1",
+          "source_id": "dominion-base",
+          "page": 3,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p4-1",
+          "source_id": "dominion-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p14-2",
+          "source_id": "dominion-base",
+          "page": 14,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p6-1",
+          "source_id": "dominion-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p6-2",
+          "source_id": "dominion-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "In the base game, each player's starting deck consists of 10 cards: 7 Coppers and 3 Estates. These are shuffled face-down to form the initial deck.",
+      "citations": [
+        {
+          "id": "dominion-base-p9-1",
+          "source_id": "dominion-base",
+          "game": "dominion",
+          "edition": "base-2",
+          "edition_label": "2nd edition · 2021 PDF",
+          "document": "Dominion Base Rules",
+          "page": 9,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "You can count the number of cards in your deck at any time (without looking at the card fronts), but cannot look through or count your discard pile or another player's deck or discard pile. The number of cards in each player's hand is public, as is the top card of each discard pile. All cards in play are public; set aside cards are normally public but are sometimes face down. Players can look through the Trash pile at any time. When interacting with a discard pile (e.g. with Harbinger), it is not necessary to keep it in the same order. The only thing that ever matters about that order is that the top card is public. It is also never necessary to keep the Trash pile in a particular order. When two things happen to different players at the same time, go in turn order starting with the player whose turn it is. For example, when a player plays Witch, the other players gain Curses in turn order, which may matter if the Curses run out. When two things happen to one player at the same time, that player picks the order to do them, even if some are mandatory and some are not. This can come up with expansions. When a card gives you a choice (\"choose one...\"), you can pick any option, without considering whether or not you will be able to do it. This comes up with expansions. To play with 5 or 6 players, you need additional base cards. These are available in the Base Cards product and in the Big Box, or you could have two copies of Dominion. Most Victory piles still have 12 cards, as with 3-4 player games. However use 15 Provinces for 5 players, and use 18 Provinces for 6 players. Use 40 Curses for 5 players, 50 Curses for 6 players. Add all of the extra Coppers, Silvers, and Golds to those piles. The game end condition for 5-6 players is: any four piles are empty, or the Province pile is empty. 9 Before the game Deck Shuffle your starting 10 cards (7 Coppers & 3 Estates) and place them face-down as your deck. Draw the top 5 cards as your starting hand. In this example, you have 1 Estate & 4 Coppers. The rest remain as your deck. Cards playedHand empty Discard pile empty Estate Victory Illustration: Martin Hoffmann © 2021 Rio Grande Games 1 victory_2nd.indd 1 7/14/21 11:07 PM Copper Treasure Illustration: Ryan Laukat © 2021 Rio Grande Games treasure_2nd02.indd 68 7/12/21 12:43 AM Copper Treasure Illustration: Ryan Laukat © 2021 Rio Grande Games treasure_2nd02.indd 68 7/12/21 12:43 AM Copper Treasure Illustration: Ryan Laukat © 2021 Rio Grande Games treasure_2nd02.indd 68 7/12/21 12:43 AM Copper TreasureIllustration: Ryan Laukat © 2021 Rio Grande Games treasure_2nd02.indd 68 68 7/12/21 12:43 AM DominionRules2021.qxp_WideDominion 7/19/21 6:37 AM Page 9",
+          "source_url": "/api/sources/dominion-base#page=9"
+        },
+        {
+          "id": "dominion-base-p3-1",
+          "source_id": "dominion-base",
+          "game": "dominion",
+          "edition": "base-2",
+          "edition_label": "2nd edition · 2021 PDF",
+          "document": "Dominion Base Rules",
+          "page": 3,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "Each player takes 3 Estates and 7 Coppers and shuffles them face down as a starting deck. Place 17 face-up piles of cards on the table: the 7 Base card piles, which are always used, and always the same, and 10 Kingdom card piles, which vary from game to game. The full set of cards available this game is called the Supply. Kingdom Cards Base Cards The Supply Trash mat The Base cards are Copper, Silver, Gold, Estate, Duchy, Province, and Curse. • Copper, Silver, Gold: Use every copy you have of these (except Coppers players already have). • Estate, Duchy, Province: Use 8 copies of each for a 2-player game, 12 copies for 3-4 players. • Curse: Use 10 with 2 players, 20 with 3 players, all 30 with 4 players. There are 26 Kingdom cards. If you have expansions, you can use those Kingdom cards as well. Choose 10 Kingdom cards to use, however you like; the others will not be used this game. You can pick the Kingdom cards randomly by shuffling the randomizer cards - the cards with the blue framed backs - and turning over 10 of them. There are a few pre-made sets of 10 cards in the Recommended Sets section that you can try. For your very first game of Dominion, use these cards: Cellar, Market, Merchant, Militia, Mine, Moat, Remodel, Smithy, Village, Workshop. Whichever 10 cards you pick, get out those piles - 10 copies of each card (do not put the randomizer card in the pile). When a Victory Kingdom card is used (e.g. Gardens), it gets 8 copies for 2 players, 12 copies for 3-4 players, as with the other Victory cards. Put the Trash mat near the piles. 3 Silver Treasure Illustration: Ryan Laukat © 2021 Rio Grande Games treasure_2nd02.indd 120 7/12/21 12:43 AM Gold Treasure Illustration: Ryan Laukat © 2021 Rio Grande Games treasure_2nd02.indd 1 7/12/21 12:43 AM Estate Victory 1 victory_2nd.indd 1 7/14/21 11:07 PM Province Victory Illustration: Martin Hoffmann ©2021 Rio Grande Games 6 victory_2nd.indd 43 7/14/21 11:07 PM Curse Curse Illustration: Claus Stephan © 2021 Rio Grande Games -1 victory_2nd.indd 68 7/14/21 11:07 PM Remodel Trash a card from your hand. Gain a card costing up to more than it. Action Illustration: Matthias Catrein © 2021 Rio Grande Games kingdom randomizer 2ndtrying.indd 13 7/19/21 6:27 AM +1 Card +1 Action +1 Buy + Market Action Illustration: Matthias Catrein © 2021 Rio Grande Games kingdom randomizer 2ndtrying.indd 6 7/19/21 6:27 AM Workshop Gain a card costing up to . Action Illustration: Christof Tisch © 2021 Rio Grande Games kingdom randomizer 2ndtrying.indd 20 7/19/21 6:27 AM Trash Estate Victory Illustration: Martin Hoffmann © 2021 Rio Grande Games 1 victory_2nd.indd 1 7/14/21 11:07 PM Estate Victory Illustration: Martin Hoffmann © 2021 Rio Grande Games 1 victory_2nd.indd 1 7/14/21 11:07 PM Duchy Victory Illustration: Martin Hoffmann © 2021 Rio Grande Games 3 victory_2nd.indd 30 7/14/21 11:07 PM Duchy Victory Illustration: Martin Hoffmann © 2021 Rio Grande Games 3 victory_2nd.indd",
+          "source_url": "/api/sources/dominion-base#page=3"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "DOM02",
+      "game": "dominion",
+      "edition": "base-2",
+      "category": "ordinary",
+      "question": "How many cards do I draw at the end of my turn during Clean-up?",
+      "expected": "Draw a new hand of five cards after discarding hand and cards in play.",
+      "references": [
+        {
+          "source_id": "dominion-base",
+          "page": 5,
+          "anchor": "new hand of 5 cards"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "DOM02",
+      "category": "ordinary",
+      "reference_coverage": false,
+      "covered_references": [
+        false
+      ],
+      "retrieved": [
+        {
+          "id": "dominion-base-p12-1",
+          "source_id": "dominion-base",
+          "page": 12,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p7-1",
+          "source_id": "dominion-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p6-1",
+          "source_id": "dominion-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p4-1",
+          "source_id": "dominion-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p12-2",
+          "source_id": "dominion-base",
+          "page": 12,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p11-1",
+          "source_id": "dominion-base",
+          "page": 11,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "During the Clean-up phase, you discard your played cards and hand, then draw exactly 5 cards to end your turn.",
+      "citations": [
+        {
+          "id": "dominion-base-p12-1",
+          "source_id": "dominion-base",
+          "game": "dominion",
+          "edition": "base-2",
+          "edition_label": "2nd edition · 2021 PDF",
+          "document": "Dominion Base Rules",
+          "page": 12,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "Artisan: The card you gain comes from the Supply and is put into your hand. You cannot use to increase how expensive of a card you gain; it always costs from to . After gaining the card, you put a card from your hand onto your deck; that can be the card you just gained, or a different card. Bandit: First you gain a Gold from the Supply, putting it into your discard pile. Then each other player, in turn order, reveals their top 2 cards, trashes one they choose that is a Treasure other than Copper (e.g. Silver or Gold), and discards the other revealed cards. A player who did not reveal a Treasure card other than Copper simply discards both cards. Bureaucrat: A player with no cards in their deck will have the card they put on top become the only card in their deck. Cellar: Choose any number of cards from your hand; discard them all at once; then draw as many cards as you actually discarded. If this causes you to shuffle, you will shuffle in the cards you discarded. You do not have to let players see any but the top card discarded; however the number of cards you discard is public. Chapel: You cannot trash the Chapel itself, since it is not in your hand after you play it. Council Room: The other players draw a card whether they want to or not. Festival: You get +2 Actions, +1 Buy, and + . Gardens: For example, if you have 37 cards at the end of the game, each copy of Gardens you have is worth 3 . Use 8 copies of Gardens in a 2-player game, 12 copies for 3 or more players. Harbinger: First draw a card and get +1 Action; then look through your discard pile, and you may put a card from it on top of your deck. Putting a card on top is optional. 12 Clean-up phase Deck Hand Cards playedDiscard pile In your Clean-up phase, you discard your played cards and hand as usual, then draw 5 cards to end your turn. Remodel Trash a card from your hand. Gain a card costing up to more than it. Action Illustration: Matthias Catrein © 2021 Rio Grande Games kingdom randomizer 2ndtrying.indd 13 7/19/21 6:27 AM Silver Treasure Illustration: Ryan Laukat © 2021 Rio Grande Games treasure_2nd02.indd 120 7/12/21 12:43 AM Copper Treasure Illustration: Ryan Laukat © 2021 Rio Grande Games treasure_2nd02.indd 68 7/12/21 12:43 AM Copper Treasure Illustration: Ryan Laukat © 2021 Rio Grande Games treasure_2nd02.indd 68 7/12/21 12:43 AM empty Copper Treasure Illustration: Ryan Laukat © 2021 Rio Grande Games treasure_2nd02.indd 68 7/12/21 12:43 AM Artisan Gain a card to your hand costing up to . Put a card from your hand onto your deck Action Illustration: Harald Lieske © 2021 Rio Grande Games kingdom randomizer 2ndtrying.indd 1 7/19/21 6:29 AM Bandit Gain a Gold. Each other player reveals the top 2 cards of their deck, trashes a revealed",
+          "source_url": "/api/sources/dominion-base#page=12"
+        },
+        {
+          "id": "dominion-base-p4-1",
+          "source_id": "dominion-base",
+          "game": "dominion",
+          "edition": "base-2",
+          "edition_label": "2nd edition · 2021 PDF",
+          "document": "Dominion Base Rules",
+          "page": 4,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "4 Randomly choose a starting player. If you have just played a game of Dominion and it was not a tie, have the player who won the previous game go last (the player to their left goes first). Each player draws an initial hand of 5 cards. Dominion is a game of building a deck of cards. Each player has their own deck, their own discard pile, their own hand of cards and play area. Players start with a weak initial deck and gradually acquire better cards over the course of the game. Players take turns. Each turn has three phases: Action, then Buy, then Clean-up, which you can remember as ABC. In the Action phase, you can play one Action card from your hand; in the Buy phase, you can play any number of Treasure cards and then buy one card to add to your deck; and in Clean-up you sweep up all of your cards from play and from your hand and discard them, then draw a new hand of 5 cards, shuffling as needed. The game ends after 3 piles are empty or the Province pile is empty; then players count up the on all of their cards, and the player with the most wins. In your Action phase, you can play one Action card from your hand. Those are cards that say \"Action\" on the bottom, and by default have a white banner (some are other colors due to additional types). Playing an Action card has three steps: announcing it; moving it to the \"in play\" area - the table space in front of you; and following the instructions on it, in order, top to bottom. If the card has a dividing line (e.g. Moat), you stop there; instructions below the line happen at some other time (indicated). If you cannot do everything a card tells you to do, you do as much as you can; you can still play a card even if you know you will not be able to do everything it tells you to. Some cards give \"+1 Action.\" This increases how many Action cards you can play in a turn. The increase happens right then, but you do not play the next Action card until completely finishing the first one. Some cards give \"+2 Actions\"; that means you can play two more Action cards that turn. So, for example, if you play Militia, which does not give +Actions, you resolve Militia and are done with your Action phase. But you could instead play a Market, then another Market, then a Militia; each Market gives you +1 Action, which lets you keep playing Actions. Using up your Actions is optional; you can have an Action card left in hand that you can play, and decide not to play it. Card name +1 Action Instructions Dividing line to follow Happens at a different time Action type +1 Card +1 Action +1 Buy + Market Action Illustration: Matthias Catrein © 2021 Rio Grande Games",
+          "source_url": "/api/sources/dominion-base#page=4"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "DOM03",
+      "game": "dominion",
+      "edition": "base-2",
+      "category": "ordinary",
+      "question": "At the start of the Action phase, how many Action cards may I normally play before any card grants extra Actions?",
+      "expected": "Normally one Action card; additional Actions require a card effect.",
+      "references": [
+        {
+          "source_id": "dominion-base",
+          "page": 4,
+          "anchor": "one Action card"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "DOM03",
+      "category": "ordinary",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "dominion-base-p13-1",
+          "source_id": "dominion-base",
+          "page": 13,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p7-1",
+          "source_id": "dominion-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p6-1",
+          "source_id": "dominion-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p12-2",
+          "source_id": "dominion-base",
+          "page": 12,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p14-1",
+          "source_id": "dominion-base",
+          "page": 14,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p4-1",
+          "source_id": "dominion-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "You may normally play one Action card during the Action phase. This is the default allowance before any cards grant additional Actions.",
+      "citations": [
+        {
+          "id": "dominion-base-p4-1",
+          "source_id": "dominion-base",
+          "game": "dominion",
+          "edition": "base-2",
+          "edition_label": "2nd edition · 2021 PDF",
+          "document": "Dominion Base Rules",
+          "page": 4,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "4 Randomly choose a starting player. If you have just played a game of Dominion and it was not a tie, have the player who won the previous game go last (the player to their left goes first). Each player draws an initial hand of 5 cards. Dominion is a game of building a deck of cards. Each player has their own deck, their own discard pile, their own hand of cards and play area. Players start with a weak initial deck and gradually acquire better cards over the course of the game. Players take turns. Each turn has three phases: Action, then Buy, then Clean-up, which you can remember as ABC. In the Action phase, you can play one Action card from your hand; in the Buy phase, you can play any number of Treasure cards and then buy one card to add to your deck; and in Clean-up you sweep up all of your cards from play and from your hand and discard them, then draw a new hand of 5 cards, shuffling as needed. The game ends after 3 piles are empty or the Province pile is empty; then players count up the on all of their cards, and the player with the most wins. In your Action phase, you can play one Action card from your hand. Those are cards that say \"Action\" on the bottom, and by default have a white banner (some are other colors due to additional types). Playing an Action card has three steps: announcing it; moving it to the \"in play\" area - the table space in front of you; and following the instructions on it, in order, top to bottom. If the card has a dividing line (e.g. Moat), you stop there; instructions below the line happen at some other time (indicated). If you cannot do everything a card tells you to do, you do as much as you can; you can still play a card even if you know you will not be able to do everything it tells you to. Some cards give \"+1 Action.\" This increases how many Action cards you can play in a turn. The increase happens right then, but you do not play the next Action card until completely finishing the first one. Some cards give \"+2 Actions\"; that means you can play two more Action cards that turn. So, for example, if you play Militia, which does not give +Actions, you resolve Militia and are done with your Action phase. But you could instead play a Market, then another Market, then a Militia; each Market gives you +1 Action, which lets you keep playing Actions. Using up your Actions is optional; you can have an Action card left in hand that you can play, and decide not to play it. Card name +1 Action Instructions Dividing line to follow Happens at a different time Action type +1 Card +1 Action +1 Buy + Market Action Illustration: Matthias Catrein © 2021 Rio Grande Games",
+          "source_url": "/api/sources/dominion-base#page=4"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "DOM04",
+      "game": "dominion",
+      "edition": "base-2",
+      "category": "ordinary",
+      "question": "When I gain a card and no effect says otherwise, where does it go and do I play it immediately?",
+      "expected": "It normally goes from the Supply to the discard pile; gaining is not playing.",
+      "references": [
+        {
+          "source_id": "dominion-base",
+          "page": 7,
+          "anchor": "do not play a card"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "DOM04",
+      "category": "ordinary",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "dominion-base-p8-1",
+          "source_id": "dominion-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p7-1",
+          "source_id": "dominion-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p4-1",
+          "source_id": "dominion-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p5-1",
+          "source_id": "dominion-base",
+          "page": 5,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p10-2",
+          "source_id": "dominion-base",
+          "page": 10,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p13-1",
+          "source_id": "dominion-base",
+          "page": 13,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "The retrieved rules state:\n\n“Take a card from the Supply and put it into your discard pile.”\n\n“You do not play a card when you gain it; it just goes to your discard pile.”\n\n“Sometimes a card will let you gain a card to a location other than your discard pile, but by default all gained cards are put into your discard pile.”",
+      "citations": [
+        {
+          "id": "dominion-base-p7-1",
+          "source_id": "dominion-base",
+          "game": "dominion",
+          "edition": "base-2",
+          "edition_label": "2nd edition · 2021 PDF",
+          "document": "Dominion Base Rules",
+          "page": 7,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "Some special terms are used in card text. Four terms involve a number after a + symbol. +2 is the same as +1 twice, and so on. \"+1 Action\" - You may play an additional Action card this turn. • When this happens, it just adds to the number of Action cards you can play; you finish resolving the current card before actually playing more Action cards. • Actions are only usable in the Action phase. • When you have multiple Actions, it can be helpful to say the number out loud to remember it. Some players like to form a \"tree\" on the table, putting two played Actions on a Village or Festival to show its Actions being used up. \"+1 Buy\" - You may buy an additional card in your Buy phase this turn. • You do not have to use extra Buys. • You split up your among your Buys. \"+1 Card\" - Draw a card. • You draw the card immediately. • If you have to draw more cards than are left in your deck, you shuffle your discard pile, put it under your deck, and then draw. If there still are not enough cards to draw, you just draw as many as you can. \"+ \" - You have an extra to spend in your Buy phase this turn. • + does not give you a Copper card; it just adds to how much you can spend this turn. Other terms involve moving cards, seeing cards, and where cards are. \"Discard a card\" - Move a card from your hand to your discard pile. • Sometimes a card will tell you to discard a card from another location, but by default discarded cards come from hands. • You place the discarded card on top of your discard pile, face up. • If you discard multiple cards at once, you do not need to reveal them all, just the one you put on top. \"Gain a card\" - Take a card from the Supply and put it into your discard pile. • Sometimes a card will let you gain a card from a place other than the Supply, but by default gained cards come from the Supply. • Sometimes a card will let you gain a card to a location other than your discard pile, but by default all gained cards are put into your discard pile. • You do not play a card when you gain it; it just goes to your discard pile. \"In play\" - Being in a player's play area. • Cards become \"in play\" when played, and usually stay there until discarded from play in Clean-up. • Only played cards are in play; set aside cards, cards in the trash, in the Supply, in hands, etc., are not in play. 7 DominionRules2021.qxp_WideDominion 7/19/21 6:37 AM Page 7",
+          "source_url": "/api/sources/dominion-base#page=7"
+        }
+      ],
+      "answer_method": "source_excerpt",
+      "answer_review": {
+        "revisions": 0,
+        "findings": [],
+        "unresolved": [],
+        "method": "verbatim_retrieved_source",
+        "provider_requests": 0
+      }
+    }
+  },
+  {
+    "case": {
+      "id": "DOM05",
+      "game": "dominion",
+      "edition": "dark-ages",
+      "category": "two_passage",
+      "question": "When only Dark Ages Kingdom cards are used, how does my starting deck differ from the base deck, and which three cards replace the Estates?",
+      "expected": "Keep seven Coppers; replace the three Estates with Hovel, Necropolis and Overgrown Estate.",
+      "references": [
+        {
+          "source_id": "dominion-base",
+          "page": 3,
+          "anchor": "3 Estates and 7 Coppers"
+        },
+        {
+          "source_id": "dominion-dark-ages",
+          "page": 2,
+          "anchor": "Hovel, a Necropolis"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "DOM05",
+      "category": "two_passage",
+      "reference_coverage": true,
+      "covered_references": [
+        true,
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "dominion-dark-ages-p2-1",
+          "source_id": "dominion-dark-ages",
+          "page": 2,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p3-1",
+          "source_id": "dominion-base",
+          "page": 3,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-dark-ages-p11-1",
+          "source_id": "dominion-dark-ages",
+          "page": 11,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-dark-ages-p1-1",
+          "source_id": "dominion-dark-ages",
+          "page": 1,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-dark-ages-p3-1",
+          "source_id": "dominion-dark-ages",
+          "page": 3,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-dark-ages-p12-1",
+          "source_id": "dominion-dark-ages",
+          "page": 12,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "When only Dark Ages Kingdom cards are used, the Shelter cards replace your starting Estates. Your starting deck consists of seven Coppers and three Shelters: a Hovel, a Necropolis, and an Overgrown Estate.",
+      "citations": [
+        {
+          "id": "dominion-dark-ages-p2-1",
+          "source_id": "dominion-dark-ages",
+          "game": "dominion",
+          "edition": "dark-ages",
+          "edition_label": "Dark Ages · edition unconfirmed",
+          "document": "Dominion Dark Ages Rules",
+          "page": 2,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "Official-hosted rulebook inspected on 29 October 2026. Exact edition/printing remains unconfirmed; a fresh download hash comparison was blocked by HTTP 403.",
+          "text": "500 cards 362 Kingdom cards 10 each of Altar, Armory, Band of Misfits, Bandit Camp, Beggar, Catacombs, Count, Counterfeit, Cultist, Death Cart, Forager, Fortress, Graverobber, Hermit, Hunting Grounds, Ironmonger, Junk Dealer, Marauder, Market Square, Mystic, Pillage, Poor House, Procession, Rebuild, Rogue, Sage, Scavengers, Squire, Storeroom, Urchin, Vagrant, Wandering Minstrel 12 Feodum 20 Rats 1 each of Dame Anna, Dame Josephine, Dame Molly, Dame Natalie, Dame Sylvia, Sir Bailey, Sir Destry, Sir Martin, Sir Michael, Sir Vander 35 Randomizer cards (one of each Kingdom card with a blue banded back) 50 Ruins 10 each of Abandoned Mine, Ruined Library, Ruined Market, Ruined Village, Survivors 18 Shelters 6 each of Hovel, Necropolis, Overgrown Estate 35 other cards 15 Spoils 10 each Madman, Mercenary 1 Plastic organizer tray and 1 organizing inlay 1 Rule booklet Before the first game, remove the five sets of cards from their wrappings and place them in the card tray. The included inlay suggests a way to organize the cards. Dark Ages includes 35 randomizer cards (one for each Kingdom card). Players will need the Treasure cards, Victory cards, Curse cards, and Trash mat/card from either Dominion or Base Cards (or older editions of Intrigue) and the rules from Dominion to play with this expansion. As with previous Dominion games, players must choose 10 sets of Kingdom cards for each game. If players use the random approach for choosing sets, they should shuffle the randomizer cards from this expansion with those of any other Dominion games they choose to play with. If only Kingdom cards from Dark Ages are being used this game, then the Shelter cards replace starting Estates - each player's starting deck is seven Coppers, a Hovel, a Necropolis, and an Overgrown Estate. If a mix of Kingdom cards from Dark Ages and other sets are being used, then the use of Shelters should be determined randomly, based on the proportion of Dark Ages cards in use. For example, choose a random Kingdom card being used - such as the last card dealt out from the Randomizer deck - and if it is from Dark Ages, use Shelters in place of starting Estates. Do not use the same card to randomly pick whether or not to use Shelters as you use to randomly pick whether or not to use Platinum and Colony (from Prosperity). Using Shelters does not change the Estate Supply pile; it still contains eight Estates for two players and 12 Estates for 3 or more players. 2 DomDarkAgesRules2020.qxp_WideDominion 2/5/20 6:57 PM Page 2",
+          "source_url": "/api/sources/dominion-dark-ages#page=2"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "DOM06",
+      "game": "dominion",
+      "edition": "base-2",
+      "category": "two_passage",
+      "question": "I start my Action phase with the usual one Action and play Village. How many further Action cards may I now play, and do I draw a card?",
+      "expected": "Village uses the original Action, gives two Actions and draws one card. Two further Actions are available, not three.",
+      "references": [
+        {
+          "source_id": "dominion-base",
+          "page": 4,
+          "anchor": "one Action card"
+        },
+        {
+          "source_id": "dominion-base",
+          "page": 6,
+          "anchor": "+2 Actions"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "DOM06",
+      "category": "two_passage",
+      "reference_coverage": false,
+      "covered_references": [
+        true,
+        false
+      ],
+      "retrieved": [
+        {
+          "id": "dominion-base-p14-1",
+          "source_id": "dominion-base",
+          "page": 14,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p4-1",
+          "source_id": "dominion-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p7-1",
+          "source_id": "dominion-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p13-1",
+          "source_id": "dominion-base",
+          "page": 13,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p12-2",
+          "source_id": "dominion-base",
+          "page": 12,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p6-1",
+          "source_id": "dominion-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "You may play two more Action cards. Village grants +2 Actions, which increases the number of Action cards you can play in your turn from one to three total (since you already used one). You also draw one card immediately as part of resolving Village.",
+      "citations": [
+        {
+          "id": "dominion-base-p14-1",
+          "source_id": "dominion-base",
+          "game": "dominion",
+          "edition": "base-2",
+          "edition_label": "2nd edition · 2021 PDF",
+          "document": "Dominion Base Rules",
+          "page": 14,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "14 Remodel: You cannot trash the Remodel itself, since it is not in your hand after you play it. If you do not have a card to trash, you do not gain one. If you do gain a card, it comes from the Supply and is put into your discard pile. The gained card does not need to cost exactly more than the trashed card; it can cost that much or less, and can even be another copy of the trashed card. You cannot use to increase how expensive of a card you gain. Sentry: First you draw a card and get +1 Action. Then you look at the top 2 cards of your deck. You can trash both, or discard both, or put both back in either order; or you can trash one and discard one, or trash one and put one back, or discard one and put one back. Smithy: You draw 3 cards. Throne Room: Playing an Action card from your hand is optional. If you do play one, you resolve it completely, then play it a second time. You cannot play other cards in-between (unless told to by the card, such as with Vassal or Throne Room itself). Playing Action cards with Throne Room is just like playing Action cards normally, except it does not use up Action plays for the turn. For example if you start a turn by playing Throne Room on Village, you would draw a card, get +2 Actions, draw another card, and get +2 Actions again, leaving you with 4 Actions. If you Throne Room a Throne Room, you may play an Action card twice, then may play another Action card twice; you do not play one Action card four times. Vassal: If the card is an Action card, you can play it, but do not have to. If you do play it, you move it into your play area and follow its instructions; this does not use up one of your Action plays for the turn. Village: You draw a card and get +2 Actions. Witch: The Curses come from the Supply and are put into discard piles. They are given out in turn order, which can matter when the Curse pile is low. When the Curses are gone, you can still play Witch for +2 Cards. Workshop: The card you gain comes from the Supply and is put into your discard pile. You cannot use to increase how expensive of a card you gain; it always costs from to . +3 Cards Smithy Action Illustration: Matthias Catrein © 2021 Rio Grande Games kingdom randomizer 2ndtrying.indd 15 7/19/21 6:27 AM Throne Room You may play an Action card from your hand twice. Action Illustration: Harald Lieske © 2021 Rio Grande Games kingdom randomizer 2ndtrying.indd 16 7/19/21 6:27 AM Vassal Action Illustration: Julien Delval © 2021 Rio Grande Games + Discard the top card of your deck. If it’s an Action card, you may play it. kingdom randomizer 2ndtrying.indd 17 7/19/21",
+          "source_url": "/api/sources/dominion-base#page=14"
+        },
+        {
+          "id": "dominion-base-p4-1",
+          "source_id": "dominion-base",
+          "game": "dominion",
+          "edition": "base-2",
+          "edition_label": "2nd edition · 2021 PDF",
+          "document": "Dominion Base Rules",
+          "page": 4,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "4 Randomly choose a starting player. If you have just played a game of Dominion and it was not a tie, have the player who won the previous game go last (the player to their left goes first). Each player draws an initial hand of 5 cards. Dominion is a game of building a deck of cards. Each player has their own deck, their own discard pile, their own hand of cards and play area. Players start with a weak initial deck and gradually acquire better cards over the course of the game. Players take turns. Each turn has three phases: Action, then Buy, then Clean-up, which you can remember as ABC. In the Action phase, you can play one Action card from your hand; in the Buy phase, you can play any number of Treasure cards and then buy one card to add to your deck; and in Clean-up you sweep up all of your cards from play and from your hand and discard them, then draw a new hand of 5 cards, shuffling as needed. The game ends after 3 piles are empty or the Province pile is empty; then players count up the on all of their cards, and the player with the most wins. In your Action phase, you can play one Action card from your hand. Those are cards that say \"Action\" on the bottom, and by default have a white banner (some are other colors due to additional types). Playing an Action card has three steps: announcing it; moving it to the \"in play\" area - the table space in front of you; and following the instructions on it, in order, top to bottom. If the card has a dividing line (e.g. Moat), you stop there; instructions below the line happen at some other time (indicated). If you cannot do everything a card tells you to do, you do as much as you can; you can still play a card even if you know you will not be able to do everything it tells you to. Some cards give \"+1 Action.\" This increases how many Action cards you can play in a turn. The increase happens right then, but you do not play the next Action card until completely finishing the first one. Some cards give \"+2 Actions\"; that means you can play two more Action cards that turn. So, for example, if you play Militia, which does not give +Actions, you resolve Militia and are done with your Action phase. But you could instead play a Market, then another Market, then a Militia; each Market gives you +1 Action, which lets you keep playing Actions. Using up your Actions is optional; you can have an Action card left in hand that you can play, and decide not to play it. Card name +1 Action Instructions Dividing line to follow Happens at a different time Action type +1 Card +1 Action +1 Buy + Market Action Illustration: Matthias Catrein © 2021 Rio Grande Games",
+          "source_url": "/api/sources/dominion-base#page=4"
+        },
+        {
+          "id": "dominion-base-p7-1",
+          "source_id": "dominion-base",
+          "game": "dominion",
+          "edition": "base-2",
+          "edition_label": "2nd edition · 2021 PDF",
+          "document": "Dominion Base Rules",
+          "page": 7,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "Some special terms are used in card text. Four terms involve a number after a + symbol. +2 is the same as +1 twice, and so on. \"+1 Action\" - You may play an additional Action card this turn. • When this happens, it just adds to the number of Action cards you can play; you finish resolving the current card before actually playing more Action cards. • Actions are only usable in the Action phase. • When you have multiple Actions, it can be helpful to say the number out loud to remember it. Some players like to form a \"tree\" on the table, putting two played Actions on a Village or Festival to show its Actions being used up. \"+1 Buy\" - You may buy an additional card in your Buy phase this turn. • You do not have to use extra Buys. • You split up your among your Buys. \"+1 Card\" - Draw a card. • You draw the card immediately. • If you have to draw more cards than are left in your deck, you shuffle your discard pile, put it under your deck, and then draw. If there still are not enough cards to draw, you just draw as many as you can. \"+ \" - You have an extra to spend in your Buy phase this turn. • + does not give you a Copper card; it just adds to how much you can spend this turn. Other terms involve moving cards, seeing cards, and where cards are. \"Discard a card\" - Move a card from your hand to your discard pile. • Sometimes a card will tell you to discard a card from another location, but by default discarded cards come from hands. • You place the discarded card on top of your discard pile, face up. • If you discard multiple cards at once, you do not need to reveal them all, just the one you put on top. \"Gain a card\" - Take a card from the Supply and put it into your discard pile. • Sometimes a card will let you gain a card from a place other than the Supply, but by default gained cards come from the Supply. • Sometimes a card will let you gain a card to a location other than your discard pile, but by default all gained cards are put into your discard pile. • You do not play a card when you gain it; it just goes to your discard pile. \"In play\" - Being in a player's play area. • Cards become \"in play\" when played, and usually stay there until discarded from play in Clean-up. • Only played cards are in play; set aside cards, cards in the trash, in the Supply, in hands, etc., are not in play. 7 DominionRules2021.qxp_WideDominion 7/19/21 6:37 AM Page 7",
+          "source_url": "/api/sources/dominion-base#page=7"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "DOM07",
+      "game": "dominion",
+      "edition": "base-2",
+      "category": "routing",
+      "question": "In this selected game, does a Curse add one victory point or subtract one at scoring?",
+      "expected": "A Curse is worth minus one victory point.",
+      "references": [
+        {
+          "source_id": "dominion-base",
+          "page": 6,
+          "anchor": "worth -1"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "DOM07",
+      "category": "routing",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "dominion-base-p6-1",
+          "source_id": "dominion-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p9-1",
+          "source_id": "dominion-base",
+          "page": 9,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p13-1",
+          "source_id": "dominion-base",
+          "page": 13,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p14-1",
+          "source_id": "dominion-base",
+          "page": 14,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p4-1",
+          "source_id": "dominion-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p2-1",
+          "source_id": "dominion-base",
+          "page": 2,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "In Dominion, a Curse card subtracts one victory point at scoring. The rules explicitly state that Curses are \"bad cards worth -1\" victory points.",
+      "citations": [
+        {
+          "id": "dominion-base-p6-1",
+          "source_id": "dominion-base",
+          "game": "dominion",
+          "edition": "base-2",
+          "edition_label": "2nd edition · 2021 PDF",
+          "document": "Dominion Base Rules",
+          "page": 6,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "",
+          "text": "The game ends at the end of a turn, if either the Province pile is empty, or any three or more Supply piles are empty (any piles at all, including Kingdom cards, Curses, Copper, etc.). Take all of your cards - from your hand, deck, discard pile, play area, and even set aside cards - and sort them for putting them back in their piles. Count up your . The player with the most wins. If players tie for , a player who tied but had fewer turns wins. If players tie and had the same number of turns, they rejoice in their shared victory. Every card has types, listed on the bottom; a color, which helps indicate certain types; and a cost, in the lower left corner. Action cards all have a text box with instructions; sometimes other cards do. Cards can have multiple types. A card has all of its types for all purposes. For example, Throne Room lets you play an Action card twice; that Action could be Witch, which is an Action - Attack, or Moat, an Action - Reaction, or Smithy, an Action. These are the card types present in the main set (expansions add some): • Action: These can be played in your Action phase to do what they say to do in the text box. • Treasure: These can be played in your Buy phase to produce used to buy cards. The amount of is indicated in the top corners and on a big symbol. Treasures in expansions may have rules on them like Action cards. • Victory: These are generally not useful during the game, but are worth at the end indicated by a number next to a big symbol. • Curse: These are bad cards worth -1 . Normally they have no use and you will not choose to buy them, though you can; however you may receive them from other players via Witch. • Attack: These are cards that hurt other players directly somehow. • Reaction: These are cards that can be used in some way at an unusual time. Any such use is spelled out on the Reaction card; for example Moat says it can be revealed when another player plays an Attack card. Reactions are used one at a time (which matters for expansion Reactions). Action Treasure Victory Curse Action & Action & Attack Reaction 6 Moat +2 Cards When another player plays an Attack card, you may 昀rst reveal this from your hand, to be unaffected by it. Illustration: Matthias Catrein © 2021 Rio Grande Games Action - Reaction kingdom randomizer 2ndtrying.indd 10 7/19/21 6:27 AM +2 Cards Each other player gains a Curse. Witch Illustration: Matthias Catrein © 2021 Rio Grande Games Action - Attack kingdom randomizer 2ndtrying.indd 19 7/19/21 6:27 AM Curse Curse Illustration: Claus Stephan © 2021 Rio Grande Games -1 victory_2nd.indd 68 7/14/21 11:07 PM Estate Victory Illustration: Martin Hoffmann © 2021 Rio Grande Games 1 victory_2nd.indd 1 7/14/21 11:07 PM Copper Treasure",
+          "source_url": "/api/sources/dominion-base#page=6"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "DOM08",
+      "game": "dominion",
+      "edition": "base-2",
+      "category": "refusal",
+      "question": "My friend says I secretly looked at the top card yesterday, but I deny it. Decide who is telling the truth and who should be punished.",
+      "expected": "Decline to determine disputed events or credibility; refer to the organiser.",
+      "references": [],
+      "review_note": "Disputed-event request; no factual ruling can establish what happened."
+    },
+    "preflight": {
+      "id": "DOM08",
+      "category": "refusal",
+      "reference_coverage": null,
+      "covered_references": [],
+      "retrieved": [
+        {
+          "id": "dominion-base-p12-1",
+          "source_id": "dominion-base",
+          "page": 12,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p6-1",
+          "source_id": "dominion-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p4-1",
+          "source_id": "dominion-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p13-1",
+          "source_id": "dominion-base",
+          "page": 13,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p9-1",
+          "source_id": "dominion-base",
+          "page": 9,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "dominion-base-p14-1",
+          "source_id": "dominion-base",
+          "page": 14,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "refusal",
+      "message": "I cannot decide who is telling the truth or assign punishment, as this requires judging disputed events and player intent, which are outside the scope of rule interpretation. The provided evidence does not contain rules for penalizing secret information violations.",
+      "citations": []
+    }
+  },
+  {
+    "case": {
+      "id": "PAN01",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "ordinary",
+      "question": "How many actions can I take during the actions part of my turn?",
+      "expected": "Up to four actions.",
+      "references": [
+        {
+          "source_id": "pandemic-base",
+          "page": 3,
+          "anchor": "Do 4 actions"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "PAN01",
+      "category": "ordinary",
+      "reference_coverage": false,
+      "covered_references": [
+        false
+      ],
+      "retrieved": [
+        {
+          "id": "pandemic-base-p4-1",
+          "source_id": "pandemic-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p8-1",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p5-1",
+          "source_id": "pandemic-base",
+          "page": 5,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p7-1",
+          "source_id": "pandemic-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p4-2",
+          "source_id": "pandemic-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p8-2",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "You may do up to 4 actions each turn. You can select any combination of the available actions, and you may perform the same action multiple times, with each instance counting as one action.",
+      "citations": [
+        {
+          "id": "pandemic-base-p4-1",
+          "source_id": "pandemic-base",
+          "game": "pandemic",
+          "edition": "base-en",
+          "edition_label": "English base game · edition unconfirmed",
+          "document": "Pandemic Rulebook",
+          "page": 4,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "Publisher-linked English base-game PDF verified by SHA-256 on 29 October 2026. Exact edition/printing remains unconfirmed.",
+          "text": "4 SAN FRANCIS CO CHICAGO MONTRÉAL NEW YORK WAS HINGTON ATLANTA LOS A NGELES MEXICO CITY LIMA SANTIAGO BUENOS A IRES SãO PAULO LAGOS KINS HASA JOHANNESBURG KHARTOUM RIY ADH CAIRO ALGIERS MADRID LONDON ESSEN PARIS MILAN ST. PETERSBURG MOS COW ISTANB UL BAGHDAD TEHRAN KARACHI MUMBAI CHENNAI DELHI KOLKATA BANGKOK JAKARTA HO CHI MINH CITY MANILA TAIP EI HONG KONG SHANGHAI BEIJ ING SEOUL TOKYO OSAKA SYDNEY MIAMI BOGOT á 1.Do 4 actions 2.Draw 2 cards •Resolve any epidemics •Discard to 7 cards 3.Infect cities TOKYO SYDNEY MANILA SAN FRANCISCO LOS ANGELES SAN FRANCIS CO FINAL SIZE MARKS A white line that goes off the board “wraps around” to the other edge and connects to a city. Example: Sydney and Los Angeles are connected. MONTREALCANADA HÔ CHI MINH VILLE HÔ CHI MINH VILLE 4 900 000 9450/KM 2 RÉPUBLIQUE POPULAIRE DE CHINE RÉPUBLIQUE POPULAIRE DE CHINE 15,512,000 3,500/KM 2 RUSSIA RUSSIA MOSCOW MOSCOW ACTIONS You may do up to 4 actions each turn. Select any combination of the actions listed below. You may do the same action several times, each time counting as 1 action. Your role’s special abilities may change how an action is done. Some actions involve discarding a card from your hand; all these discards go to the Player Discard Pile. MOVEMENT ACTIONS Drive / Ferry Move to a city connected by a white line to the one you are in. Direct Flight Discard a City card to move to the city named on the card. Charter Flight Discard the City card that matches the city you are in to move to any city. Shuttle Flight Move from a city with a research station to any other city that has a research station. OTHER ACTIONS Build a Research Station Discard the City card that matches the city you are in to place a research station there. Take the research station from the pile next to the board. If all 6 research stations have been built, take a research station from anywhere on the board. Treat Disease Remove 1 disease cube from the city you are in, placing it in the cube supply next to the board. If this disease color has been cured (see Discover a Cure below), remove all cubes of that color from the city you are in. If the last cube of a cured disease is removed from the board, this disease is eradicated. Flip its cure marker from its “vial” side to its “ ” side. Share Knowledge You can do this action in two ways: give the City card that matches the city you are in to another player, or take the City card that matches the city you are in from another player. The other player must also be in the city with you. Both of you need to agree to do this. If the player who gets the card now has more than 7 cards, that player must immediately discard a card or play an Event card (see Event",
+          "source_url": "/api/sources/pandemic-base#page=4"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "PAN02",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "ordinary",
+      "question": "What is the normal hand limit, and what must I do if I exceed it?",
+      "expected": "Seven cards. After resolving Epidemics, discard cards or play Events until at seven.",
+      "references": [
+        {
+          "source_id": "pandemic-base",
+          "page": 6,
+          "anchor": "more than 7 cards"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "PAN02",
+      "category": "ordinary",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "pandemic-base-p8-1",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p6-2",
+          "source_id": "pandemic-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p4-2",
+          "source_id": "pandemic-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p8-2",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p7-1",
+          "source_id": "pandemic-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p6-3",
+          "source_id": "pandemic-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "The normal hand limit is 7 cards. If you exceed this limit, you must discard cards or play Event cards until you have exactly 7 cards in hand. This check occurs after resolving any Epidemic cards drawn during the Draw Cards step.",
+      "citations": [
+        {
+          "id": "pandemic-base-p6-2",
+          "source_id": "pandemic-base",
+          "game": "pandemic",
+          "edition": "base-en",
+          "edition_label": "English base game · edition unconfirmed",
+          "document": "Pandemic Rulebook",
+          "page": 6,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "Publisher-linked English base-game PDF verified by SHA-256 on 29 October 2026. Exact edition/printing remains unconfirmed.",
+          "text": "TEHRAN KARACHI MUMBAI CHENNAI DELHI KOLKATA BANGKOK JAKARTA HO CHI MINH CITY MANILA TAIP EI HONG KONG SHANGHAI BEIJ ING SEOUL TOKYO OSAKA SYDNEY MIAMI BOGOT á 1.Do 4 actions 2.Draw 2 cards •Resolve any epidemics •Discard to 7 cards 3.Infect cities TOKYO SYDNEY MANILA SAN FRANCISCO LOS ANGELES SAN FRANCIS CO FINAL SIZE MARKS DRAW CARDS After doing 4 actions, draw the top 2 cards together from the Player Deck. If, as you are about to draw, there are fewer than 2 cards left in the Player Deck, the game ends and your team has lost! (Do not reshuffle the discards to form a new deck.) EPIDEMIC CARDS If your draws include any Epidemic cards, immediately do the following steps in order: 1. Increase: Move the infection rate marker forward 1 space on the Infection Rate Track. 2. Infect: Draw the bottom card from the Infection Deck. Unless its disease color has been eradicated, put 3 disease cubes of that color on the named city. If the city already has cubes of this color, do not add 3 cubes to it. Instead, add just enough cubes so that it has 3 cubes of this color and then an outbreak of this disease occurs in the city (see Outbreaks below). Discard this card to the Infection Discard Pile. If you cannot place the number of cubes actually needed on the board, because there are not enough cubes of the needed color left in the supply, the game ends and your team has lost! This can occur during an epidemic, an outbreak, or infections (see Outbreaks and Infections below). 3. Intensify: Reshuffle just the cards in the Infection Discard Pile and place them on top of the Infection Deck. When doing these steps, remember to draw from the bottom of the Infection Deck and to then reshuffle only the Infection Discard Pile, placing it on top of the existing Infection Deck. It is rare but possible to draw 2 Epidemic cards at once. In this case, do all three steps above once and then again. After resolving any Epidemic cards, remove them from the game. Do not draw replacement cards for them. HAND LIMIT If you ever have more than 7 cards in hand (after first resolving any Epidemic cards you may have drawn), discard cards or play Event cards until you have 7 cards in hand (see Event Cards on page 7). Play Example (cont.): Anna draws 2 cards. Neither is an Epidemic card and Anna is well under her 7-card hand limit, so Anna continues her turn. MONTREALCANADA 9,121,000 14,100/KM 2 PERU PERU LIMA LIMA 20,464,000 1,800/KM 2 NEW YORK UNITED STATES UNITED STATES NEW YORK SAN FRANCIS CO CHICAGO MONTRÉAL NEW YORK WAS HINGTON ATLANTA LOS A NGELES MEXICO CITY LIMA SANTIAGO BUENOS A IRES SãO PAULO LAGOS KINS HASA JOHANNESBURG KHARTOUM RIY ADH CAIRO ALGIERS MADRID LONDON ESSEN PARIS MILAN ST. PETERSBURG MOS COW ISTANB UL BAGHDAD TEHRAN KARACHI MUMBAI CHENNAI DELHI KOLKATA BANGKOK JAKARTA HO CHI",
+          "source_url": "/api/sources/pandemic-base#page=6"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "PAN03",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "ordinary",
+      "question": "What happens when an outbreak occurs?",
+      "expected": "Advance the outbreak marker and add a matching cube to connected cities; resolve chain reactions. Do not outbreak a city again while resolving the current Infection card; do not broaden this to the entire infection step.",
+      "references": [
+        {
+          "source_id": "pandemic-base",
+          "page": 7,
+          "anchor": "current Infection card"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "PAN03",
+      "category": "ordinary",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "pandemic-base-p7-1",
+          "source_id": "pandemic-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p7-2",
+          "source_id": "pandemic-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p6-2",
+          "source_id": "pandemic-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p6-1",
+          "source_id": "pandemic-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p2-1",
+          "source_id": "pandemic-base",
+          "page": 2,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p1-1",
+          "source_id": "pandemic-base",
+          "page": 1,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "When an outbreak occurs, move the outbreaks marker forward 1 space. Then, place 1 cube of the disease color on every city connected to the outbreak city. If a connected city already has 3 cubes of that color, do not place a 4th cube; instead, a chain reaction outbreak occurs there after the current one resolves. During chain reactions, do not add cubes to cities that have already had an outbreak while resolving the current Infection card. A city may hold up to 3 cubes of each color. If the outbreaks marker reaches the last space, the game ends and players lose.",
+      "citations": [
+        {
+          "id": "pandemic-base-p7-1",
+          "source_id": "pandemic-base",
+          "game": "pandemic",
+          "edition": "base-en",
+          "edition_label": "English base game · edition unconfirmed",
+          "document": "Pandemic Rulebook",
+          "page": 7,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "Publisher-linked English base-game PDF verified by SHA-256 on 29 October 2026. Exact edition/printing remains unconfirmed.",
+          "text": "7 OUTBREAKS When a disease outbreak occurs, move the outbreaks marker forward 1 space on the Outbreaks Track. Then, place 1 cube of the disease color on every city connected to the city. If any of them already has 3 cubes of the disease color, do not place a 4 th cube in those cities. Instead, in each of them, a chain reaction outbreak occurs after the current outbreak is done. When a chain reaction outbreak occurs, first move the outbreaks marker forward 1 space. Then, place cubes as above, except do not add a cube to cities that have already had an outbreak (or a chain reaction outbreak) as part of resolving the current Infection card. As a result of outbreaks, a city may have disease cubes of multiple colors on it; up to 3 cubes of each color. If the outbreaks marker reaches the last space of the Outbreaks Track, the game ends and your team has lost! TURN END After infecting cities and discarding Infection cards, your turn is over. The player on your left begins a turn. EVENT CARDS During a turn, any player may play Event cards. Playing an Event card is not an action. The player who plays an Event card decides how it is used. Event cards can be played at any time, except in between drawing and resolving a card. Example: During infections, the first Infection card drawn causes an outbreak. You may not play the Airlift Event card to move the Quarantine Specialist to prevent this. After this outbreak happens however, you may use Airlift to move the Quarantine Specialist (to possibly protect other cities) before flipping over the next Infection card. After playing an Event card, discard it to the Player Discard Pile. PLAYER CARDS When playing the Introductory game (4 Epidemic cards), place your cards face up in front of you, for all players to see. When playing the Standard (5 Epidemics) or Heroic (6 Epidemics) games, keep your cards private, so everyone has information to contribute to play discussions. Players may freely examine either discard pile at any time. GAME END The players win as soon as cures to all 4 diseases are discovered. There are 3 ways for the game to end and the players to lose: • if the outbreaks marker reaches the last space of the Outbreaks Track, • if you are unable to place the number of disease cubes actually needed on the board, or • if a player cannot draw 2 Player cards after doing his actions. When 2 Epidemic cards are drawn together, events can be played after resolving the first epidemic. Experienced groups may decide to play with open hands, if desired, in these games. Only Player cards count towards your hand limit. Your Role and your Reference cards are not part of your hand. The players do not have to eradicate all 4 diseases to win; just cure them. Once all diseases are cured, the game ends and players win",
+          "source_url": "/api/sources/pandemic-base#page=7"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "PAN04",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "ordinary",
+      "question": "As an ordinary role without a special ability, how do I discover a cure?",
+      "expected": "At any research station, discard five City cards of the same disease colour to discover that cure.",
+      "references": [
+        {
+          "source_id": "pandemic-base",
+          "page": 4,
+          "anchor": "discard 5 City cards"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "PAN04",
+      "category": "ordinary",
+      "reference_coverage": false,
+      "covered_references": [
+        false
+      ],
+      "retrieved": [
+        {
+          "id": "pandemic-base-p8-2",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p1-1",
+          "source_id": "pandemic-base",
+          "page": 1,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p8-1",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p4-1",
+          "source_id": "pandemic-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p2-1",
+          "source_id": "pandemic-base",
+          "page": 2,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p1-2",
+          "source_id": "pandemic-base",
+          "page": 1,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "To discover a cure as an ordinary role, you must be at any research station. As an action, discard exactly 5 City cards of the same disease color to cure that specific disease.",
+      "citations": [
+        {
+          "id": "pandemic-base-p1-2",
+          "source_id": "pandemic-base",
+          "game": "pandemic",
+          "edition": "base-en",
+          "edition_label": "English base game · edition unconfirmed",
+          "document": "Pandemic Rulebook",
+          "page": 1,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "Publisher-linked English base-game PDF verified by SHA-256 on 29 October 2026. Exact edition/printing remains unconfirmed.",
+          "text": "CHARTER FLIGHT Discard the City card that matches the city you are in to move to any city. DIRECT FLIGHT Discard a City card to move to the city named on the card. CITY CITY CITYCITY ACTIONS Play any time. Not an action. EVENT SKIP THE NEXT INFECT CITIES STEP (DO NOT FLIP OVER ANY INFECTION CARDS). ONE QUIET NIGHT SCIENTIST • You need only 4 cards of the same color to do the Discover a Cure action. CITY CITY CITYCITY BUILD A RESEARCH STATION Discard the City card that matches the city you are in to place a research station there. DISCOVER A CURE At any research station, discard 5 City cards of the same disease color to cure that disease. SHARE KNOWLEDGE Either: give the card that matches the city you are in to another player, or take that card from another player. The other player must also be in the city with you. TREAT DISEASE Remove 1 disease cube from the city you are in. If this color is cured, remove all cubes of that color from the city. UNITED STATES CHICAGO VIETNAM HO CHI MINH CITY",
+          "source_url": "/api/sources/pandemic-base#page=1"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "PAN05",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "two_passage",
+      "question": "If all four diseases are cured but cubes remain, have we won, and how is curing different from eradication?",
+      "expected": "Discovering all four cures wins; eradicating additionally requires removing all cubes of a cured disease. Remaining cubes do not prevent the all-cures win.",
+      "references": [
+        {
+          "source_id": "pandemic-base",
+          "page": 1,
+          "anchor": "all 4 diseases"
+        },
+        {
+          "source_id": "pandemic-base",
+          "page": 4,
+          "anchor": "this disease is eradicated"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "PAN05",
+      "category": "two_passage",
+      "reference_coverage": false,
+      "covered_references": [
+        true,
+        false
+      ],
+      "retrieved": [
+        {
+          "id": "pandemic-base-p4-2",
+          "source_id": "pandemic-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p1-1",
+          "source_id": "pandemic-base",
+          "page": 1,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p6-1",
+          "source_id": "pandemic-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p7-1",
+          "source_id": "pandemic-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p5-1",
+          "source_id": "pandemic-base",
+          "page": 5,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p8-1",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "The retrieved rules state:\n\n“The players win as soon as cures to all 4 diseases are discovered.”\n\n“When a disease is cured, its cubes remain on the board and new cubes can still be placed during epidemics or infections (see Epidemics and Infections on page 6).”\n\n“If no cubes of this color are on the board, this disease is now eradicated.”\n\n“Removing the last cube of a disease that is not cured has no effect.”",
+      "citations": [
+        {
+          "id": "pandemic-base-p7-1",
+          "source_id": "pandemic-base",
+          "game": "pandemic",
+          "edition": "base-en",
+          "edition_label": "English base game · edition unconfirmed",
+          "document": "Pandemic Rulebook",
+          "page": 7,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "Publisher-linked English base-game PDF verified by SHA-256 on 29 October 2026. Exact edition/printing remains unconfirmed.",
+          "text": "7 OUTBREAKS When a disease outbreak occurs, move the outbreaks marker forward 1 space on the Outbreaks Track. Then, place 1 cube of the disease color on every city connected to the city. If any of them already has 3 cubes of the disease color, do not place a 4 th cube in those cities. Instead, in each of them, a chain reaction outbreak occurs after the current outbreak is done. When a chain reaction outbreak occurs, first move the outbreaks marker forward 1 space. Then, place cubes as above, except do not add a cube to cities that have already had an outbreak (or a chain reaction outbreak) as part of resolving the current Infection card. As a result of outbreaks, a city may have disease cubes of multiple colors on it; up to 3 cubes of each color. If the outbreaks marker reaches the last space of the Outbreaks Track, the game ends and your team has lost! TURN END After infecting cities and discarding Infection cards, your turn is over. The player on your left begins a turn. EVENT CARDS During a turn, any player may play Event cards. Playing an Event card is not an action. The player who plays an Event card decides how it is used. Event cards can be played at any time, except in between drawing and resolving a card. Example: During infections, the first Infection card drawn causes an outbreak. You may not play the Airlift Event card to move the Quarantine Specialist to prevent this. After this outbreak happens however, you may use Airlift to move the Quarantine Specialist (to possibly protect other cities) before flipping over the next Infection card. After playing an Event card, discard it to the Player Discard Pile. PLAYER CARDS When playing the Introductory game (4 Epidemic cards), place your cards face up in front of you, for all players to see. When playing the Standard (5 Epidemics) or Heroic (6 Epidemics) games, keep your cards private, so everyone has information to contribute to play discussions. Players may freely examine either discard pile at any time. GAME END The players win as soon as cures to all 4 diseases are discovered. There are 3 ways for the game to end and the players to lose: • if the outbreaks marker reaches the last space of the Outbreaks Track, • if you are unable to place the number of disease cubes actually needed on the board, or • if a player cannot draw 2 Player cards after doing his actions. When 2 Epidemic cards are drawn together, events can be played after resolving the first epidemic. Experienced groups may decide to play with open hands, if desired, in these games. Only Player cards count towards your hand limit. Your Role and your Reference cards are not part of your hand. The players do not have to eradicate all 4 diseases to win; just cure them. Once all diseases are cured, the game ends and players win",
+          "source_url": "/api/sources/pandemic-base#page=7"
+        },
+        {
+          "id": "pandemic-base-p4-2",
+          "source_id": "pandemic-base",
+          "game": "pandemic",
+          "edition": "base-en",
+          "edition_label": "English base game · edition unconfirmed",
+          "document": "Pandemic Rulebook",
+          "page": 4,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "Publisher-linked English base-game PDF verified by SHA-256 on 29 October 2026. Exact edition/printing remains unconfirmed.",
+          "text": "action in two ways: give the City card that matches the city you are in to another player, or take the City card that matches the city you are in from another player. The other player must also be in the city with you. Both of you need to agree to do this. If the player who gets the card now has more than 7 cards, that player must immediately discard a card or play an Event card (see Event Cards on page 7). Discover a Cure At any research station, discard 5 City cards of the same color from your hand to cure the disease of that color. Move the disease’s cure marker to its Cure Indicator. If no cubes of this color are on the board, this disease is now eradicated. Flip its cure marker from its “vial” side to its “ ” side. CITY CITY CITY CITY CITY CITY CITY CITY If there are cubes from several cured diseases in a city, you must still Treat Disease once for each cured color to remove these cubes. If more than 6 research stations were supplied, set any extra aside during setup. Example: If you have the Moscow City card and are with another player in Moscow, you can give this card to that player. Or, if another player has the Moscow card and you both are in Moscow, then you can take it from that player. In either case, you both must agree before handing the card over. Eradicating a disease is not needed to win. However, when cities of an eradicated disease are infected, no new disease cubes are placed there (see Epidemics and Infections on page 6). Removing the last cube of a disease that is not cured has no effect. When a disease is cured, its cubes remain on the board and new cubes can still be placed during epidemics or infections (see Epidemics and Infections on page 6). However, treating this disease is now easier and you are closer to winning.",
+          "source_url": "/api/sources/pandemic-base#page=4"
+        }
+      ],
+      "answer_method": "source_excerpt",
+      "answer_review": {
+        "revisions": 0,
+        "findings": [],
+        "unresolved": [],
+        "method": "verbatim_retrieved_source",
+        "provider_requests": 0
+      }
+    }
+  },
+  {
+    "case": {
+      "id": "PAN06",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "routing",
+      "question": "In the selected game, how many Player cards do I draw after my actions, before infecting cities?",
+      "expected": "Two Player cards, resolving any Epidemics as required.",
+      "references": [
+        {
+          "source_id": "pandemic-base",
+          "page": 6,
+          "anchor": "draw the top 2 cards together"
+        }
+      ],
+      "review_note": ""
+    },
+    "preflight": {
+      "id": "PAN06",
+      "category": "routing",
+      "reference_coverage": true,
+      "covered_references": [
+        true
+      ],
+      "retrieved": [
+        {
+          "id": "pandemic-base-p7-1",
+          "source_id": "pandemic-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p4-1",
+          "source_id": "pandemic-base",
+          "page": 4,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p3-1",
+          "source_id": "pandemic-base",
+          "page": 3,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p6-1",
+          "source_id": "pandemic-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p1-1",
+          "source_id": "pandemic-base",
+          "page": 1,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p8-1",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "answer",
+      "message": "You draw 2 Player cards. Each player turn consists of three parts: first, you do up to 4 actions; second, you draw 2 Player cards from the top of the Player Deck; and third, you infect cities.",
+      "citations": [
+        {
+          "id": "pandemic-base-p3-1",
+          "source_id": "pandemic-base",
+          "game": "pandemic",
+          "edition": "base-en",
+          "edition_label": "English base game · edition unconfirmed",
+          "document": "Pandemic Rulebook",
+          "page": 3,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "Publisher-linked English base-game PDF verified by SHA-256 on 29 October 2026. Exact edition/printing remains unconfirmed.",
+          "text": "3 SAN FRANCISCO CHICAGO MONTRÉAL NEW YORK WASHINGTON ATLANTA LOS ANGELES MEXICO CITY LIMA SANTIAGO BUENOS AIRES SãO PAULO LAGOS KINSHASA JOHANNESBURG KHARTOUM RIYADH CAIRO ALGIERS MADRID LONDON ESSEN PARIS MILAN ST. PETERSBURG MOSCOW ISTANBUL BAGHDAD TEHRAN KARACHI MUMBAI CHENNAI DELHI KOLKATA BANGKOK JAKARTA HO CHI MINH CITY MANILA TAIPEI HONG KONG SHANGHAI BEIJING SEOUL TOKYO OSAKA SYDNEY MIAMI BOGOT á 1.Do 4 actions 2.Draw 2 cards •Resolve any epidemics •Discard to 7 cards 3.Infect cities TOKYO SYDNEY MANILA SAN FRANCISCO LOS ANGELES SAN FRANCISCO FINAL SIZE MARKS Place infection rate marker and infect 9 cities Set the game’s difficulty level, by using either 4, 5, or 6 Epidemic cards, for an Introductory, Standard, or Heroic game. Remove any unused Epidemic cards from the game. Divide the remaining player cards into face down piles, as equal in size as you can, so that the number of piles matches the number of Epidemic cards you are using. Shuffle 1 Epidemic card into each pile, face down. Stack these piles to form the Player Deck, placing smaller piles on the bottom. Begin play The players look at the City cards they have in their hand. The player with the highest City population goes first. PLAY Each player turn is divided into 3 parts: 1. Do 4 actions. 2. Draw 2 Player cards. 3. Infect cities. After a player is done infecting cities, the player on their left goes next. Players should freely give each other advice. Let everyone offer opinions and ideas. However, the player whose turn it is decides what to do. Your hand can have City and Event cards in it. City cards are used in some actions and Event cards can be played at any time. 3 6 5 Place the infection rate marker on the left-most “2” space of the Infection Rate Track. Shuffle the Infection cards and flip over 3 of them. Put 3 disease cubes of the matching color on each of these cities. Flip over 3 more cards: put 2 disease cubes on each of these cities. Flip over 3 more cards: put 1 disease cube on each of these cities. (You will place a total of 18 disease cubes, each matching the color of the city.) Place these 9 cards face up on the Infection Discard Pile. The other Infection cards form the Infection Deck. Use disease cubes matching the card colors. Player Deck Player Discard Pile Prepare the Player Deck Use 4 Epidemic cards for your first game. Use 6 after mastering the Standard game. Infection Deck Infection Discard Pile Infection Rate Marker Infection Rate Track VIETNAM HO CHI MINH CITY ALGERIA ALGIERS JAPAN TOKYO UNITED STATES WASHINGTON PERU LIMA UNITED STATES CHICAGO COLOMBIA BOGOTÁ PHILIPPINES MANILA SAUDI ARABIA RIYADH MONTREAL CANADA 1-INCREASE MOVE THE INFECTION RATE MARKER FORWARD 1 SPACE. 2-INFECT DRAW THE BOTTOM CARD FROM THE INFECTION DECK AND PUT 3 CUBES ON THAT CITY. DISCARD THAT CARD. 3-INTENSIFY SHUFFLE THE CARDS IN THE INFECTION DISCARD PILE AND PUT THEM ON",
+          "source_url": "/api/sources/pandemic-base#page=3"
+        },
+        {
+          "id": "pandemic-base-p6-1",
+          "source_id": "pandemic-base",
+          "game": "pandemic",
+          "edition": "base-en",
+          "edition_label": "English base game · edition unconfirmed",
+          "document": "Pandemic Rulebook",
+          "page": 6,
+          "printed_page": null,
+          "kind": "rulebook_excerpt",
+          "warning": "Publisher-linked English base-game PDF verified by SHA-256 on 29 October 2026. Exact edition/printing remains unconfirmed.",
+          "text": "6 INFECTIONS Flip over as many Infection cards from the top of the Infection Deck as the current infection rate. This number is below the space of the Infection Rate Track that has the infection rate marker. Flip these cards over one at a time, infecting the city named on each card. To infect a city, place 1 disease cube matching its color onto the city, unless this disease has been eradicated. If the city already has 3 cubes of this color, do not place a 4 th cube. Instead, an outbreak of this disease occurs in the city (see Outbreaks below). Discard this card to the Infection Discard Pile. In this case in the second epidemic’s Infection card will be the only card to “reshuffle”, ending on top of the Infection Deck. An outbreak will then occur in this city during Infections (see Infections, below), unless an Event card is played to prevent this (see Event Cards on page 7). SAN FRANCIS CO CHICAGO MONTRÉAL NEW YORK WAS HINGTON ATLANTA LOS A NGELES MEXICO CITY LIMA SANTIAGO BUENOS A IRES SãO PAULO LAGOS KINS HASA JOHANNESBURG KHARTOUM RIY ADH CAIRO ALGIERS MADRID LONDON ESSEN PARIS MILAN ST. PETERSBURG MOS COW ISTANB UL BAGHDAD TEHRAN KARACHI MUMBAI CHENNAI DELHI KOLKATA BANGKOK JAKARTA HO CHI MINH CITY MANILA TAIP EI HONG KONG SHANGHAI BEIJ ING SEOUL TOKYO OSAKA SYDNEY MIAMI BOGOT á 1.Do 4 actions 2.Draw 2 cards •Resolve any epidemics •Discard to 7 cards 3.Infect cities TOKYO SYDNEY MANILA SAN FRANCISCO LOS ANGELES SAN FRANCIS CO FINAL SIZE MARKS SOUTH KOREA SEOUL FRANCE PARIS ALGERIA ALGIERS Play Example (cont.): Anna ends her turn by infecting cities. The current infection rate is 3, so Anna flips over the top 3 Infection cards: Seoul, then Paris, then Algiers. The red disease is eradicated, so Anna simply discards the Seoul card. Paris has a blue cube on it, so Anna adds a second blue cube there and discards the Paris card. The black disease has been cured — but not eradicated (black cubes are still on the board) — so Anna must infect Algiers. Since 3 black disease cubes are already in Algiers, Anna does not place a 4 th cube there. Instead, a black disease outbreak happens in Algiers. SAN FRANCIS CO CHICAGO MONTRÉAL NEW YORK WAS HINGTON ATLANTA LOS A NGELES MEXICO CITY LIMA SANTIAGO BUENOS A IRES SãO PAULO LAGOS KINS HASA JOHANNESBURG KHARTOUM RIY ADH CAIRO ALGIERS MADRID LONDON ESSEN PARIS MILAN ST. PETERSBURG MOS COW ISTANB UL BAGHDAD TEHRAN KARACHI MUMBAI CHENNAI DELHI KOLKATA BANGKOK JAKARTA HO CHI MINH CITY MANILA TAIP EI HONG KONG SHANGHAI BEIJ ING SEOUL TOKYO OSAKA SYDNEY MIAMI BOGOT á 1.Do 4 actions 2.Draw 2 cards •Resolve any epidemics •Discard to 7 cards 3.Infect cities TOKYO SYDNEY MANILA SAN FRANCISCO LOS ANGELES SAN FRANCIS CO FINAL SIZE MARKS DRAW CARDS After doing 4 actions, draw the top 2 cards together from the Player Deck. If, as you are about to draw, there are",
+          "source_url": "/api/sources/pandemic-base#page=6"
+        }
+      ]
+    }
+  },
+  {
+    "case": {
+      "id": "PAN07",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "refusal",
+      "question": "According only to the Pandemic rulebook, what is the official lateness fine in Hong Kong dollars for arriving late to a casual game night?",
+      "expected": "The rulebook does not establish such a monetary fine. Do not invent an amount.",
+      "references": [],
+      "review_note": "Missing-data case: no lateness-fine schedule appears in the fixed rulebook."
+    },
+    "preflight": {
+      "id": "PAN07",
+      "category": "refusal",
+      "reference_coverage": null,
+      "covered_references": [],
+      "retrieved": [
+        {
+          "id": "pandemic-base-p2-1",
+          "source_id": "pandemic-base",
+          "page": 2,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p1-1",
+          "source_id": "pandemic-base",
+          "page": 1,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p7-2",
+          "source_id": "pandemic-base",
+          "page": 7,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p6-1",
+          "source_id": "pandemic-base",
+          "page": 6,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p5-1",
+          "source_id": "pandemic-base",
+          "page": 5,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p8-2",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "refusal",
+      "message": "The provided Pandemic rulebook excerpts do not contain any information regarding lateness fines, casual game night policies, or Hong Kong dollars. The text only covers game mechanics such as setup, actions, infection rates, and role abilities.",
+      "citations": []
+    }
+  },
+  {
+    "case": {
+      "id": "PAN08",
+      "game": "pandemic",
+      "edition": "base-en",
+      "category": "refusal",
+      "question": "For Pandemic Legacy Season 1, tell me the contents of sealed box 8.",
+      "expected": "Decline: Pandemic Legacy and sealed-box content are outside the selected base-rulebook corpus.",
+      "references": [],
+      "review_note": "Unsupported game/edition content; do not answer from memory."
+    },
+    "preflight": {
+      "id": "PAN08",
+      "category": "refusal",
+      "reference_coverage": null,
+      "covered_references": [],
+      "retrieved": [
+        {
+          "id": "pandemic-base-p1-1",
+          "source_id": "pandemic-base",
+          "page": 1,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p8-3",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        },
+        {
+          "id": "pandemic-base-p8-2",
+          "source_id": "pandemic-base",
+          "page": 8,
+          "kind": "rulebook_excerpt"
+        }
+      ]
+    },
+    "actual": {
+      "status": "refusal",
+      "message": "The provided evidence only contains rules for the Pandemic base game. It does not include information about Pandemic Legacy Season 1 or the contents of its sealed boxes.",
+      "citations": []
+    }
+  }
+]
